@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 import typer
 from dotenv import load_dotenv
@@ -467,6 +469,160 @@ def briefs(
             json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
         )
         console.print(f"\n[green]JSON gravado em {saida_json}[/green]")
+
+
+# ---------------------------------------------------------------------------
+# Pipeline completo
+# ---------------------------------------------------------------------------
+
+
+@app.command()
+def run(
+    legenda: Path = typer.Argument(..., help="Arquivo .srt ou .vtt"),
+    canal: str = typer.Option(..., "--canal", "-c", help="Slug do pack de canal"),
+    saida: Path | None = typer.Option(None, "--saida", "-o", help="Pasta de entrega"),
+    limite: int = typer.Option(0, "--limite", "-n", help="Processar só os N primeiros blocos"),
+    so_links: bool = typer.Option(
+        False, "--so-links", help="Não baixa nada: só gera o relatório de links"
+    ),
+    sem_alternativas: bool = typer.Option(
+        False, "--sem-alternativas", help="Baixa apenas o escolhido de cada bloco"
+    ),
+    tema: str | None = typer.Option(None, "--tema", help="Tema do vídeo"),
+) -> None:
+    """Executa o pipeline: legenda → blocos → briefs → busca → entrega."""
+    from .output.deliver import entregar, escrever_relatorio
+    from .pipeline import Pipeline
+
+    try:
+        cfg = load_channel(canal)
+    except FileNotFoundError:
+        console.print(f"[red]canal '{canal}' não encontrado.[/red]")
+        raise typer.Exit(code=1) from None
+
+    pasta = saida or Path("saida") / f"{datetime.now():%Y-%m-%d}_{cfg.slug}"
+    pipeline = Pipeline(cfg)
+
+    console.print(f"\n[bold]{legenda.name}[/bold] · canal [cyan]{cfg.nome}[/cyan]\n")
+
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TextColumn("{task.completed}/{task.total}"),
+        console=console,
+        transient=True,
+    ) as progress:
+        tarefas: dict[str, Any] = {}
+
+        def avancar(etapa: str, feito: int, total: int) -> None:
+            if etapa not in tarefas:
+                tarefas[etapa] = progress.add_task(etapa, total=total)
+            progress.update(tarefas[etapa], completed=feito, total=total)
+
+        try:
+            resultado = pipeline.executar(
+                legenda, limite_blocos=limite, tema=tema, progresso=avancar
+            )
+        except (FileNotFoundError, SubtitleParseError) as exc:
+            console.print(f"[red]{exc}[/red]")
+            raise typer.Exit(code=1) from None
+        except LLMError as exc:
+            console.print(f"[red]{exc}[/red]")
+            raise typer.Exit(code=1) from None
+
+    total = len(resultado.blocos)
+    com = resultado.com_resultado
+    sem = resultado.sem_resultado
+    videos = sum(1 for r in com if r.escolhido[0].media_type.value == "video")
+
+    table = Table(show_lines=False, box=None, pad_edge=False)
+    table.add_column("#", justify="right", style="bold")
+    table.add_column("dur", justify="right", no_wrap=True)
+    table.add_column("res", justify="center", no_wrap=True)
+    table.add_column("tipo", no_wrap=True)
+    table.add_column("asset", justify="right", no_wrap=True)
+    table.add_column("provedor", no_wrap=True)
+    table.add_column("query", no_wrap=True, overflow="ellipsis", max_width=38)
+
+    largura = len(str(total))
+    for r in resultado.resultados:
+        if not r.encontrou:
+            table.add_row(
+                str(r.block.number).zfill(largura),
+                f"{r.block.duration_s:.1f}s",
+                "[red]✗[/red]",
+                "—", "—", "—",
+                (r.brief.queries.primary[0] if r.brief.queries.primary else "—"),
+            )
+            continue
+        asset, _ = r.escolhido
+        tipo = "vídeo" if asset.media_type.value == "video" else "imagem"
+        table.add_row(
+            str(r.block.number).zfill(largura),
+            f"{r.block.duration_s:.1f}s",
+            "[green]✓[/green]",
+            tipo,
+            f"{asset.duration_s:.1f}s" if asset.duration_s else f"{asset.width}x{asset.height}",
+            asset.provider,
+            (r.brief.queries.primary[0] if r.brief.queries.primary else "—"),
+        )
+
+    console.print(table)
+    console.print("\n[bold]Resumo da busca[/bold]")
+    console.print(
+        f"  blocos: {total} · com resultado: [green]{len(com)}[/green]"
+        f" ({len(com) / total:.0%})" if total else "  sem blocos"
+    )
+    console.print(
+        f"  vídeo: {videos} · imagem: {len(com) - videos} · "
+        f"sem nada: [red]{len(sem)}[/red]"
+    )
+    console.print(f"  cache de busca: {resultado.cache_busca}")
+    if resultado.briefing:
+        extra = ""
+        if resultado.briefing.emergencia:
+            extra = f" · emergência: {resultado.briefing.emergencia}"
+        console.print(f"  briefing: {resultado.briefing.cache}{extra}")
+
+    erros = [e for r in resultado.resultados for e in r.erros]
+    if erros:
+        console.print(f"\n[yellow]Erros de provedor ({len(erros)}):[/yellow]")
+        for erro in list(dict.fromkeys(erros))[:8]:
+            console.print(f"  • {erro}")
+
+    relatorio = escrever_relatorio(resultado, pasta / "_RELATORIO.md")
+    console.print(f"\n[green]Relatório: {relatorio}[/green]")
+
+    if so_links:
+        console.print("[dim]--so-links: nada foi baixado[/dim]")
+        return
+
+    console.print()
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("baixando"),
+        BarColumn(),
+        TextColumn("{task.completed}/{task.total}"),
+        console=console,
+        transient=True,
+    ) as progress:
+        tarefa = progress.add_task("download", total=max(1, len(com)))
+        entrega = entregar(
+            resultado,
+            pasta,
+            alternativas=not sem_alternativas,
+            progresso=lambda f, t: progress.update(tarefa, completed=f, total=t),
+        )
+
+    console.print(
+        f"[green]{entrega.baixados} arquivos[/green] em [bold]{entrega.pasta}[/bold]"
+        f" · {entrega.bytes_totais / 1e6:.1f} MB"
+    )
+    if entrega.falhas:
+        console.print(f"[yellow]falhas de download ({len(entrega.falhas)}):[/yellow]")
+        for falha in entrega.falhas[:6]:
+            console.print(f"  • {falha}")
 
 
 if __name__ == "__main__":  # pragma: no cover
