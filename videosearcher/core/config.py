@@ -65,6 +65,38 @@ class BriefingConfig(BaseModel):
     )
 
 
+class MidiaConfig(BaseModel):
+    """Regras de compatibilidade entre o asset e a duração do bloco.
+
+    O bloco tem duração variável e o sistema se adapta a ela — não o contrário.
+    A regra central: vídeo precisa **cobrir** o bloco (durar o mesmo ou mais),
+    porque esticar vídeo degrada e repetir em loop aparece. Foto não tem essa
+    restrição: com pan/zoom ela cobre qualquer duração, e por isso é o fallback
+    universal quando nenhum vídeo é longo o bastante.
+    """
+
+    video_deve_cobrir_bloco: bool = True
+    tolerancia_cobertura_s: float = 0.0
+    fallback_para_imagem: bool = True
+
+    # Folga relativa a partir da qual o vídeo começa a perder pontos por ser
+    # longo demais (4.0 = quatro vezes a duração do bloco).
+    folga_relativa_maxima: float = 4.0
+
+    # Foto
+    imagem_aspecto: str = "16:9"
+    imagem_tolerancia_aspecto: float = 0.12  # desvio relativo aceito sem crop
+    permitir_crop_para_aspecto: bool = True
+
+    @property
+    def aspecto_alvo(self) -> float:
+        try:
+            w, h = self.imagem_aspecto.split(":")
+            return float(w) / float(h)
+        except (ValueError, ZeroDivisionError):
+            return 16 / 9
+
+
 class PoliticaConfig(BaseModel):
     sensitivity_maxima: Sensitivity = Sensitivity.SENSITIVE
     licencas_proibidas: list[str] = Field(default_factory=list)
@@ -108,6 +140,7 @@ class ChannelConfig(BaseModel):
     provedores: ProvedoresConfig = Field(default_factory=ProvedoresConfig)
     estetica: EsteticaConfig = Field(default_factory=EsteticaConfig)
     briefing: BriefingConfig = Field(default_factory=BriefingConfig)
+    midia: MidiaConfig = Field(default_factory=MidiaConfig)
     politica: PoliticaConfig = Field(default_factory=PoliticaConfig)
     entrega: EntregaConfig = Field(default_factory=EntregaConfig)
 

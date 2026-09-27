@@ -401,6 +401,52 @@ entrega:
 > Com ela, o corte cai na fronteira de ideia e o teto é respeitado. O timecode de
 > cada frase é interpolado proporcionalmente ao número de caracteres.
 
+### Regra de duração: o asset se adapta ao bloco
+
+Os blocos têm **duração variável** — é a legenda que manda, e o sistema se adapta a ela. Não existe tentativa de forçar o bloco a caber num clipe.
+
+```yaml
+midia:
+  video_deve_cobrir_bloco: true      # vídeo precisa durar ≥ o bloco
+  tolerancia_cobertura_s: 0.0        # nenhuma folga negativa aceita
+  fallback_para_imagem: true         # sem vídeo longo o bastante → imagem
+  folga_relativa_maxima: 4.0         # clipe 4x mais longo perde nota, não é eliminado
+  imagem_aspecto: "16:9"
+  imagem_tolerancia_aspecto: 0.12    # desvio aceito sem crop
+  permitir_crop_para_aspecto: true   # fora da tolerância, crop central
+```
+
+A lógica, em ordem:
+
+| Situação | Decisão |
+|---|---|
+| Existe vídeo com duração **≥** o bloco | **Vídeo ganha**, com `trim`. Sempre preferido |
+| Entre vídeos válidos | Vence o de **encaixe mais justo** — menos folga, menos arbitrariedade na escolha do trecho |
+| Vídeo mais curto que o bloco | **Recusado**, sem exceção. Esticar degrada e loop aparece |
+| Nenhum vídeo cobre o bloco | **Cai para imagem**, com `kenburns` — pan/zoom cobre qualquer duração |
+| Imagem dentro da tolerância de 16:9 | Entra direto |
+| Imagem fora de 16:9 | Entra por **crop central**, com nota proporcional à área mantida |
+| Crop derrubaria a resolução abaixo do mínimo do canal | **Recusada** |
+| Nada aprovado | Bloco vai para `_nao-encontrados.txt` |
+
+Exemplos reais da regra rodando num bloco de 6,2s:
+
+```
+ESCOLHIDO  video  video-6.5s   nota 0.99  [trim]      cobre o bloco: 6.5s ≥ 6.2s (folga 0.3s)
+alt 1      video  video-8s     nota 0.93  [trim]      cobre o bloco: 8.0s ≥ 6.2s (folga 1.8s)
+alt 2      photo  foto-16x9    nota 1.00  [kenburns]  aspecto 1.78 dentro da tolerância
+```
+
+E num bloco de 9,0s onde nenhum vídeo alcança:
+
+```
+ESCOLHIDO  photo  foto-16x9    nota 1.00  [kenburns]  aspecto 1.78 dentro da tolerância
+RECUSADO   video  video-8.9s               vídeo curto: 8.9s para bloco de 9.0s (faltam 0.1s)
+RECUSADO   video  video-4s                 vídeo curto: 4.0s para bloco de 9.0s (faltam 5.0s)
+```
+
+Todo veredito carrega o motivo em texto, e o motivo vai para o `_manifest.csv` da entrega — é o que permite auditar por que um bloco recebeu foto em vez de vídeo.
+
 O que cada seção controla:
 
 | Seção | Efeito |
@@ -409,6 +455,7 @@ O que cada seção controla:
 | `estetica` | `look_padrao` (`bw_archival`, `color_modern`, `sepia`, `any`), aceitar 4:3, permitir grão |
 | `briefing` | **Vocabulário injetado no prompt** — o ativo que faz o LLM gerar query de stock boa em vez de tradução literal |
 | `politica` | Teto de sensibilidade (filtro de desmonetização) e licenças banidas |
+| `midia` | Cobertura de duração do vídeo, fallback para imagem, aspecto 16:9 e crop |
 | `entrega` | Duração de bloco, resolução mínima, quantas alternativas por bloco |
 | `llm` | Corrente de LLM específica daquele canal |
 
