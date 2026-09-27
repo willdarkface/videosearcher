@@ -63,6 +63,9 @@ class BriefingConfig(BaseModel):
     media_padrao: list[MediaType] = Field(
         default_factory=lambda: [MediaType.VIDEO, MediaType.PHOTO]
     )
+    # Idioma do slug, que vira o nome do arquivo entregue. As queries de busca
+    # são sempre em inglês, independente disto.
+    idioma_slug: str = "pt-BR"
 
 
 class MidiaConfig(BaseModel):

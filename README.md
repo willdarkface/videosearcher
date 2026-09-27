@@ -42,7 +42,7 @@ Bloco sem resultado simplesmente não gera arquivo, e a numeração **não é re
 |---|---|---|
 | **0** | Esqueleto, modelos, registry de provedores, packs de canal, camada de LLM com fallback, CLI | ✅ **pronto** |
 | **1** | Parser SRT/VTT + segmentação em blocos visuais | ✅ **pronto** |
-| 2 | Briefing visual por LLM (intenção, era, queries, estética) | ⏳ próxima |
+| **2** | Briefing visual por LLM (intenção, era, queries, estética) | ✅ **pronto** |
 | 3 | Pexels + Pixabay + ranqueamento + entrega em pasta numerada | ⏳ |
 | 4 | Download, normalização ffmpeg, Ken Burns em foto, 4:3 | ⏳ |
 | 5 | Internet Archive + NARA + detecção de cena | ⏳ |
@@ -368,6 +368,54 @@ Opções:
 | `--limite`, `-n` | Mostra só os N primeiros blocos |
 | `--json ARQUIVO` | Grava blocos e estatísticas em JSON |
 
+### Gerar o briefing visual de cada bloco
+
+```bash
+videosearcher briefs examples/baker-rifle.srt --canal armas
+```
+
+```
+ #   dur   intenção   era        look  query principal                    slug
+003  9.0s  arquivo    1809-1809  bw    Baker rifle single shot kill       rifle-baker-tiro-unico
+004  6.9s  arquivo    1815-1815  bw    Waterloo farmhouse British sol…    fazenda-waterloo-defesa
+005  6.9s  metaforico —          cor   genius vs mistake military dec…    genialidade-ou-erro
+
+Resumo
+  intenções: metaforico=69 · literal=28 · arquivo=11 · retrato=4 · grafico=2
+  com era histórica: 38/114 · com query de arquivo: 81 · sensíveis: 17
+  lotes: 6 · 6/6 do cache (100%) · provedores: só cache
+```
+
+| Flag | Efeito |
+|---|---|
+| `--canal`, `-c` | Pack de canal (obrigatório: define vocabulário e estética) |
+| `--tema` | Tema do vídeo. Por padrão infere da abertura do roteiro |
+| `--limite`, `-n` | Processa só os N primeiros blocos — use ao ajustar o prompt |
+| `--sem-cache` | Ignora o cache e força chamada nova |
+| `--json ARQUIVO` | Grava todos os briefs em JSON |
+
+**Cache:** a resposta é gravada em `.cache/llm/` com chave por hash de prompt + modelo. Reprocessar o mesmo roteiro custa **0,3s e zero cota**. Mudar o prompt invalida o cache automaticamente, então não há risco de continuar servindo resposta velha.
+
+**Robustez:** o pipeline nunca deixa bloco órfão. Se o lote volta incompleto, os blocos faltantes são reprocessados isoladamente. Se a corrente de LLM falha, o lote é dividido ao meio e tentado de novo. Em último caso, um brief de emergência é montado a partir do texto do bloco, e o aviso aparece no relatório.
+
+### Onde ficam prompt e schema
+
+`videosearcher/script/prompt.py` — separado do motor de propósito, porque ajustar prompt é a atividade mais frequente e não deveria exigir mexer em rede, cache ou validação.
+
+Ao mudar o prompt de forma incompatível, incremente `VERSAO_PROMPT` no mesmo arquivo: isso invalida o cache de todo mundo.
+
+Como o prompt é medido contra roteiro real — números de uma iteração que melhorou duas regras:
+
+| Métrica | Antes | Depois |
+|---|---|---|
+| `era` preenchida mas `intent: metaforico` (contradição) | 48 (42%) | **2 (2%)** |
+| Blocos marcados só como foto, sem vídeo | 100 (88%) | **19 (17%)** |
+| Blocos que aceitam vídeo | 14 (12%) | **95 (83%)** |
+| `look: painting` (época pré-fotografia) | 0 | **17** |
+| `motion: still` | 88 | 24 |
+
+As duas correções foram: (1) regra de coerência dizendo que `era` preenchida implica fato histórico concreto, logo `intent` não deveria ser metáfora; (2) aviso explícito de que **época antiga não significa foto** — existe vídeo moderno de reconstituição, close de mecanismo, neve, fumaça e paisagem.
+
 ### Todos os comandos
 
 ```bash
@@ -375,6 +423,7 @@ videosearcher version              # versão
 videosearcher providers            # provedores de mídia + capabilities + chaves
 videosearcher channels             # packs de canal disponíveis
 videosearcher blocks LEGENDA       # fase 1: legenda → blocos
+videosearcher briefs LEGENDA -c X  # fase 2: blocos → briefing visual por LLM
 videosearcher llm list             # provedores de LLM, variáveis e onde cadastrar
 videosearcher llm check            # testa a corrente de LLM elo por elo
 ```
