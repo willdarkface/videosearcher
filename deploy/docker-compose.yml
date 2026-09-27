@@ -1,0 +1,223 @@
+name: videosearcher
+
+# Serviços separados, workers stateless e escaláveis por réplica.
+# Ver docs/arquitetura-plataforma.md para o racional de cada escolha.
+
+x-postgres-env: &postgres-env
+  POSTGRES_HOST: postgres
+  POSTGRES_PORT: "5432"
+  POSTGRES_DB: ${POSTGRES_DB:-videosearcher}
+  POSTGRES_USER: ${POSTGRES_USER:-vs}
+  POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-vs}
+
+x-nats-env: &nats-env
+  NATS_URL: nats://nats:4222
+
+x-python-worker: &python-worker
+  restart: unless-stopped
+  depends_on:
+    postgres:
+      condition: service_healthy
+    nats:
+      condition: service_healthy
+  volumes:
+    - acervo:/acervo
+  environment:
+    <<: [*postgres-env, *nats-env]
+    ACERVO_DIR: /acervo
+    PYTHONUNBUFFERED: "1"
+
+services:
+  # ------------------------------------------------------------------ dados
+  postgres:
+    image: pgvector/pgvector:pg17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-videosearcher}
+      POSTGRES_USER: ${POSTGRES_USER:-vs}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-vs}
+      # TZ explícito não é enfeite: sem isso o initdb trava em "selecting
+      # default time zone" em runtime de container sem cgroup completo
+      # (podman rootless, alguns CI). Reproduzido aqui: 7 minutos pendurado.
+      TZ: UTC
+      PGTZ: UTC
+      # Perfil enxuto: o banco é o único stateful, mas não precisa de 2 GB
+      # para milhares de linhas.
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    command:
+      - postgres
+      - -c
+      - shared_buffers=256MB
+      - -c
+      - effective_cache_size=768MB
+      - -c
+      - work_mem=16MB
+      - -c
+      - maintenance_work_mem=128MB
+      - -c
+      - max_connections=100
+      - -c
+      - random_page_cost=1.1
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "${POSTGRES_PORT_HOST:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-vs} -d ${POSTGRES_DB:-videosearcher}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  nats:
+    image: nats:2.10-alpine
+    restart: unless-stopped
+    command:
+      - "-js"                      # JetStream: fila durável com ack e retry
+      - "-sd"
+      - "/data"
+      - "-m"
+      - "8222"                     # porta de monitoramento, usada no healthcheck
+    volumes:
+      - natsdata:/data
+    ports:
+      - "${NATS_PORT_HOST:-4222}:4222"
+      - "${NATS_MONITOR_PORT:-8222}:8222"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O- http://localhost:8222/healthz || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # -------------------------------------------------------------- Go: rápido
+  bff:
+    build:
+      context: ..
+      dockerfile: deploy/go.Dockerfile
+      args:
+        SERVICE: bff
+    restart: unless-stopped
+    environment:
+      <<: [*postgres-env, *nats-env]
+      TZ: UTC
+      PORT: "8080"
+      CATALOG_URL: http://catalog:8081
+      PIPELINE_URL: http://pipeline:8082
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3000}
+    ports:
+      - "${BFF_PORT:-8080}:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      nats:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "/app/service", "-healthcheck"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  catalog:
+    build:
+      context: ..
+      dockerfile: deploy/go.Dockerfile
+      args:
+        SERVICE: catalog
+    restart: unless-stopped
+    environment:
+      <<: *postgres-env
+      PORT: "8081"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "/app/service", "-healthcheck"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # ---------------------------------------------------- Python: processamento
+  #
+  # Declarados com profile `pendente`: a arquitetura está definida, mas o
+  # código destes serviços é o próximo passo. Com o profile, `compose up` sobe
+  # só o que já funciona, em vez de quebrar tentando construir o que não existe.
+  # Para subir quando estiverem prontos: docker compose --profile pendente up
+  pipeline:
+    profiles: ["pendente"]
+    build:
+      context: ..
+      dockerfile: deploy/python.Dockerfile
+      args:
+        SERVICE: pipeline
+    <<: *python-worker
+    environment:
+      <<: [*postgres-env, *nats-env]
+      ACERVO_DIR: /acervo
+      PYTHONUNBUFFERED: "1"
+      PORT: "8082"
+      MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      ZAI_API_KEY: ${ZAI_API_KEY:-}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      PEXELS_API_KEY: ${PEXELS_API_KEY:-}
+      PIXABAY_API_KEY: ${PIXABAY_API_KEY:-}
+
+  media:
+    profiles: ["pendente"]
+    build:
+      context: ..
+      dockerfile: deploy/python.Dockerfile
+      args:
+        SERVICE: media
+    <<: *python-worker
+    # Corte de filme é CPU-bound: escalar por réplica é o caminho.
+    # docker compose up --scale media=4
+    deploy:
+      replicas: ${MEDIA_REPLICAS:-1}
+    environment:
+      <<: [*postgres-env, *nats-env]
+      ACERVO_DIR: /acervo
+      PYTHONUNBUFFERED: "1"
+      DURACAO_CORTE_S: ${DURACAO_CORTE_S:-6}
+      PEXELS_API_KEY: ${PEXELS_API_KEY:-}
+      PIXABAY_API_KEY: ${PIXABAY_API_KEY:-}
+
+  classify:
+    profiles: ["pendente"]
+    build:
+      context: ..
+      dockerfile: deploy/python.Dockerfile
+      args:
+        SERVICE: classify
+    <<: *python-worker
+    deploy:
+      replicas: ${CLASSIFY_REPLICAS:-1}
+    environment:
+      <<: [*postgres-env, *nats-env]
+      ACERVO_DIR: /acervo
+      PYTHONUNBUFFERED: "1"
+      # Modelo de visão gratuito na Z.ai; embedding roda local.
+      ZAI_API_KEY: ${ZAI_API_KEY:-}
+      MODELO_VLM: ${MODELO_VLM:-glm-4.6v-flash}
+      MODELO_EMBEDDING: ${MODELO_EMBEDDING:-siglip-base-patch16-224}
+
+  # ------------------------------------------------------------------- front
+  web:
+    profiles: ["pendente"]
+    build:
+      context: ../web
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:8080}
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-3000}:80"
+    depends_on:
+      - bff
+
+volumes:
+  pgdata:
+  natsdata:
+  # Passo 2 troca este volume por bucket S3. O código fala com ObjectStore,
+  # e clipes.objeto guarda chave, não caminho absoluto.
+  acervo:
