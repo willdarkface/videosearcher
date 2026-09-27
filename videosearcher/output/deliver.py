@@ -18,6 +18,7 @@ class ResultadoEntrega:
     pasta: Path
     baixados: int = 0
     falhas: list[str] = field(default_factory=list)
+    pendentes: list[str] = field(default_factory=list)
     bytes_totais: int = 0
 
 
@@ -189,6 +190,7 @@ def entregar(
     pasta: Path,
     *,
     alternativas: bool = True,
+    baixar_filmes_inteiros: bool = False,
     progresso: Callable[[int, int], None] | None = None,
 ) -> ResultadoEntrega:
     from ..core.registry import get_provider
@@ -202,6 +204,19 @@ def entregar(
 
     for i, r in enumerate(com):
         asset, _ = r.escolhido
+
+        # Filme de arquivo tem horas de duração: baixar significa gigabytes para
+        # um bloco de segundos, e o arquivo não é utilizável antes da detecção
+        # de cena. Fica registrado como pendente em vez de entupir o disco.
+        if not baixar_filmes_inteiros and _aviso_de_uso(r):
+            entrega.pendentes.append(
+                f"bloco {r.block.number:03d}: {asset.duration_s / 60:.0f} min "
+                f"({asset.provider}) — aguarda corte por cena · {asset.source_page}"
+            )
+            if progresso:
+                progresso(i + 1, len(com))
+            continue
+
         nome = nome_arquivo(r.block.number, asset, r.brief.slug, total_blocos=total_blocos)
         destino = caminho_sem_colisao(pasta, nome)
         try:
@@ -242,6 +257,16 @@ def entregar(
     escrever_manifest(resultado, pasta / "_manifest.csv")
     escrever_nao_encontrados(resultado, pasta / "_nao-encontrados.txt")
     escrever_creditos(resultado, pasta / "_CREDITOS.md")
+    if entrega.pendentes:
+        (pasta / "_PENDENTES-CORTE-POR-CENA.txt").write_text(
+            "Estes blocos acharam material de arquivo, mas o item é um filme\n"
+            "inteiro de dezenas de minutos. Baixar não resolve: o arquivo só\n"
+            "vira utilizável depois da detecção de cena (fase 5), que corta o\n"
+            "filme em sub-clipes e indexa cada cena.\n\n"
+            "Para baixar de qualquer forma, rode com --baixar-filmes.\n\n"
+            + "\n".join(entrega.pendentes),
+            encoding="utf-8",
+        )
     return entrega
 
 

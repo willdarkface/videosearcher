@@ -2,12 +2,11 @@
 
 - **Canal:** História de Armas (`armas`)
 - **Blocos:** 114
-- **Com resultado:** 26 (23%)
-- **Sem resultado:** 88
-- **Vídeo escolhido:** 26 · **Imagem escolhida:** 0
-- **⚠️ Precisam de corte por cena (fase 5):** 25 — são filmes inteiros, não clipes, e não devem ser usados como estão
-- **Chaves ausentes:** Pexels, Pixabay — estes provedores não foram consultados, e são justamente os que cobrem bloco moderno e metafórico
-- **Provedores:** internet_archive (26)
+- **Com resultado:** 101 (89%)
+- **Sem resultado:** 13
+- **Vídeo escolhido:** 89 · **Imagem escolhida:** 12
+- **⚠️ Precisam de corte por cena (fase 5):** 24 — são filmes inteiros, não clipes, e não devem ser usados como estão
+- **Provedores:** pexels (40), pixabay (36), internet_archive (25)
 
 > Confira a coluna **query** contra o **texto do bloco**: é ali que se vê
 > se o briefing está calibrado. O link abre a página do asset.
@@ -22,9 +21,21 @@
 
 - **query:** `contrasting rifles speed comparison` · `slow vs fast gun mechanism` · `army choosing slower weapon`
 - alternativas: `historical military decision making` · `trade-off between speed and accuracy` · `rifle vs musket debate`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 5.0s · `pixabay` · nota 0.99
+
+- motivo: cobre o bloco: 5.0s ≥ 4.9s (folga 0.1s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-5/
+- download: https://cdn.pixabay.com/video/2015/08/07/5-135665794_large.mp4
+- preview: https://cdn.pixabay.com/video/2015/08/07/5-135665794_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 6.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-21115/
+- vídeo · 6.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-21118/
+- vídeo · 7.0s · `pixabay` · nota 0.89 · https://pixabay.com/videos/id-167659/
 
 ---
 
@@ -36,9 +47,21 @@
 
 - **query:** `rifle changing military tactics` · `single soldier impact on warfare` · `weapon revolution concept`
 - alternativas: `historical arms evolution` · `military innovation visualization` · `soldier expectations transformation`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/armies-firing-at-the-shooting-range-8605303/
+- download: https://videos.pexels.com/video-files/8605303/8605303-hd_1920_1080_30fps.mp4
+- preview: https://images.pexels.com/videos/8605303/9-mm-army-military-military-personnel-8605303.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 7.0s · `pexels` · nota 0.99 · https://www.pexels.com/video/tactical-soldier-in-action-indoors-30892981/
+- vídeo · 8.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/man-aiming-with-gun-10491772/
+- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-131127/
 
 ---
 
@@ -51,23 +74,14 @@
 - **query:** `Baker rifle single shot kill` · `Napoleonic sniper action` · `soldier killing general with rifle`
 - alternativas: `Spanish Peninsula War rifle duel` · `British rifleman in snow` · `historical sniper shot`
 - arquivo: `19th century rifle firing` · `Napoleonic warfare rifle` · `Colbert assassination rifle`
-- provedores consultados: internet_archive · candidatos: 11
+- provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 655x480 · 515.2s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 9 minutos para um bloco de 4.8s (108x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 515.2s ≥ 4.8s (folga 510.5s)
-- ajustes: `trim`
-- página: https://archive.org/details/111-adc-7986
-- download: https://archive.org/download/111-adc-7986/111-adc-7986.mp4
-- preview: https://archive.org/services/img/111-adc-7986
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 377.1s · `internet_archive` · nota 0.20 · https://archive.org/details/111-adc-4828
-- vídeo · 1149.7s · `internet_archive` · nota 0.20 · https://archive.org/details/gov.dod.dimoc.28805
-- vídeo · 389.8s · `internet_archive` · nota 0.20 · https://archive.org/details/111-adc-8148
+Recusados:
+- `internet_archive:gov.archives.arc.36901/gov.archives.arc.36901_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
+- `internet_archive:gov.archives.arc.32203/gov.archives.arc.32203_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
+- `internet_archive:gov.archives.arc.36734/gov.archives.arc.36734_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
 
 ---
 
@@ -103,9 +117,20 @@ Alternativas:
 
 - **query:** `genius vs mistake military decision` · `hidden detail in weapon design` · `everyday object with secret purpose`
 - alternativas: `close-up rifle mechanism clue` · `weapon detail magnification` · `historical arms innovation mystery`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 0x0 · 9.0s · `pixabay` · nota 0.99
+
+- motivo: cobre o bloco: 9.0s ≥ 8.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-1754/
+- download: https://cdn.pixabay.com/video/2015/12/24/1754-149965384_medium.mp4
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/video-of-soldier-sharing-stories-to-his-comrades-7467770/
+- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-3191/
+- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-80699/
 
 ---
 
@@ -183,9 +208,21 @@ Recusados:
 
 - **query:** `truth behind legend rifle shot` · `misunderstood historical event` · `legend vs reality military`
 - alternativas: `hidden details in history` · `reinterpretation of famous shot` · `military legend analysis`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.98
+
+- motivo: cobre o bloco: 8.0s ≥ 7.4s (folga 0.6s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/man-aiming-with-gun-10491772/
+- download: https://videos.pexels.com/video-files/10491772/10491772-hd_1920_1080_24fps.mp4
+- preview: https://images.pexels.com/videos/10491772/gunman-10491772.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pexels` · nota 0.98 · https://www.pexels.com/video/man-aiming-down-the-scope-of-a-rifle-6092104/
+- vídeo · 9.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
+- vídeo · 11.0s · `pexels` · nota 0.88 · https://www.pexels.com/video/a-man-shooting-with-a-gun-6201051/
 
 ---
 
@@ -198,9 +235,21 @@ Recusados:
 - **query:** `Napoleonic battle red lines` · `traditional battle formation visualization` · `shoulder to shoulder soldiers`
 - alternativas: `classic battle scene illustration` · `19th century infantry line` · `historical battle depiction`
 - arquivo: `Napoleonic Wars battle painting` · `infantry line formation` · `traditional battle artwork`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.87
+
+- motivo: cobre o bloco: 10.0s ≥ 6.5s (folga 3.5s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-1210/
+- download: https://cdn.pixabay.com/video/2015/10/28/1210-143977098_large.mp4
+- preview: https://cdn.pixabay.com/video/2015/10/28/1210-143977098_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 12.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/men-performing-during-historical-reenactment-9466318/
+- vídeo · 12.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/french-revolutionary-soldiers-arranging-their-rifles-9466132/
+- vídeo · 13.0s · `pexels` · nota 0.75 · https://www.pexels.com/video/people-standing-while-holding-guns-9466303/
 
 ---
 
@@ -213,9 +262,21 @@ Recusados:
 - **query:** `Napoleonic battle smoke detail` · `hidden soldiers in battle` · `overlooked battle tactics`
 - alternativas: `close-up battle scene` · `soldiers behind walls` · `unseen battle formations`
 - arquivo: `Napoleonic battle smoke painting` · `hidden riflemen in battle` · `tactical positioning artwork`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.94
+
+- motivo: cobre o bloco: 9.0s ≥ 7.2s (folga 1.8s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-253436/
+- download: https://cdn.pixabay.com/video/2025/01/19/253436_large.mp4
+- preview: https://cdn.pixabay.com/video/2025/01/19/253436_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.90 · https://www.pexels.com/video/dramatic-trenches-in-steamy-battlefield-scene-31867115/
+- vídeo · 10.0s · `pixabay` · nota 0.90 · https://pixabay.com/videos/id-3068/
+- vídeo · 12.0s · `pexels` · nota 0.83 · https://www.pexels.com/video/men-performing-during-historical-reenactment-9466318/
 
 ---
 
@@ -251,9 +312,21 @@ Recusados:
 
 - **query:** `practical vs best weapon` · `army usability vs performance` · `military compromise concept`
 - alternativas: `weapon practicality illustration` · `army logistics vs technology` · `trade-off military decision`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1080x1920 · 6.0s · `pixabay` · nota 0.96
+
+- motivo: cobre o bloco: 6.0s ≥ 5.3s (folga 0.7s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-78932/
+- download: https://cdn.pixabay.com/video/2021/06/25/78932-567996303_large.mp4
+- preview: https://cdn.pixabay.com/video/2021/06/25/78932-567996303_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 6.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-121983/
+- vídeo · 6.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-78931/
+- vídeo · 9.0s · `pexels` · nota 0.82 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
 
 ---
 
@@ -265,9 +338,21 @@ Recusados:
 
 - **query:** `rifles more accurate than muskets` · `why armies didn't use rifles` · `historical arms question`
 - alternativas: `rifle vs musket debate` · `military technology adoption` · `accuracy vs speed arms`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.98
+
+- motivo: cobre o bloco: 8.0s ≥ 7.5s (folga 0.5s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-131127/
+- download: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.92 · https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
+- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-79759/
+- vídeo · 11.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-61418/
 
 ---
 
@@ -280,9 +365,21 @@ Recusados:
 - **query:** `rifles used by hunters history` · `rifle evolution timeline` · `hunters vs military rifles`
 - alternativas: `historical rifle development` · `rifle adoption in warfare` · `hunting rifles vs military`
 - arquivo: `18th century hunting rifles` · `rifle history illustrations` · `early military rifles`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 2560x1440 · 9.0s · `pixabay` · nota 0.94
+
+- motivo: cobre o bloco: 9.0s ≥ 7.2s (folga 1.8s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-70862/
+- download: https://cdn.pixabay.com/video/2021/04/12/70862-536317071_large.mp4
+- preview: https://cdn.pixabay.com/video/2021/04/12/70862-536317071_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.90 · https://pixabay.com/videos/id-79759/
+- vídeo · 11.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61418/
+- vídeo · 11.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-113204/
 
 ---
 
@@ -295,9 +392,21 @@ Recusados:
 - **query:** `rifle ball fitting tight barrel` · `spiral grooves rifle barrel` · `rifle ball insertion close-up`
 - alternativas: `rifle mechanism slow loading` · `rifle ball vs musket ball` · `rifle accuracy mechanism`
 - arquivo: `historical rifle loading process` · `19th century rifle close-up` · `rifle barrel grooves`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.98
+
+- motivo: cobre o bloco: 9.0s ≥ 8.3s (folga 0.7s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/a-woman-holding-a-sniper-rifle-6090889/
+- download: https://videos.pexels.com/video-files/6090889/6090889-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/6090889/pexels-photo-6090889.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.98 · https://pixabay.com/videos/id-131088/
+- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-79759/
+- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-3129/
 
 ---
 
@@ -310,9 +419,21 @@ Recusados:
 - **query:** `black powder residue rifle` · `dirty rifle barrel` · `rifle maintenance issue`
 - alternativas: `rifle cleaning process` · `black powder gunk` · `rifle jamming problem`
 - arquivo: `19th century rifle cleaning` · `historical rifle maintenance` · `black powder residue`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.96
+
+- motivo: cobre o bloco: 8.0s ≥ 7.0s (folga 1.0s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/empty-bullet-shells-in-a-bin-6091312/
+- download: https://videos.pexels.com/video-files/6091312/6091312-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/6091312/pexels-photo-6091312.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-188934/
+- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-131127/
+- vídeo · 9.0s · `pexels` · nota 0.93 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
 
 ---
 
@@ -325,9 +446,21 @@ Recusados:
 - **query:** `rifle jamming from black powder` · `tight ball not fitting rifle` · `rifle malfunction close-up`
 - alternativas: `rifle failure mechanism` · `black powder buildup rifle` · `rifle jamming process`
 - arquivo: `historical rifle jamming` · `19th century rifle malfunctions` · `rifle maintenance failures`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.97
+
+- motivo: cobre o bloco: 9.0s ≥ 8.1s (folga 0.9s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/close-up-on-machine-guns-10480506/
+- download: https://videos.pexels.com/video-files/10480506/10480506-hd_1920_1080_30fps.mp4
+- preview: https://images.pexels.com/videos/10480506/ammo-firearm-machine-gun-pistol-10480506.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-131088/
+- vídeo · 11.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-61418/
+- vídeo · 12.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-135988/
 
 ---
 
@@ -340,9 +473,21 @@ Recusados:
 - **query:** `army wants cheap durable guns` · `military weapon practicality` · `rifle vs musket cost`
 - alternativas: `army logistics weapons` · `durable military arms` · `cheap vs effective weapons`
 - arquivo: `19th century military armories` · `mass-produced muskets` · `rifle vs musket cost comparison`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.97
+
+- motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-131127/
+- download: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/soldiers-in-tactical-gear-in-forest-34634810/
+- vídeo · 9.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
+- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-131088/
 
 ---
 
@@ -355,9 +500,21 @@ Recusados:
 - **query:** `thousand men firing line` · `speed over accuracy military` · `mass firing tactic`
 - alternativas: `Napoleonic infantry volley` · `musket vs rifle speed` · `military firepower tactics`
 - arquivo: `19th century volley fire` · `mass infantry firing` · `Napoleonic battle formations`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.99
+
+- motivo: cobre o bloco: 8.0s ≥ 7.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-27539/
+- download: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.mp4
+- preview: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-1210/
+- vídeo · 11.0s · `pixabay` · nota 0.89 · https://pixabay.com/videos/id-301635/
+- vídeo · 14.0s · `pixabay` · nota 0.79 · https://pixabay.com/videos/id-1643/
 
 ---
 
@@ -370,9 +527,21 @@ Recusados:
 - **query:** `general standing with telescope` · `military officer contemplating battlefield` · `war strategy board with pieces`
 - alternativas: `old war painting generals planning` · `modern reenactment of 18th century tactics` · `abstract clock with gears symbolizing speed`
 - arquivo: `18th century military manual illustration` · `Napoleonic era tactical formation`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.97
+
+- motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-4/
+- download: https://cdn.pixabay.com/video/2015/08/07/4-135665514_large.mp4
+- preview: https://cdn.pixabay.com/video/2015/08/07/4-135665514_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-3608/
+- vídeo · 15.0s · `pexels` · nota 0.73 · https://www.pexels.com/video/cg-animation-of-satellite-854233/
+- vídeo · 15.0s · `pixabay` · nota 0.73 · https://pixabay.com/videos/id-313001/
 
 ---
 
@@ -385,9 +554,21 @@ Recusados:
 - **query:** `old rifle with broken pieces discarded` · `abandoned weapon in snow` · `historical weapon collection dusty`
 - alternativas: `modern rifle disassembled on table` · `soldier holding obsolete rifle` · `museum display of old firearms`
 - arquivo: `18th century British rifle manual illustration` · `Ferguson rifle blueprint`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.97
+
+- motivo: cobre o bloco: 9.0s ≥ 8.2s (folga 0.8s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/a-rusted-drum-2674784/
+- download: https://videos.pexels.com/video-files/2674784/2674784-hd_1920_1080_24fps.mp4
+- preview: https://images.pexels.com/videos/2674784/free-video-2674784.jpg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 9.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/the-inside-of-a-burned-out-truck-with-a-broken-window-18221666/
+- vídeo · 9.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/wreckage-of-a-wooden-boat-base-abandoned-outdoors-2882402/
+- vídeo · 9.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/ruined-building-4876871/
 
 ---
 
@@ -400,9 +581,21 @@ Recusados:
 - **query:** `brilliant inventor sketching rifle design` · `lightbulb over old weapon` · `scientist frustrated with failed experiment`
 - alternativas: `historical painting of inventor at workbench` · `modern 3D rendering of rifle mechanism` · `hands holding broken and working rifle parts`
 - arquivo: `18th century British arms factory workers`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.84
+
+- motivo: cobre o bloco: 10.0s ≥ 6.1s (folga 3.9s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-13950/
+- download: https://cdn.pixabay.com/video/2018/01/27/13950-253035807_large.mp4
+- preview: https://cdn.pixabay.com/video/2018/01/27/13950-253035807_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-13949/
+- vídeo · 11.0s · `pexels` · nota 0.80 · https://www.pexels.com/video/a-man-sketching-a-tattoo-design-6594007/
+- vídeo · 11.0s · `pexels` · nota 0.80 · https://www.pexels.com/video/video-of-a-person-sketching-6970180/
 
 ---
 
@@ -466,9 +659,21 @@ Alternativas:
 - **query:** `British redcoats standing in perfect line` · `soldiers in formation with sniper in background` · `target crosshair over redcoat uniform`
 - alternativas: `historical painting of British line infantry` · `modern reenactment of Waterloo formation` · `abstract sniper scope view of soldiers`
 - arquivo: `18th century British infantry drill illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.97
+
+- motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/video-of-clothes-in-a-shop-8195083/
+- download: https://videos.pexels.com/video-files/8195083/8195083-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/8195083/pexels-photo-8195083.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-27539/
+- vídeo · 8.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-137614/
+- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-3608/
 
 ---
 
@@ -508,9 +713,21 @@ Alternativas:
 - **query:** `British officer paying foreign mercenary` · `prideful soldier handing over rifle to foreigner` · `historical painting of mercenaries in service`
 - alternativas: `18th century sharpshooter aiming rifle` · `modern reenactment of British-German mercenaries` · `hands exchanging money for weapon`
 - arquivo: `18th century German rifleman uniform`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3556x2048 · 8.0s · `pixabay` · nota 0.97
+
+- motivo: cobre o bloco: 8.0s ≥ 7.1s (folga 0.9s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-137614/
+- download: https://cdn.pixabay.com/video/2022/11/03/137614-767056227_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/11/03/137614-767056227_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.93 · https://pixabay.com/videos/id-140353/
+- vídeo · 10.0s · `pixabay` · nota 0.90 · https://pixabay.com/videos/id-1204/
+- vídeo · 12.0s · `pexels` · nota 0.83 · https://www.pexels.com/video/video-of-a-man-paying-in-cash-5794431/
 
 ---
 
@@ -522,9 +739,21 @@ Alternativas:
 
 - **query:** `British flag being lowered in shame` · `empty throne symbolizing lost pride` · `soldier breaking rifle over knee`
 - alternativas: `historical painting of defeated army` · `modern reenactment of British humiliation` · `prideful lion statue with broken chain`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/a-building-named-in-honor-of-a-queen-3206880/
+- download: https://videos.pexels.com/video-files/3206880/3206880-hd_1920_1080_30fps.mp4
+- preview: https://images.pexels.com/videos/3206880/free-video-3206880.jpg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-27539/
+- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-137614/
+- vídeo · 9.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-140353/
 
 ---
 
@@ -576,9 +805,21 @@ Alternativas:
 - **query:** `rifle hitting target eleven times` · `bullseye with eleven hits` · `soldier celebrating perfect shot`
 - alternativas: `historical painting of marksman` · `modern target range with multiple hits` · `abstract target with numbers`
 - arquivo: `18th century rifle target practice illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.98
+
+- motivo: cobre o bloco: 9.0s ≥ 8.2s (folga 0.8s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/a-footage-of-a-popping-balloon-6668643/
+- download: https://videos.pexels.com/video-files/6668643/6668643-hd_1920_1080_30fps.mp4
+- preview: https://images.pexels.com/videos/6668643/archer-archery-addict-archery-girl-archery-hunting-6668643.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/man-checking-bullet-marks-on-target-paper-5243087/
+- vídeo · 10.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/man-aiming-a-sniper-rifle-6091129/
+- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-7549/
 
 ---
 
@@ -591,9 +832,21 @@ Alternativas:
 - **query:** `rifle barrel with grooves close up` · `rifle bullet spinning in barrel` · `technical drawing of rifling`
 - alternativas: `modern bullet trajectory illustration` · `historical weapon blueprint` · `3D rendering of rifle grooves`
 - arquivo: `18th century rifle mechanism illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.98
+
+- motivo: cobre o bloco: 8.0s ≥ 7.5s (folga 0.5s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/hand-taking-cartridge-from-box-10480753/
+- download: https://videos.pexels.com/video-files/10480753/10480753-hd_1920_1080_30fps.mp4
+- preview: https://images.pexels.com/videos/10480753/ammo-cartridge-combat-weapon-firearm-10480753.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pexels` · nota 0.98 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
+- vídeo · 8.0s · `pixabay` · nota 0.98 · https://pixabay.com/videos/id-131127/
+- vídeo · 9.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/a-woman-holding-a-sniper-rifle-6090889/
 
 ---
 
@@ -606,9 +859,21 @@ Alternativas:
 - **query:** `dirty rifle barrel with fouling` · `soldier cleaning rifle in rain` · `muddy rifle after march`
 - alternativas: `historical painting of soldier cleaning weapon` · `modern reenactment of dirty rifle` · `close-up of fouled barrel`
 - arquivo: `18th century soldier maintenance illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 8.0s ≥ 7.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/hand-taking-cartridge-from-box-10480753/
+- download: https://videos.pexels.com/video-files/10480753/10480753-hd_1920_1080_30fps.mp4
+- preview: https://images.pexels.com/videos/10480753/ammo-cartridge-combat-weapon-firearm-10480753.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pexels` · nota 0.99 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
+- vídeo · 8.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-131127/
+- vídeo · 8.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-164827/
 
 ---
 
@@ -620,9 +885,21 @@ Alternativas:
 
 - **query:** `worse rifle being better in war` · `broken watch still telling time` · `flawed design with hidden strength`
 - alternativas: `historical painting of soldier with damaged rifle` · `modern illustration of imperfect weapon` · `abstract balance scale with flawed item`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.97
+
+- motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-27539/
+- download: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.mp4
+- preview: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-131127/
+- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-131088/
+- vídeo · 11.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61418/
 
 ---
 
@@ -635,9 +912,21 @@ Alternativas:
 - **query:** `Baker rifle barrel close up grooves` · `rifle rifling pattern seven grooves` · `historical rifle mechanism detail`
 - alternativas: `technical drawing of Baker rifle` · `modern 3D scan of rifle barrel` · `museum display of Baker rifle`
 - arquivo: `Baker rifle blueprint 1800s` · `British rifle mechanism illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 4376x2722 · — · `pexels` · nota 1.00
+
+- motivo: aspecto 1.61 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://www.pexels.com/photo/gray-metal-shutter-in-close-up-photography-10900775/
+- download: https://images.pexels.com/photos/10900775/pexels-photo-10900775.jpeg
+- preview: https://images.pexels.com/photos/10900775/pexels-photo-10900775.jpeg?auto=compress&cs=tinysrgb&h=350
+- licença: `pexels`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/pebble-stones-pebbles-multicoloured-1090536/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/bumblebee-insect-macro-close-up-711677/
+- imagem · — · `pixabay` · nota 0.89 · https://pixabay.com/photos/antique-gun-rifle-vintage-weapon-1297675/
 
 ---
 
@@ -650,9 +939,21 @@ Alternativas:
 - **query:** `rifle barrel grooves quarter turn diagram` · `spiral rifling illustration` · `technical drawing of Baker rifle spin`
 - alternativas: `bullet trajectory with slow spin` · `3D rendering of rifling pattern` · `historical weapon mechanics illustration`
 - arquivo: `18th century rifling technical drawing`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 2560x1600 · — · `pixabay` · nota 1.00
+
+- motivo: aspecto 1.60 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://pixabay.com/photos/wooden-barrel-barrel-wooden-barrels-2782182/
+- download: https://pixabay.com/get/g73b41fbd307884715a5086b0f9b02bfec19823ae924c847b5715c4c9579c001f63d7cd501e8ece78a103da743b46ef7cdbd304d0d8e0fb99a7f023e0acaf7aee_1280.png
+- preview: https://pixabay.com/get/gef9108b96a5869165ca1a3e3eb365d7dfbd50bdb3c49fbd908daebe63a5e72096387780d1a8e15ed62542c21af472b19b75b0e77d0d0bee92574e0adb0d72dc7_640.png
+- licença: `pixabay-content-license`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 0.89 · https://pixabay.com/photos/antique-gun-rifle-vintage-weapon-1297675/
+- imagem · — · `pixabay` · nota 0.85 · https://pixabay.com/photos/merry-go-round-turned-height-5188459/
+- imagem · — · `pexels` · nota 0.85 · https://www.pexels.com/photo/close-up-of-a-rifle-6621954/
 
 ---
 
@@ -665,9 +966,21 @@ Alternativas:
 - **query:** `dirty Baker rifle still firing accurately` · `soldier cleaning rifle in snow` · `muddy rifle working after rain`
 - alternativas: `historical reenactment of Baker rifle in bad conditions` · `modern test of rifle durability` · `close-up of fouled barrel firing`
 - arquivo: `18th century soldier maintaining rifle illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.97
+
+- motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-131127/
+- download: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-205890/
+- vídeo · 11.0s · `pexels` · nota 0.87 · https://www.pexels.com/video/man-at-indoor-shooting-range-5243139/
+- vídeo · 11.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61418/
 
 ---
 
@@ -680,9 +993,21 @@ Alternativas:
 - **query:** `rifle with patch box in stock` · `soldier loading rifle with patches` · `close-up of rifle maintenance tools`
 - alternativas: `historical painting of soldier with cleaning kit` · `modern reenactment of rifle loading` · `abstract toolbox symbolizing preparedness`
 - arquivo: `18th century rifle cleaning kit illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 4096x2160 · 9.0s · `pixabay` · nota 0.98
+
+- motivo: cobre o bloco: 9.0s ≥ 8.3s (folga 0.7s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-52101/
+- download: https://cdn.pixabay.com/video/2020/10/11/52101-467180032_large.mp4
+- preview: https://cdn.pixabay.com/video/2020/10/11/52101-467180032_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 11.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-61418/
+- vídeo · 12.0s · `pixabay` · nota 0.89 · https://pixabay.com/videos/id-61419/
+- vídeo · 18.0s · `pexels` · nota 0.71 · https://www.pexels.com/video/french-revolutionary-soldiers-doing-rifle-drils-9466194/
 
 ---
 
@@ -695,9 +1020,21 @@ Alternativas:
 - **query:** `Baker rifle with long sword bayonet` · `short rifle with attached bayonet` · `historical soldier with Baker rifle and bayonet`
 - alternativas: `19th century rifle and bayonet close-up` · `modern reenactment of Baker rifle setup` · `museum display of Baker rifle with bayonet`
 - arquivo: `Baker rifle with bayonet illustration 1800s`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.98
+
+- motivo: cobre o bloco: 9.0s ≥ 8.4s (folga 0.6s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-205890/
+- download: https://cdn.pixabay.com/video/2024/03/28/205890_large.mp4
+- preview: https://cdn.pixabay.com/video/2024/03/28/205890_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 11.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-61418/
+- vídeo · 12.0s · `pixabay` · nota 0.89 · https://pixabay.com/videos/id-61419/
+- vídeo · 13.0s · `pixabay` · nota 0.86 · https://pixabay.com/videos/id-43653/
 
 ---
 
@@ -710,9 +1047,21 @@ Alternativas:
 - **query:** `rifle with long sword bayonet close up` · `Baker rifle bayonet mechanism` · `historical rifle bayonet attachment`
 - alternativas: `rifle and bayonet comparison` · `musket vs rifle bayonet` · `19th century rifle bayonet`
 - arquivo: `Baker rifle blueprint` · `early 1800s rifle technical drawing`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 12.0s · `pixabay` · nota 0.88
+
+- motivo: cobre o bloco: 12.0s ≥ 8.2s (folga 3.8s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-4948/
+- download: https://cdn.pixabay.com/video/2016/09/05/4948-181538478_large.mp4
+- preview: https://cdn.pixabay.com/video/2016/09/05/4948-181538478_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 13.0s · `pexels` · nota 0.85 · https://www.pexels.com/video/close-up-video-of-a-woman-aiming-at-a-rifle-scope-6090892/
+- vídeo · 14.0s · `pixabay` · nota 0.82 · https://pixabay.com/videos/id-189018/
+- vídeo · 15.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/man-holding-a-sniper-rifle-6091127/
 
 ---
 
@@ -724,9 +1073,21 @@ Alternativas:
 
 - **query:** `deconstructed famous photograph` · `famous image being dismantled` · `close-up of rifle parts`
 - alternativas: `hand examining rifle mechanism` · `magnifying glass on gun detail` · `abstract image of layers`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 4032x2268 · — · `pexels` · nota 1.00
+
+- motivo: aspecto 1.78 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://www.pexels.com/photo/close-up-shot-of-a-vandalized-wall-11027038/
+- download: https://images.pexels.com/photos/11027038/pexels-photo-11027038.jpeg
+- preview: https://images.pexels.com/photos/11027038/pexels-photo-11027038.jpeg?auto=compress&cs=tinysrgb&h=350
+- licença: `pexels`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/paparazzi-photographer-camera-star-6934821/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/milky-way-stars-night-sky-2695569/
+- imagem · — · `pexels` · nota 0.85 · https://www.pexels.com/photo/sky-reflecting-in-mirror-16250767/
 
 ---
 
@@ -738,9 +1099,21 @@ Alternativas:
 
 - **query:** `soldier holding rifle vs musket` · `rifleman vs redcoat uniform` · `historical soldier thinking vs automatic`
 - alternativas: `close-up of rifle vs musket barrel` · `soldier with rifle in contemplative pose` · `rifleman aiming at target`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.98
+
+- motivo: cobre o bloco: 8.0s ≥ 7.4s (folga 0.6s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-38084/
+- download: https://cdn.pixabay.com/video/2020/05/04/38084-416330724_large.mp4
+- preview: https://cdn.pixabay.com/video/2020/05/04/38084-416330724_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-101795/
+- vídeo · 10.0s · `pexels` · nota 0.91 · https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
+- vídeo · 10.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-79759/
 
 ---
 
@@ -752,9 +1125,21 @@ Alternativas:
 
 - **query:** `slow motion soldier loading musket` · `redcoat firing musket` · `rifleman aiming rifle`
 - alternativas: `comparison rifle vs musket firing speed` · `soldier struggling with musket` · `rifleman in precise stance`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.96
+
+- motivo: cobre o bloco: 10.0s ≥ 8.5s (folga 1.5s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
+- download: https://videos.pexels.com/video-files/9466270/9466270-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/9466270/adult-ammunition-army-battle-9466270.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 13.0s · `pexels` · nota 0.87 · https://www.pexels.com/video/people-standing-while-holding-guns-9466303/
+- vídeo · 14.0s · `pexels` · nota 0.84 · https://www.pexels.com/video/people-walking-while-holding-guns-9466272/
+- vídeo · 16.0s · `pexels` · nota 0.78 · https://www.pexels.com/video/french-revolutionary-soldiers-marching-together-9467097/
 
 ---
 
@@ -790,9 +1175,21 @@ Alternativas:
 
 - **query:** `question mark over military uniform` · `soldier with rifle and question mark` · `abstract military experiment`
 - alternativas: `hand holding rifle with uncertainty` · `rifleman silhouette with question mark` · `old military document with notes`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 5549x3248 · — · `pixabay` · nota 1.00
+
+- motivo: aspecto 1.71 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://pixabay.com/photos/question-question-mark-opinion-poll-2736480/
+- download: https://pixabay.com/get/g52fba3357fd033aa60edeed34b28f466d7e19a898ce78f1696eea436fda4672f8a39c6959dfdb370479f064d88a6fa402b8b55fb892a80b501864c1c9752811b_1280.jpg
+- preview: https://pixabay.com/get/gbe0d02154daa4c5f3dcfd61fafd5c19da80076492720559c5f2f3da39cb1694cec1614fe57d7817a0d8b6cee7032d45dca34bec91c6aa176ae9b6a4428ff089b_640.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/question-mark-3d-writing-issue-1927457/
+- imagem · — · `pixabay` · nota 0.85 · https://pixabay.com/photos/man-cadet-military-training-100379/
+- imagem · — · `pixabay` · nota 0.84 · https://pixabay.com/photos/smile-laugh-happiness-happy-5128742/
 
 ---
 
@@ -828,9 +1225,21 @@ Alternativas:
 
 - **query:** `redcoat soldier firing musket volley` · `rifleman aiming precisely at target` · `soldier thinking vs automatic firing`
 - alternativas: `musket ball vs rifle bullet trajectory` · `soldier with rifle calculating distance` · `redcoat vs rifleman comparison`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 2160x3840 · 8.0s · `pixabay` · nota 0.95
+
+- motivo: cobre o bloco: 8.0s ≥ 6.7s (folga 1.3s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-188811/
+- download: https://cdn.pixabay.com/video/2023/11/12/188811-883827743_large.mp4
+- preview: https://cdn.pixabay.com/video/2023/11/12/188811-883827743_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61412/
+- vídeo · 11.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-61418/
+- vídeo · 12.0s · `pixabay` · nota 0.80 · https://pixabay.com/videos/id-61419/
 
 ---
 
@@ -842,9 +1251,21 @@ Alternativas:
 
 - **query:** `soldier judging distance with rifle` · `rifleman using terrain for cover` · `historical sniper aiming technique`
 - alternativas: `soldier calculating trajectory` · `rifleman in natural camouflage` · `target practice with rifle`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.93
+
+- motivo: cobre o bloco: 10.0s ≥ 7.9s (folga 2.1s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-61412/
+- download: https://cdn.pixabay.com/video/2021/01/07/61412-498529684_large.mp4
+- preview: https://cdn.pixabay.com/video/2021/01/07/61412-498529684_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 11.0s · `pixabay` · nota 0.90 · https://pixabay.com/videos/id-61418/
+- vídeo · 12.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61419/
+- vídeo · 12.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-158075/
 
 ---
 
@@ -856,9 +1277,21 @@ Alternativas:
 
 - **query:** `soldiers following orders vs thinking independently` · `rifleman breaking military tradition` · `historical soldier with rifle and book`
 - alternativas: `old military manual vs rifleman` · `soldier questioning orders` · `19th century army revolution concept`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 1.00
+
+- motivo: cobre o bloco: 8.0s ≥ 7.9s (folga 0.1s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-126560/
+- download: https://cdn.pixabay.com/video/2022/08/03/126560-736345309_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/08/03/126560-736345309_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-126557/
+- vídeo · 10.0s · `pexels` · nota 0.93 · https://www.pexels.com/video/military-parade-with-ceremonial-band-outdoors-33055464/
+- vídeo · 10.0s · `pixabay` · nota 0.93 · https://pixabay.com/videos/id-80314/
 
 ---
 
@@ -936,9 +1369,21 @@ Alternativas:
 
 - **query:** `rifleman earning reward for shot` · `soldier using head for tactics` · `historical soldier thinking creatively`
 - alternativas: `rifleman with target and medal` · `soldier rewarded for precision` · `19th century military innovation`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.98
+
+- motivo: cobre o bloco: 8.0s ≥ 7.3s (folga 0.7s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/counting-cash-from-a-wallet-on-a-desk-37339306/
+- download: https://videos.pexels.com/video-files/37339306/15815052_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/37339306/banking-banknotes-budget-business-37339306.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pexels` · nota 0.98 · https://www.pexels.com/video/a-man-is-smiling-while-holding-a-gun-26747811/
+- vídeo · 11.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-18390/
+- vídeo · 13.0s · `pexels` · nota 0.81 · https://www.pexels.com/video/close-up-on-man-showing-use-of-weapon-10480528/
 
 ---
 
@@ -950,9 +1395,21 @@ Alternativas:
 
 - **query:** `rifle adapting army tactics` · `soldier changing military doctrine` · `historical military revolution concept`
 - alternativas: `rifleman vs traditional soldier comparison` · `army adapting to rifle` · `19th century military innovation`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.97
+
+- motivo: cobre o bloco: 8.0s ≥ 7.3s (folga 0.7s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/armed-soldier-on-tactical-mission-30284840/
+- download: https://videos.pexels.com/video-files/30284840/12981888_1920_1080_60fps.mp4
+- preview: https://images.pexels.com/videos/30284840/military-helmet-soldier-30284840.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/silhouettes-of-soldiers-in-tactical-formation-30284839/
+- vídeo · 8.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/close-up-of-sneaking-special-force-soldier-13721787/
+- vídeo · 8.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-131127/
 
 ---
 
@@ -964,9 +1421,21 @@ Alternativas:
 
 - **query:** `volley firing muskets abstract` · `muskets firing at block concept` · `rifle vs musket aim comparison`
 - alternativas: `muskets firing smoke illustration` · `rifle precise shot vs musket volley` · `historical military aim concept`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 5328x2904 · — · `pixabay` · nota 1.00
+
+- motivo: aspecto 1.83 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://pixabay.com/photos/sports-beach-volleyball-ball-sand-6480828/
+- download: https://pixabay.com/get/g39f4e9b72783fbaabdaeefeccfbd83c8e577f1093c089e6e63204a24839e03eaf5efb7a25487a04bea0d0145d1a3414a2d1c782506911ad0f4881ac4b11751cc_1280.jpg
+- preview: https://pixabay.com/get/g2bdd9eed090fbc8cffb7b2de26f399aa88d1be89ffaab805eca99c546ca446821050249e283eaccfbf5ef620c8ab9726ea0d172c4482ac182a87525c379f6c71_640.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/hunt-hunter-musket-armed-shooter-4626664/
+- imagem · — · `pixabay` · nota 0.88 · https://pixabay.com/photos/musket-cannon-cartridges-hunt-1761235/
+- imagem · — · `pixabay` · nota 0.85 · https://pixabay.com/photos/sports-beach-volleyball-ball-sand-6480827/
 
 ---
 
@@ -978,9 +1447,21 @@ Alternativas:
 
 - **query:** `muskets firing at wall concept` · `rifle aiming at person vs musket` · `historical military precision vs volume`
 - alternativas: `muskets firing smoke at target` · `rifleman picking individual target` · `19th century military tactics comparison`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.92
+
+- motivo: cobre o bloco: 10.0s ≥ 7.6s (folga 2.4s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-345244/
+- download: https://cdn.pixabay.com/video/2026/04/08/345244_large.mp4
+- preview: https://cdn.pixabay.com/video/2026/04/08/345244_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-199558/
+- vídeo · 12.0s · `pixabay` · nota 0.86 · https://pixabay.com/videos/id-257182/
+- vídeo · 14.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/people-walking-while-holding-guns-9466272/
 
 ---
 
@@ -992,9 +1473,21 @@ Alternativas:
 
 - **query:** `officer giving orders battlefield` · `sergeant holding line` · `gunner working cannon historical`
 - alternativas: `military hierarchy in action` · `key figures on battlefield` · `19th century military roles`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.98
+
+- motivo: cobre o bloco: 8.0s ≥ 7.3s (folga 0.7s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-156893/
+- download: https://cdn.pixabay.com/video/2023/03/31/156893-813654701_large.mp4
+- preview: https://cdn.pixabay.com/video/2023/03/31/156893-813654701_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-208367/
+- vídeo · 10.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-43658/
+- vídeo · 15.0s · `pixabay` · nota 0.74 · https://pixabay.com/videos/id-88242/
 
 ---
 
@@ -1006,9 +1499,21 @@ Alternativas:
 
 - **query:** `removing officer disrupts line` · `key soldier decision impact` · `military hierarchy vulnerability`
 - alternativas: `soldier taking out officer concept` · `removing sergeant chaos` · `19th century military decision makers`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.98
+
+- motivo: cobre o bloco: 8.0s ≥ 7.5s (folga 0.5s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/police-officers-wearing-respirators-4632642/
+- download: https://videos.pexels.com/video-files/4632642/4632642-hd_1920_1080_24fps.mp4
+- preview: https://images.pexels.com/videos/4632642/pexels-photo-4632642.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.98 · https://pixabay.com/videos/id-156893/
+- vídeo · 10.0s · `pexels` · nota 0.92 · https://www.pexels.com/video/police-officer-arresting-a-man-7714308/
+- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-1210/
 
 ---
 
@@ -1020,9 +1525,21 @@ Alternativas:
 
 - **query:** `rifle in snow battlefield` · `soldier aiming rifle in winter` · `historical sniper in snow`
 - alternativas: `Baker rifle close-up in cold` · `rifleman in snowy terrain` · `precision shot in snow concept`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.95
+
+- motivo: cobre o bloco: 10.0s ≥ 8.2s (folga 1.8s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/drone-footage-of-people-wearing-camouflage-and-carrying-rifles-6200859/
+- download: https://videos.pexels.com/video-files/6200859/6200859-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/6200859/pexels-photo-6200859.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 12.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-12396/
+- vídeo · 12.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-103361/
+- vídeo · 15.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/a-men-walking-together-holding-rifle-9466149/
 
 ---
 
@@ -1050,9 +1567,21 @@ Alternativas:
 - **query:** `long distance rifle shot snowy field` · `sniper target through telescope`
 - alternativas: `rifleman aiming through snow` · `historical military precision shot`
 - arquivo: `rifleman in green jacket aiming` · `19th century sharpshooter`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 9.0s ≥ 8.6s (folga 0.4s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/men-walking-on-the-snow-field-6200855/
+- download: https://videos.pexels.com/video-files/6200855/6200855-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/6200855/pexels-photo-6200855.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/drone-footage-of-people-wearing-camouflage-and-carrying-rifles-6200859/
+- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-187614/
+- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-329674/
 
 ---
 
@@ -1065,9 +1594,21 @@ Alternativas:
 - **query:** `historical military range markers` · `rifle target practice 1800s`
 - alternativas: `rifleman measuring distance with hands` · `military training yard`
 - arquivo: `British rifle range 19th century` · `historical sharpshooter training`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.96
+
+- motivo: cobre o bloco: 8.0s ≥ 7.0s (folga 1.0s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/abandoned-industrial-warehouse-with-tanks-33770831/
+- download: https://videos.pexels.com/video-files/33770831/14335852_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/33770831/pexels-photo-33770831.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-8386/
+- vídeo · 10.0s · `pexels` · nota 0.89 · https://www.pexels.com/video/chattanooga-national-cemetery-memorial-rows-33214794/
+- vídeo · 10.0s · `pexels` · nota 0.89 · https://www.pexels.com/video/beautiful-view-at-the-park-4671896/
 
 ---
 
@@ -1080,9 +1621,21 @@ Alternativas:
 - **query:** `rifleman hidden behind rocks aiming` · `tactical sniper position`
 - alternativas: `military strategy board with arrows` · `soldier planning shot`
 - arquivo: `British rifleman in ambush 1800s` · `historical sharpshooter tactics`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 8.0s ≥ 7.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/old-bible-discovered-among-desert-rocks-29276174/
+- download: https://videos.pexels.com/video-files/29276174/12627723_1920_1080_24fps.mp4
+- preview: https://images.pexels.com/videos/29276174/pexels-photo-29276174.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-349388/
+- vídeo · 10.0s · `pexels` · nota 0.92 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
+- vídeo · 11.0s · `pexels` · nota 0.89 · https://www.pexels.com/video/interior-of-cave-11423540/
 
 ---
 
@@ -1095,9 +1648,21 @@ Alternativas:
 - **query:** `rifleman in snow camouflage` · `soldier hidden in forest`
 - alternativas: `tactical sniper scope view` · `military ambush preparation`
 - arquivo: `British sharpshooter in concealment 1800s` · `historical sniper position`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.95
+
+- motivo: cobre o bloco: 8.0s ≥ 6.8s (folga 1.2s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-27539/
+- download: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.mp4
+- preview: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 12.0s · `pixabay` · nota 0.81 · https://pixabay.com/videos/id-12396/
+- vídeo · 12.0s · `pixabay` · nota 0.81 · https://pixabay.com/videos/id-103361/
+- vídeo · 13.0s · `pexels` · nota 0.77 · https://www.pexels.com/video/man-holding-gun-on-shoulders-and-looking-at-camera-6201050/
 
 ---
 
@@ -1110,9 +1675,21 @@ Alternativas:
 - **query:** `question mark on military map` · `rifle range guess illustration`
 - alternativas: `historical military survey tools` · `19th century distance measurement`
 - arquivo: `British military map 1800s` · `historical range estimation`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1366x658 · 9.0s · `pexels` · nota 0.97
+
+- motivo: cobre o bloco: 9.0s ≥ 8.1s (folga 0.9s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/world-maps-on-the-wall-7593623/
+- download: https://videos.pexels.com/video-files/7593623/7593623-hd_1366_658_30fps.mp4
+- preview: https://images.pexels.com/videos/7593623/abandoned-architecture-art-building-7593623.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/man-checking-bullet-marks-on-target-paper-5243087/
+- vídeo · 10.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-80699/
+- vídeo · 10.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-80702/
 
 ---
 
@@ -1125,9 +1702,21 @@ Alternativas:
 - **query:** `British soldiers celebrating victory` · `military parade 1800s`
 - alternativas: `cost analysis chart military` · `supply carts comparison`
 - arquivo: `British Light Division 1810s` · `Wellington's army success`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.98
+
+- motivo: cobre o bloco: 7.0s ≥ 6.6s (folga 0.4s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/two-men-celebrating-7005855/
+- download: https://videos.pexels.com/video-files/7005855/7005855-hd_1920_1080_24fps.mp4
+- preview: https://images.pexels.com/videos/7005855/achieve-achievement-award-winning-awards-7005855.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-137614/
+- vídeo · 9.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-4848/
+- vídeo · 9.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-4852/
 
 ---
 
@@ -1249,9 +1838,21 @@ Alternativas:
 - **query:** `riflemen holding position under attack` · `soldiers defending farmhouse`
 - alternativas: `military siege standoff` · `riflemen firing through small openings`
 - arquivo: `historical defense tactic 1800s` · `British riflemen last stand`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.98
+
+- motivo: cobre o bloco: 8.0s ≥ 7.3s (folga 0.7s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-38084/
+- download: https://cdn.pixabay.com/video/2020/05/04/38084-416330724_large.mp4
+- preview: https://cdn.pixabay.com/video/2020/05/04/38084-416330724_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.91 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
+- vídeo · 10.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-7817/
+- vídeo · 15.0s · `pexels` · nota 0.74 · https://www.pexels.com/video/men-with-rifles-shooting-during-historical-reenactment-9466302/
 
 ---
 
@@ -1351,9 +1952,21 @@ Recusados:
 - **query:** `soldiers in mud and smoke` · `military battle close quarters`
 - alternativas: `historical battlefield chaos` · `riflemen under fire`
 - arquivo: `Waterloo battle smoke archival` · `19th century combat close-up`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 1.00
+
+- motivo: cobre o bloco: 8.0s ≥ 7.9s (folga 0.1s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/intense-military-operation-in-smoke-filled-warehouse-30892854/
+- download: https://videos.pexels.com/video-files/30892854/13208152_1920_1080_60fps.mp4
+- preview: https://images.pexels.com/videos/30892854/camoflage-military-soldiers-war-30892854.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pexels` · nota 1.00 · https://www.pexels.com/video/silhouettes-of-soldiers-in-tactical-formation-30284839/
+- vídeo · 8.0s · `pixabay` · nota 1.00 · https://pixabay.com/videos/id-27539/
+- vídeo · 9.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/soldiers-in-formation-with-smoke-indoors-30892982/
 
 ---
 
@@ -1366,9 +1979,21 @@ Recusados:
 - **query:** `rifleman aiming through small hole` · `soldier targeting officer`
 - alternativas: `historical sniper shot through wall` · `military precision under pressure`
 - arquivo: `Waterloo sharpshooter tactics` · `19th century battlefield targeting`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 9.0s ≥ 8.5s (folga 0.5s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/woman-using-a-sniper-rifle-6090852/
+- download: https://videos.pexels.com/video-files/6090852/6090852-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/6090852/pexels-photo-6090852.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-139586/
+- vídeo · 10.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
+- vídeo · 10.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/man-aiming-a-sniper-rifle-6091129/
 
 ---
 
@@ -1381,9 +2006,21 @@ Recusados:
 - **query:** `rifleman aiming at drummer` · `soldier targeting military leader`
 - alternativas: `historical battle officer down` · `military precision shot key figure`
 - arquivo: `Waterloo rifleman engagement archival` · `19th century sharpshooter tactics`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.97
+
+- motivo: cobre o bloco: 9.0s ≥ 8.0s (folga 1.0s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/snow-mountains-nature-person-6200898/
+- download: https://videos.pexels.com/video-files/6200898/6200898-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/6200898/pexels-photo-6200898.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/a-young-boy-holding-a-rifle-in-a-room-4836478/
+- vídeo · 10.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
+- vídeo · 10.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-345244/
 
 ---
 
@@ -1419,9 +2056,21 @@ Recusados:
 
 - **query:** `exhausted soldiers holding position snow` · `warriors tired battle stance` · `young men exhausted war effort`
 - alternativas: `soldiers with soot marks faces` · `historical battle fatigue expressions` · `warriors leaning on walls exhausted`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.96
+
+- motivo: cobre o bloco: 8.0s ≥ 6.8s (folga 1.2s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/soldiers-standing-at-attention-in-a-military-base-12761921/
+- download: https://videos.pexels.com/video-files/12761921/12761921-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/12761921/pexels-photo-12761921.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-38084/
+- vídeo · 9.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-101795/
+- vídeo · 10.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-191159/
 
 ---
 
@@ -1433,9 +2082,21 @@ Recusados:
 
 - **query:** `soldiers looking at comrades dying` · `warriors emotional battle moment` · `men determined faces war`
 - alternativas: `historical soldiers staring at fallen friends` · `Napoleonic era grim determination` · `warriors gripping rifles tightly`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.95
+
+- motivo: cobre o bloco: 10.0s ≥ 8.4s (folga 1.6s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
+- download: https://videos.pexels.com/video-files/9466270/9466270-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/9466270/adult-ammunition-army-battle-9466270.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-345244/
+- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-19706/
+- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-61412/
 
 ---
 
@@ -1472,9 +2133,21 @@ Recusados:
 - **query:** `Baker rifle cartridge close-up` · `19th century rifle ammunition detail` · `rifle bullet vs musket ball comparison`
 - alternativas: `historical rifle mechanism close-up` · `Peninsular War rifle cartridges` · `Baker rifle ammunition pouch`
 - arquivo: `1800s rifle ammunition technical drawing`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 5194x3075 · — · `pexels` · nota 1.00
+
+- motivo: aspecto 1.69 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://www.pexels.com/photo/brown-and-silver-tube-lot-6092080/
+- download: https://images.pexels.com/photos/6092080/pexels-photo-6092080.jpeg
+- preview: https://images.pexels.com/photos/6092080/pexels-photo-6092080.jpeg?auto=compress&cs=tinysrgb&h=350
+- licença: `pexels`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/bullets-shells-bullet-shells-2166491/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/bullet-caliber-cartridge-ammo-5633997/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/pebble-stones-pebbles-multicoloured-1090536/
 
 ---
 
@@ -1510,9 +2183,21 @@ Recusados:
 
 - **query:** `soldiers searching dead comrades pouches` · `warriors looking for last cartridge` · `desperate soldiers rifling through gear`
 - alternativas: `Napoleonic era soldiers scavenging ammo` · `historical battle last shot desperation` · `riflemen checking fallen friends`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/tactical-soldier-in-action-indoors-30892981/
+- download: https://videos.pexels.com/video-files/30892981/13208023_1920_1080_60fps.mp4
+- preview: https://images.pexels.com/videos/30892981/camoflage-military-soldiers-war-30892981.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-51237/
+- vídeo · 10.0s · `pexels` · nota 0.87 · https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
+- vídeo · 12.0s · `pexels` · nota 0.80 · https://www.pexels.com/video/soldiers-entering-through-door-13884572/
 
 ---
 
@@ -1551,9 +2236,20 @@ Alternativas:
 
 - **query:** `British officer leading survivors retreat` · `Napoleonic war evacuation scene` · `soldiers escaping battle exhausted`
 - alternativas: `Peninsular War retreat under fire` · `19th century military withdrawal` · `British infantry survivors leaving battlefield`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3556x2048 · 8.0s · `pixabay` · nota 1.00
+
+- motivo: cobre o bloco: 8.0s ≥ 8.0s (folga 0.0s)
+- página: https://pixabay.com/videos/id-137614/
+- download: https://cdn.pixabay.com/video/2022/11/03/137614-767056227_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/11/03/137614-767056227_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 1.00 · https://pixabay.com/videos/id-156893/
+- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-140353/
+- vídeo · 10.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-1204/
 
 ---
 
@@ -1565,9 +2261,21 @@ Alternativas:
 
 - **query:** `Baker rifle failure concept art` · `rifle vs musket debate illustration` · `historical weapon limitation graphic`
 - alternativas: `19th century rifle accuracy vs range infographic` · `Baker rifle weakness visual representation` · `Napoleonic era weapon trade-off diagram`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 5968x3926 · — · `pixabay` · nota 0.86
+
+- motivo: aspecto 1.52 ajustado para 16:9 por crop central (5968x3357, mantém 86%)
+- ajustes: `kenburns`, `crop`
+- página: https://pixabay.com/photos/baker-cook-coffee-cupcake-frog-1194428/
+- download: https://pixabay.com/get/g0dce436a8082545dbb6a65bf02eab09b72e2f411377c0dd52402e088d856c6ac00f2c7bb8305701b8075d1f8250f0a06ed093e5c20f8f51224a645076bde596f_1280.jpg
+- preview: https://pixabay.com/get/gcec8f70e688005788894040d6f0d27b4c8b1c5e8c0fb5282c01ff69a2fff370597f42c9fca641d02cf93e976de248e163137e0a5bf3d5d1bca1801704f9f6768_640.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 0.84 · https://pixabay.com/photos/bakery-bread-baker-apron-baking-1868396/
+- imagem · — · `pexels` · nota 0.84 · https://www.pexels.com/photo/armed-soldiers-marching-on-a-grass-field-9267454/
+- imagem · — · `pexels` · nota 0.84 · https://www.pexels.com/photo/soldiers-marching-while-holding-rifles-9268696/
 
 ---
 
@@ -1579,9 +2287,21 @@ Alternativas:
 
 - **query:** `soldiers firing last shots empty rifles` · `warriors determined despite no ammo` · `riflemen holding empty weapons`
 - alternativas: `Napoleonic era soldiers bayonet charge no ammo` · `historical battle last stand with rifles` · `British infantry empty pouches`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.97
+
+- motivo: cobre o bloco: 7.0s ≥ 6.3s (folga 0.7s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/armies-firing-at-the-shooting-range-8605303/
+- download: https://videos.pexels.com/video-files/8605303/8605303-hd_1920_1080_30fps.mp4
+- preview: https://images.pexels.com/videos/8605303/9-mm-army-military-military-personnel-8605303.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.93 · https://pixabay.com/videos/id-188811/
+- vídeo · 10.0s · `pixabay` · nota 0.85 · https://pixabay.com/videos/id-61412/
+- vídeo · 11.0s · `pixabay` · nota 0.81 · https://pixabay.com/videos/id-61418/
 
 ---
 
@@ -1594,9 +2314,21 @@ Alternativas:
 - **query:** `muskets vs rifles logistics comparison` · `Napoleonic era weapon supply contrast` · `army supply lines historical illustration`
 - alternativas: `19th century military ammunition differences` · `British infantry musket vs rifle supply` · `Peninsular War logistics challenge`
 - arquivo: `1800s military supply depot archival`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 6016x3450 · — · `pixabay` · nota 1.00
+
+- motivo: aspecto 1.74 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://pixabay.com/photos/hunt-hunter-musket-armed-shooter-4626664/
+- download: https://pixabay.com/get/ge4618a2ffff4a4d82205f02cee12e716dc855f24f72010a28a115641352d48262be686843feefd4f90a836084da166eb16ef88cf3106a55bd6f01b5a15c2eff4_1280.jpg
+- preview: https://pixabay.com/get/g349e820ec3a05955289d08e7aec8a4e697a084479edff67f1237428f1488aa23b24037cf288ef97a7b34b3f077e28c988b81f853dee96ca6f865c3b6be58b0ee_640.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/weapons-gun-musket-chest-pirates-2882061/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/cartridges-ammunition-hunt-musket-1761236/
+- imagem · — · `pixabay` · nota 0.88 · https://pixabay.com/photos/musket-cannon-cartridges-hunt-1761235/
 
 ---
 
@@ -1608,9 +2340,21 @@ Alternativas:
 
 - **query:** `Baker rifle weakness illustration` · `specialized weapon failure concept` · `Napoleonic era rifle limitation graphic`
 - alternativas: `19th century rifle supply chain breakdown` · `La Haye Sainte lesson visual` · `historical weapon dependency infographic`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 4125x2578 · — · `pexels` · nota 1.00
+
+- motivo: aspecto 1.60 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://www.pexels.com/photo/young-man-concerned-about-hair-loss-39570855/
+- download: https://images.pexels.com/photos/39570855/pexels-photo-39570855.jpeg
+- preview: https://images.pexels.com/photos/39570855/pexels-photo-39570855.jpeg?auto=compress&cs=tinysrgb&h=350
+- licença: `pexels`
+
+Alternativas:
+- imagem · — · `pexels` · nota 1.00 · https://www.pexels.com/photo/military-men-holding-guns-10246126/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/meal-food-loaf-isolated-3277831/
+- imagem · — · `pixabay` · nota 0.84 · https://pixabay.com/photos/bakery-bread-baker-apron-baking-1868396/
 
 ---
 
@@ -1665,9 +2409,21 @@ Alternativas:
 - **query:** `Minié bullet close-up animation` · `rifle bullet expanding grooves` · `19th century bullet mechanism`
 - alternativas: `Minié rifle firing sequence` · `bullet expanding in barrel close-up` · `historical rifle ammunition technology`
 - arquivo: `1840s rifle bullet technical drawing`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/self-isolation-text-on-gray-background-5981747/
+- download: https://videos.pexels.com/video-files/5981747/5981747-hd_1920_1080_24fps.mp4
+- preview: https://images.pexels.com/videos/5981747/art-covid-covid-19-gray-5981747.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 7.0s · `pexels` · nota 0.99 · https://www.pexels.com/video/make-today-great-over-a-colored-yellow-background-5981789/
+- vídeo · 7.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-240531/
+- vídeo · 7.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-199545/
 
 ---
 
@@ -1679,9 +2435,21 @@ Alternativas:
 
 - **query:** `rifle vs musket trade-off eliminated` · `19th century weapon evolution infographic` · `accuracy vs speed balance graphic`
 - alternativas: `Minié rifle advantage illustration` · `historical weapon progress diagram` · `Napoleonic to Victorian rifle transition`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 2813x1777 · — · `pexels` · nota 1.00
+
+- motivo: aspecto 1.58 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://www.pexels.com/photo/civil-war-reenactor-holding-historical-rifle-38774384/
+- download: https://images.pexels.com/photos/38774384/pexels-photo-38774384.png
+- preview: https://images.pexels.com/photos/38774384/pexels-photo-38774384.png?auto=compress&cs=tinysrgb&h=350
+- licença: `pexels`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/hunt-hunter-musket-armed-shooter-4626664/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/weapons-gun-musket-chest-pirates-2882061/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/cartridges-ammunition-hunt-musket-1761236/
 
 ---
 
@@ -1720,9 +2488,21 @@ Alternativas:
 
 - **query:** `soldier aiming rifle precise shot` · `historical marksmanship training` · `rifleman judging distance`
 - alternativas: `19th century soldier aiming at target` · `Victorian era rifle accuracy drill` · `British infantry marksmanship`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 4642x2956 · — · `pexels` · nota 1.00
+
+- motivo: aspecto 1.57 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://www.pexels.com/photo/a-person-using-a-rifle-in-target-shooting-11389638/
+- download: https://images.pexels.com/photos/11389638/pexels-photo-11389638.jpeg
+- preview: https://images.pexels.com/photos/11389638/pexels-photo-11389638.jpeg?auto=compress&cs=tinysrgb&h=350
+- licença: `pexels`
+
+Alternativas:
+- imagem · — · `pexels` · nota 1.00 · https://www.pexels.com/photo/tactical-training-with-soldiers-in-combat-gear-30403112/
+- imagem · — · `pexels` · nota 1.00 · https://www.pexels.com/photo/man-in-white-t-shirt-and-vest-holding-a-rifle-5798159/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/arrow-target-bullseye-goal-aim-2886227/
 
 ---
 
@@ -1734,9 +2514,21 @@ Alternativas:
 
 - **query:** `rifle evolution timeline infographic` · `weapon technology progress illustration` · `Napoleonic to modern rifle transition`
 - alternativas: `300 years rifle development summary` · `military weapon evolution graphic` · `historical arms race infographic`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🖼️ imagem · 6000x3376 · — · `pexels` · nota 1.00
+
+- motivo: aspecto 1.78 dentro da tolerância de 16:9
+- ajustes: `kenburns`
+- página: https://www.pexels.com/photo/military-men-holding-guns-10246126/
+- download: https://images.pexels.com/photos/10246126/pexels-photo-10246126.jpeg
+- preview: https://images.pexels.com/photos/10246126/pexels-photo-10246126.jpeg?auto=compress&cs=tinysrgb&h=350
+- licença: `pexels`
+
+Alternativas:
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/human-evolution-reenactment-sunset-3801547/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/hunting-rifle-weapons-shooting-3781222/
+- imagem · — · `pixabay` · nota 0.86 · https://pixabay.com/photos/soldier-submachine-gun-war-fight-62902/
 
 ---
 
@@ -1749,9 +2541,21 @@ Alternativas:
 - **query:** `old musket vs modern rifle comparison` · `soldier holding musket vs rifle side by side` · `rifle mechanism vs musket mechanism close up`
 - alternativas: `historical military weapons evolution timeline` · `soldier struggling with outdated musket` · `rifle vs musket accuracy demonstration`
 - arquivo: `18th century musket blueprint` · `early 19th century rifle technical drawing`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.92
+
+- motivo: cobre o bloco: 10.0s ≥ 7.5s (folga 2.5s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
+- download: https://videos.pexels.com/video-files/9466270/9466270-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/9466270/adult-ammunition-army-battle-9466270.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-3611/
+- vídeo · 11.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-61418/
+- vídeo · 11.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-11186/
 
 ---
 
@@ -1764,9 +2568,20 @@ Alternativas:
 - **query:** `industrial workshop workers assembling rifles` · `historical rifle production line` · `blacksmith forging rifle parts`
 - alternativas: `19th century arms factory interior` · `rifle components being machined` · `soldiers inspecting rifle parts`
 - arquivo: `early 1800s rifle manufacturing engraving` · `Baker rifle technical illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 1.00
+
+- motivo: cobre o bloco: 8.0s ≥ 8.0s (folga 0.0s)
+- página: https://pixabay.com/videos/id-135851/
+- download: https://cdn.pixabay.com/video/2022/10/21/135851-764362075_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/10/21/135851-764362075_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-130651/
+- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-267359/
+- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-11749/
 
 ---
 
@@ -1779,9 +2594,21 @@ Alternativas:
 - **query:** `soldiers undergoing rifle training in snow` · `British infantry practicing with Baker rifle` · `historical military drill with rifles`
 - alternativas: `19th century soldier aiming rifle in field` · `rifleman reloading in training` · `group of soldiers with rifles in formation`
 - arquivo: `early 1800s rifle training manual illustration` · `Napoleonic Wars rifle drill engraving`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+
+- motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/armies-firing-at-the-shooting-range-8605303/
+- download: https://videos.pexels.com/video-files/8605303/8605303-hd_1920_1080_30fps.mp4
+- preview: https://images.pexels.com/videos/8605303/9-mm-army-military-military-personnel-8605303.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-27539/
+- vídeo · 11.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-61418/
+- vídeo · 12.0s · `pixabay` · nota 0.80 · https://pixabay.com/videos/id-61419/
 
 ---
 
@@ -1794,9 +2621,21 @@ Alternativas:
 - **query:** `industrial revolution factory workers adapting` · `historical technological adaptation process` · `people adjusting to new machinery`
 - alternativas: `19th century workshop collaboration` · `mechanics adjusting rifle components` · `soldiers learning new tactics`
 - arquivo: `early industrial age adaptation illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.97
+
+- motivo: cobre o bloco: 9.0s ≥ 8.1s (folga 0.9s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-267359/
+- download: https://cdn.pixabay.com/video/2025/03/25/267359_large.mp4
+- preview: https://cdn.pixabay.com/video/2025/03/25/267359_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/industrial-workers-in-steel-fabrication-plant-33855578/
+- vídeo · 12.0s · `pexels` · nota 0.88 · https://www.pexels.com/video/industrial-textile-machinery-in-operation-35469636/
+- vídeo · 12.0s · `pexels` · nota 0.88 · https://www.pexels.com/video/textile-factory-workers-operating-machinery-31370992/
 
 ---
 
@@ -1808,9 +2647,21 @@ Alternativas:
 
 - **query:** `successful innovation adoption over time` · `people embracing new technology gradually` · `historical invention acceptance timeline`
 - alternativas: `industrial revolution progress visualization` · `workers using improved machinery` · `societal adaptation to change`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.98
+
+- motivo: cobre o bloco: 9.0s ≥ 8.4s (folga 0.6s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/certificate-of-adoption-8060852/
+- download: https://videos.pexels.com/video-files/8060852/8060852-hd_1920_1080_25fps.mp4
+- preview: https://images.pexels.com/videos/8060852/pexels-photo-8060852.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 9.0s · `pexels` · nota 0.98 · https://www.pexels.com/video/employees-discussing-work-7687998/
+- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-7549/
+- vídeo · 11.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-15629/
 
 ---
 
@@ -1890,9 +2741,21 @@ Alternativas:
 - **query:** `sniper taking precise shot in battle` · `rifleman choosing target in war` · `historical decisive shot impact`
 - alternativas: `soldier aiming rifle with focus` · `bullet hitting distant target` · `rifleman calculating shot in war`
 - arquivo: `Napoleonic Wars sniper scene engraving`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.96
+
+- motivo: cobre o bloco: 8.0s ≥ 6.8s (folga 1.2s)
+- ajustes: `trim`
+- página: https://www.pexels.com/video/man-aiming-with-gun-10491772/
+- download: https://videos.pexels.com/video-files/10491772/10491772-hd_1920_1080_24fps.mp4
+- preview: https://images.pexels.com/videos/10491772/gunman-10491772.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
+- licença: `pexels`
+
+Alternativas:
+- vídeo · 8.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/man-aiming-down-the-scope-of-a-rifle-6092104/
+- vídeo · 8.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
+- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-27539/
 
 ---
 
@@ -1920,9 +2783,21 @@ Alternativas:
 - **query:** `historical invention forgotten over time` · `great idea overshadowing inventor` · `memorial vs forgotten genius`
 - alternativas: `old inventor working alone` · `historical figure ignored by history` · `idea becoming legend while man fades`
 - arquivo: `19th century inventor portrait` · `historical workshop with forgotten inventor`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 1.00
+
+- motivo: cobre o bloco: 8.0s ≥ 7.9s (folga 0.1s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-34855/
+- download: https://cdn.pixabay.com/video/2020/04/03/34855-403777679_large.mp4
+- preview: https://cdn.pixabay.com/video/2020/04/03/34855-403777679_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.93 · https://pixabay.com/videos/id-7549/
+- vídeo · 11.0s · `pexels` · nota 0.90 · https://www.pexels.com/video/rusty-antiques-4327233/
+- vídeo · 11.0s · `pexels` · nota 0.90 · https://www.pexels.com/video/rustic-abandoned-train-interior-39623046/
 
 ---
 
@@ -1935,9 +2810,21 @@ Alternativas:
 - **query:** `soldiers with rifles vs rifle alone` · `military training vs weapon technology` · `teamwork in historical warfare`
 - alternativas: `rifleman aiming vs rifle on display` · `soldiers practicing with Baker rifle` · `historical weapon vs user comparison`
 - arquivo: `Napoleonic Wars rifle training scene` · `19th century arms factory workers`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.95
+
+- motivo: cobre o bloco: 8.0s ≥ 6.7s (folga 1.3s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-131127/
+- download: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 9.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-131088/
+- vídeo · 10.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-79759/
+- vídeo · 11.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-61418/
 
 ---
 
@@ -1950,9 +2837,21 @@ Alternativas:
 - **query:** `Ferguson rifle vs Baker rifle comparison` · `historical advanced weapon rejected` · `military adopting or rejecting technology`
 - alternativas: `early 19th century experimental rifle` · `soldiers with outdated weapons` · `military technology evolution`
 - arquivo: `Ferguson rifle technical drawing` · `early 1800s rifle comparison illustration`
-- provedores consultados: — · candidatos: 0
+- provedores consultados: pexels, pixabay · candidatos: 24
 
-**❌ SEM RESULTADO**
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.99
+
+- motivo: cobre o bloco: 9.0s ≥ 8.8s (folga 0.2s)
+- ajustes: `trim`
+- página: https://pixabay.com/videos/id-131088/
+- download: https://cdn.pixabay.com/video/2022/09/12/131088-749689497_large.mp4
+- preview: https://cdn.pixabay.com/video/2022/09/12/131088-749689497_large.jpg
+- licença: `pixabay-content-license`
+
+Alternativas:
+- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-79759/
+- vídeo · 11.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-61418/
+- vídeo · 11.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-131126/
 
 ---
 

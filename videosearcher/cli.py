@@ -488,6 +488,9 @@ def run(
     sem_alternativas: bool = typer.Option(
         False, "--sem-alternativas", help="Baixa apenas o escolhido de cada bloco"
     ),
+    baixar_filmes: bool = typer.Option(
+        False, "--baixar-filmes", help="Baixa também filmes de arquivo inteiros (GB)"
+    ),
     tema: str | None = typer.Option(None, "--tema", help="Tema do vídeo"),
 ) -> None:
     """Executa o pipeline: legenda → blocos → briefs → busca → entrega."""
@@ -612,6 +615,7 @@ def run(
             resultado,
             pasta,
             alternativas=not sem_alternativas,
+            baixar_filmes_inteiros=baixar_filmes,
             progresso=lambda f, t: progress.update(tarefa, completed=f, total=t),
         )
 
@@ -619,6 +623,12 @@ def run(
         f"[green]{entrega.baixados} arquivos[/green] em [bold]{entrega.pasta}[/bold]"
         f" · {entrega.bytes_totais / 1e6:.1f} MB"
     )
+    if entrega.pendentes:
+        console.print(
+            f"[yellow]{len(entrega.pendentes)} blocos pendentes[/yellow] — filmes de "
+            f"arquivo inteiros, aguardam corte por cena (fase 5). "
+            f"Ver _PENDENTES-CORTE-POR-CENA.txt"
+        )
     if entrega.falhas:
         console.print(f"[yellow]falhas de download ({len(entrega.falhas)}):[/yellow]")
         for falha in entrega.falhas[:6]:
