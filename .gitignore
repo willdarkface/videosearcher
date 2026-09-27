@@ -19,3 +19,6 @@ venv/
 .pytest_cache/
 .ruff_cache/
 .DS_Store
+
+# .env do deploy (o .example fica versionado)
+/deploy/.env
