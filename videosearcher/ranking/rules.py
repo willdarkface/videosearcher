@@ -110,11 +110,11 @@ def calcular_crop(width: int, height: int, aspecto_alvo: float) -> CropBox:
     """Recorte central que leva a imagem ao aspecto alvo, sem escalar."""
     atual = width / height
     if atual > aspecto_alvo:
-        novo_w = int(round(height * aspecto_alvo))
+        novo_w = round(height * aspecto_alvo)
         novo_h = height
     else:
         novo_w = width
-        novo_h = int(round(width / aspecto_alvo))
+        novo_h = round(width / aspecto_alvo)
     novo_w = min(novo_w, width)
     novo_h = min(novo_h, height)
     return CropBox(width=novo_w, height=novo_h, x=(width - novo_w) // 2, y=(height - novo_h) // 2)

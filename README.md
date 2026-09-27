@@ -98,7 +98,7 @@ Um vídeo de 100 blocos consome **~25 mil tokens**. Mesmo produzindo 3 vídeos p
 
 ### 1. Mistral — recomendado como principal
 
-Tier **Experiment** gratuito, com acesso a todos os modelos e cota na casa de **~1 bilhão de tokens/mês**. Você usaria ~0,0025% dela por vídeo. Bônus: modelo europeu, vai bem em português.
+Tier **Experiment** gratuito, com cota alta. Melhor qualidade de briefing entre os provedores gratuitos testados.
 
 1. Acesse **<https://console.mistral.ai>** e crie a conta
 2. Menu lateral → **API Keys** → **Create new key**
@@ -108,9 +108,13 @@ Tier **Experiment** gratuito, com acesso a todos os modelos e cota na casa de **
 MISTRAL_API_KEY=sua-chave-aqui
 ```
 
-Modelo usado por padrão: `mistral-small-latest`.
+Modelo usado por padrão: **`ministral-14b-2512`**.
 
-> Os limites do tier gratuito são de **taxa** (requisições por segundo), não de volume. Como o briefing roda em lote assíncrono, isso não incomoda.
+> ⚠️ **Pegadinha verificada na prática.** A família `mistral-small`, `mistral-medium` e `mistral-large` devolve **429 Rate limit exceeded** em conta gratuita, mesmo com a chave válida e a página de limites mostrando cota. O limite efetivo dessas variantes é zero no tier grátis.
+>
+> Os que funcionam de fato: `ministral-14b-2512`, `ministral-8b-2512`, `ministral-3b-2512` e `open-mistral-nemo`. Confira os seus em <https://admin.mistral.ai/plateforme/limits>.
+>
+> Como distinguir chave inválida de conta sem cota: `GET /v1/models` responde **200** quando a chave é boa. Se a inferência devolve 429 mas o `/v1/models` responde 200, o problema é cota de modelo, não autenticação.
 
 ### 2. Z.ai (GLM) — recomendado como segundo
 
@@ -135,6 +139,8 @@ Free tier **sem cartão de crédito**, ~30 requisições/minuto, com teto diári
 ```bash
 GROQ_API_KEY=sua-chave-aqui
 ```
+
+Modelos: **`openai/gpt-oss-120b`** (melhor) e **`openai/gpt-oss-20b`** (mais rápido). São modelos de raciocínio, então precisam de folga de `max_tokens` — com orçamento apertado eles gastam tudo pensando e devolvem conteúdo vazio.
 
 ### 4. OpenRouter — a rede de segurança
 
@@ -192,6 +198,31 @@ provedor devolveu:
 ```
 
 Use `--no-ping` para checar apenas se as variáveis estão preenchidas, sem gastar requisição.
+
+### Qualidade medida com roteiro real
+
+Comparação no mesmo trecho de um roteiro de história militar, pedindo briefing estruturado para 4 blocos:
+
+| Provedor / modelo | Tempo | Qualidade observada |
+|---|---|---|
+| **mistral / ministral-14b-2512** | 4,6s | **Melhor.** Era histórica precisa (`1803-1815`), queries específicas do domínio (`baker rifle mechanism close up`, `rifle barrel spiral grooves historical`) |
+| groq / gpt-oss-120b | 2,4s | Boa classificação de intenção, mas perdeu a era em um bloco e queries mais genéricas |
+| groq / gpt-oss-20b | 1,4s | **3x mais rápido.** Queries rasas (`napoleonic troops`, `red lines`), errou uma intenção e trocou a cor de uma jaqueta no slug |
+
+Por isso a corrente padrão é `ministral-14b` → `gpt-oss-120b` → `gpt-oss-20b`: qualidade primeiro, velocidade como reserva.
+
+### Por que JSON Schema estrito não é opcional
+
+O mesmo modelo, no mesmo prompt, com e sem `response_format: json_schema`:
+
+```
+COM schema estrito:  bloco 7  · bloco 10 · bloco 40 · bloco 95   ← números preservados
+SEM schema (json_object):  bloco None · None · None · None        ← números perdidos
+```
+
+Sem o schema, o modelo devolveu uma lista na raiz em vez do objeto esperado e **descartou o `block_number` de todos os blocos**. O número do bloco é exatamente o que dá nome ao arquivo entregue (`004 - video ....mp4`), então perdê-lo inviabiliza a entrega.
+
+É por isso que `ProviderSpec.supports_json_schema` existe: provedores que não aceitam schema estrito caem para `json_object` e precisam de validação e reparo no consumidor.
 
 ### Ressalvas honestas
 

@@ -144,7 +144,9 @@ class LLMChain:
                     user="ping",
                     model=model,
                     temperature=0.0,
-                    max_output_tokens=16,
+                    # Folga suficiente para modelo de raciocínio (gpt-oss e
+                    # similares) gastar tokens pensando e ainda responder.
+                    max_output_tokens=256,
                     timeout_s=30.0,
                 )
             except LLMError as exc:
@@ -153,13 +155,14 @@ class LLMChain:
                 )
                 continue
 
+            texto = content.strip()
             results.append(
                 LinkAttempt(
                     link.provider,
                     model,
                     link.tier,
                     ok=True,
-                    detail=content.strip()[:40] or "(resposta vazia)",
+                    detail=texto[:40] if texto else "responde, mas devolveu conteúdo vazio",
                 )
             )
         return results

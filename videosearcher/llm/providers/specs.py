@@ -18,8 +18,11 @@ _OPENROUTER_HEADERS = {
 }
 
 _FREE_MISTRAL = (
-    "Tier Experiment gratuito: acesso a todos os modelos, cota na casa de "
-    "~1 bilhão de tokens/mês, com limites baixos de requisições por segundo."
+    "Tier Experiment gratuito com cota alta. ATENÇÃO: a família mistral-small / "
+    "medium / large devolve 429 em conta gratuita (limite efetivo zero). Os que "
+    "funcionam de fato são ministral-14b-2512, ministral-8b-2512, "
+    "ministral-3b-2512 e open-mistral-nemo. Confira seus limites por modelo em "
+    "https://admin.mistral.ai/plateforme/limits"
 )
 _FREE_ZAI = (
     "GLM-4.7-Flash e GLM-4.5-Flash são gratuitos na API (não é trial). "
@@ -56,7 +59,9 @@ SPECS: dict[str, ProviderSpec] = {
         name="mistral",
         base_url="https://api.mistral.ai/v1",
         api_key_env="MISTRAL_API_KEY",
-        default_model="mistral-small-latest",
+        # Escolhido empiricamente: melhor qualidade de briefing entre os modelos
+        # efetivamente disponíveis no tier gratuito.
+        default_model="ministral-14b-2512",
         signup_url="https://console.mistral.ai",
         docs_url="https://docs.mistral.ai/",
         free_tier=_FREE_MISTRAL,
