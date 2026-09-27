@@ -1,0 +1,34 @@
+[project]
+name = "vsworker"
+version = "0.1.0"
+description = "Workers de ingestão, corte e classificação do videosearcher"
+requires-python = ">=3.11"
+dependencies = [
+    "videosearcher",          # instalado do repo, traz licenca/http/text
+    "psycopg[binary]>=3.2",
+    "nats-py>=2.9",
+    "imageio-ffmpeg>=0.5",    # binário estático: dispensa ffmpeg de sistema
+    "pillow>=10.0",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+vsworker-media = "vsworker.cmd_media:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["vsworker*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+# Travessão, reticências e aspas tipográficas são conteúdo, não erro.
+ignore = ["RUF001", "RUF002", "RUF003"]
