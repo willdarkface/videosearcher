@@ -187,6 +187,87 @@ def adicionar_palavras(
     return len(ids)
 
 
+def salvar_descricao(
+    conexao: psycopg.Connection, clipe_id: int, caption: str, modelo: str
+) -> None:
+    sql = """
+        INSERT INTO descricoes (clipe_id, caption, modelo)
+        VALUES (%s, %s, %s)
+        ON CONFLICT (clipe_id) DO UPDATE SET
+            caption = EXCLUDED.caption,
+            modelo = EXCLUDED.modelo,
+            criado_em = now()
+    """
+    with conexao.cursor() as cur:
+        cur.execute(sql, (clipe_id, caption, modelo))
+
+
+def salvar_embedding(
+    conexao: psycopg.Connection, clipe_id: int, vetor: list[float], modelo: str
+) -> None:
+    """Grava o vetor. O literal do pgvector é montado como texto porque evita
+    depender do pacote `pgvector` no worker só para um cast."""
+    from .embedding import para_literal_pgvector
+
+    sql = """
+        INSERT INTO embeddings (clipe_id, modelo, vetor)
+        VALUES (%s, %s, %s::vector)
+        ON CONFLICT (clipe_id) DO UPDATE SET
+            vetor = EXCLUDED.vetor,
+            modelo = EXCLUDED.modelo,
+            criado_em = now()
+    """
+    with conexao.cursor() as cur:
+        cur.execute(sql, (clipe_id, modelo, para_literal_pgvector(vetor)))
+
+
+def atualizar_sensibilidade(
+    conexao: psycopg.Connection, clipe_id: int, sensibilidade: str
+) -> None:
+    with conexao.cursor() as cur:
+        cur.execute(
+            """INSERT INTO atributos (clipe_id, sensibilidade)
+               VALUES (%s, %s::sensibilidade)
+               ON CONFLICT (clipe_id) DO UPDATE
+               SET sensibilidade = EXCLUDED.sensibilidade""",
+            (clipe_id, sensibilidade),
+        )
+
+
+def clipes_sem_classificacao(
+    conexao: psycopg.Connection, limite: int = 50
+) -> list[dict]:
+    """Clipes que ainda não têm caption ou embedding.
+
+    Serve de rede de segurança e de backfill: se a fila perder mensagem ou o
+    worker cair no meio, isso reencontra o trabalho pendente sem depender de
+    nada além do estado do banco.
+    """
+    sql = """
+        SELECT c.id, c.objeto, c.keyframe, f.titulo, f.provider
+        FROM clipes c
+        JOIN fontes f ON f.id = c.fonte_id
+        LEFT JOIN descricoes d ON d.clipe_id = c.id
+        LEFT JOIN embeddings e ON e.clipe_id = c.id
+        WHERE c.keyframe IS NOT NULL
+          AND (d.clipe_id IS NULL OR e.clipe_id IS NULL)
+        ORDER BY c.id
+        LIMIT %s
+    """
+    with conexao.cursor() as cur:
+        cur.execute(sql, (limite,))
+        return [dict(linha) for linha in cur.fetchall()]
+
+
+def remover_clipe(conexao: psycopg.Connection, clipe_id: int) -> str | None:
+    """Remove o clipe e devolve a chave do objeto, para o chamador apagar o
+    arquivo. Usado quando o modelo de visão confirma que o quadro é inútil."""
+    with conexao.cursor() as cur:
+        cur.execute("DELETE FROM clipes WHERE id = %s RETURNING objeto", (clipe_id,))
+        linha = cur.fetchone()
+        return linha["objeto"] if linha else None
+
+
 def estatisticas(conexao: psycopg.Connection) -> dict[str, int]:
     sql = """
         SELECT
@@ -194,6 +275,8 @@ def estatisticas(conexao: psycopg.Connection) -> dict[str, int]:
           (SELECT count(*) FROM fontes WHERE licenca_verificada) AS fontes_livres,
           (SELECT count(*) FROM clipes) AS clipes,
           (SELECT count(*) FROM clipes_usaveis) AS clipes_usaveis,
+          (SELECT count(*) FROM descricoes) AS classificados,
+          (SELECT count(*) FROM embeddings) AS com_embedding,
           (SELECT count(*) FROM palavras) AS palavras,
           (SELECT COALESCE(sum(bytes), 0) FROM clipes) AS bytes
     """
