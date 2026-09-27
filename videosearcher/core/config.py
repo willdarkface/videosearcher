@@ -99,6 +99,19 @@ class MidiaConfig(BaseModel):
     # sepia) e o asset é material moderno de banco de b-roll.
     penalidade_look_incompativel: float = 0.55
 
+    # Alvo de proporção de vídeo na entrega. 0.2 = 20% dos blocos com vídeo e
+    # 80% com imagem. É decisão global do vídeo, não de cada bloco: primeiro
+    # cada bloco descobre o melhor vídeo E a melhor imagem, depois o orçamento
+    # de vídeo é distribuído para os blocos que mais ganham com movimento.
+    # `null` desliga o alvo e volta ao comportamento de sempre preferir vídeo.
+    proporcao_video: float | None = 0.2
+
+    # Peso de cada `motion` na disputa pelo orçamento de vídeo: bloco de ação
+    # aproveita movimento muito mais que bloco de documento.
+    peso_motion_video: dict[str, float] = Field(
+        default_factory=lambda: {"fast": 1.6, "any": 1.0, "slow": 0.7, "still": 0.35}
+    )
+
     # Foto
     imagem_aspecto: str = "16:9"
     imagem_tolerancia_aspecto: float = 0.12  # desvio relativo aceito sem crop

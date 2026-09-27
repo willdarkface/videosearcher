@@ -65,8 +65,21 @@ class Provider(Protocol):
         """
         ...
 
-    def search(self, brief: VisualBrief, limit: int = 20) -> list[dict[str, Any]]:
-        """Busca no provedor e devolve as respostas cruas, sem normalizar."""
+    def search(
+        self,
+        brief: VisualBrief,
+        limit: int = 20,
+        *,
+        duracao_minima: float | None = None,
+        queries: list[str] | None = None,
+        tipos: list[MediaType] | None = None,
+    ) -> list[dict[str, Any]]:
+        """Busca no provedor e devolve as respostas cruas, sem normalizar.
+
+        `tipos` sobrescreve a preferência de mídia do brief. O pipeline usa isso
+        para o alvo de proporção vídeo/imagem: não faz sentido gastar cota
+        buscando vídeo num bloco que já foi destinado a receber imagem.
+        """
         ...
 
     def normalize(self, raw: dict[str, Any]) -> Asset:

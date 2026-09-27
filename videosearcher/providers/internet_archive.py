@@ -77,7 +77,10 @@ class InternetArchiveProvider(BaseProvider):
         *,
         duracao_minima: float | None = None,
         queries: list[str] | None = None,
+        tipos: list[MediaType] | None = None,
     ) -> list[dict[str, Any]]:
+        if tipos is not None and MediaType.VIDEO not in tipos:
+            return []  # acervo só tem vídeo
         termos_busca = queries or brief.queries.archival[:1] or brief.queries.primary[:1]
         palavras = _termos_de_titulo(brief, termos_busca)
         if not palavras:

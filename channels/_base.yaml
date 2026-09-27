@@ -35,6 +35,11 @@ provedores:
   prioridade: [pexels, pixabay, internet_archive]
   pesos: {}
 
+midia:
+  # Alvo de mistura da entrega: 20% dos blocos com vídeo, 80% com imagem.
+  # Sobrescreva por canal. `null` desliga o alvo e sempre prefere vídeo.
+  proporcao_video: 0.2
+
 estetica:
   look_padrao: any
   aceita_4x3: true

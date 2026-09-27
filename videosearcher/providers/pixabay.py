@@ -54,18 +54,13 @@ class PixabayProvider(BaseProvider):
         *,
         duracao_minima: float | None = None,
         queries: list[str] | None = None,
+        tipos: list[MediaType] | None = None,
     ) -> list[dict[str, Any]]:
         chave = os.getenv("PIXABAY_API_KEY", "")
         termos = queries or brief.queries.primary[:1] or brief.queries.secondary[:1]
         saida: list[dict[str, Any]] = []
-        cobriu = False
 
-        for tipo in brief.media_preference:
-            # Vídeo é sempre preferido a foto: se já há vídeo cobrindo o bloco,
-            # a busca de foto é chamada desperdiçada.
-            if tipo is MediaType.PHOTO and cobriu:
-                break
-
+        for tipo in tipos or brief.media_preference:
             for termo in termos:
                 comum = {"key": chave, "q": termo, "per_page": max(3, min(limit, 200))}
                 if tipo is MediaType.VIDEO:
@@ -74,8 +69,6 @@ class PixabayProvider(BaseProvider):
                         item["_media_type"] = "video"
                         item["_query"] = termo
                         saida.append(item)
-                        if duracao_minima and float(item.get("duration") or 0) >= duracao_minima:
-                            cobriu = True
                 else:
                     dados = get_json(
                         f"{BASE}/",

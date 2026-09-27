@@ -581,6 +581,18 @@ def run(
         f"  vídeo: {videos} · imagem: {len(com) - videos} · "
         f"sem nada: [red]{len(sem)}[/red]"
     )
+    mistura = resultado.mistura
+    if mistura:
+        alvo = cfg.midia.proporcao_video
+        if alvo is None:
+            console.print("  mistura: alvo desligado (vídeo sempre preferido)")
+        else:
+            console.print(
+                f"  mistura: {mistura.proporcao_atingida:.0%} vídeo / "
+                f"{1 - mistura.proporcao_atingida:.0%} imagem "
+                f"(alvo {alvo:.0%}/{1 - alvo:.0%}) · "
+                f"{mistura.forcados_para_imagem} blocos tinham vídeo e receberam imagem"
+            )
     console.print(f"  cache de busca: {resultado.cache_busca}")
     if resultado.briefing:
         extra = ""

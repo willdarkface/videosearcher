@@ -267,6 +267,31 @@ class Selecao:
         escolhido = self.escolhido
         return escolhido is not None and escolhido[0].media_type is MediaType.PHOTO
 
+    def do_tipo(self, tipo: MediaType) -> list[tuple[Asset, Veredito]]:
+        return [par for par in self.aprovados if par[0].media_type is tipo]
+
+    @property
+    def melhor_video(self) -> tuple[Asset, Veredito] | None:
+        pares = self.do_tipo(MediaType.VIDEO)
+        return pares[0] if pares else None
+
+    @property
+    def melhor_foto(self) -> tuple[Asset, Veredito] | None:
+        pares = self.do_tipo(MediaType.PHOTO)
+        return pares[0] if pares else None
+
+    def preferir(self, tipo: MediaType) -> None:
+        """Reordena para que o tipo pedido fique em primeiro, mantendo o resto.
+
+        Usado pela distribuição de proporção: o ranqueamento já decidiu qual é
+        o melhor vídeo e a melhor foto, aqui só se escolhe entre os dois.
+        """
+        do_tipo = self.do_tipo(tipo)
+        if not do_tipo:
+            return
+        outros = [par for par in self.aprovados if par[0].media_type is not tipo]
+        self.aprovados = [*do_tipo, *outros]
+
 
 def selecionar(
     block: Block,

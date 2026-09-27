@@ -71,18 +71,12 @@ class PexelsProvider(BaseProvider):
         *,
         duracao_minima: float | None = None,
         queries: list[str] | None = None,
+        tipos: list[MediaType] | None = None,
     ) -> list[dict[str, Any]]:
         termos = queries or brief.queries.primary[:1] or brief.queries.secondary[:1]
         saida: list[dict[str, Any]] = []
 
-        for tipo in brief.media_preference:
-            # Economia de cota: o limite do Pexels é 200 req/hora. Como vídeo é
-            # sempre preferido a foto, se a busca de vídeo já trouxe candidatos
-            # que cobrem o bloco (min_duration é filtro do servidor), a busca de
-            # foto seria uma chamada jogada fora.
-            if tipo is MediaType.PHOTO and saida:
-                break
-
+        for tipo in tipos or brief.media_preference:
             for termo in termos:
                 if tipo is MediaType.VIDEO:
                     params: dict[str, Any] = {
