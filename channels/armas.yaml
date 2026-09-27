@@ -1,0 +1,32 @@
+extends: _base
+nome: "História de Armas"
+
+provedores:
+  prioridade: [internet_archive, pexels, pixabay]
+  pesos:
+    internet_archive: 1.3
+
+estetica:
+  look_padrao: any        # mistura arquivo de época com detalhe moderno
+  aceita_4x3: true
+
+briefing:
+  intent_padrao: arquivo
+  media_padrao: [video, photo]
+  vocabulario: |
+    Vocabulário de armamento e indústria bélica:
+    rifle mechanism close up, bolt action, machine gun firing, ammunition
+    belt, cartridge production line, arms factory workers, weapon assembly,
+    firing range test, artillery piece loading, tank turret, submarine torpedo,
+    aircraft cannon, blueprint technical drawing, gunsmith workshop.
+    Para armas específicas, use o nome de fábrica e o ano
+    (ex: "Mauser 98k", "Thompson submachine gun 1942").
+    Detalhe mecânico em close vale mais que plano geral.
+
+politica:
+  sensitivity_maxima: sensitive
+  licencas_proibidas: [cc-by-sa]
+
+entrega:
+  duracao_bloco: [4, 9]
+  resolucao_minima: 480

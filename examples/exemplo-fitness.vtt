@@ -1,0 +1,32 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+NOTE
+Este exemplo exercita as partes chatas do formato VTT:
+identificador de cue, timestamp sem hora, tags inline,
+override de estilo, entidade HTML e travessão de diálogo.
+
+intro-1
+00:01.000 --> 00:04.500 align:start position:10%
+<i>Todo mundo</i> erra o agachamento
+do mesmo jeito.
+
+00:04.500 --> 00:08.200
+O joelho passa da linha do pé
+{\an8}e a lombar assume a carga.
+
+00:08.200 --> 00:12.000
+- E aí vem a dor &amp; a lesão
+que trava seu treino por meses.
+
+00:12.600 --> 00:16.400
+A correção leva três segundos
+e ninguém te ensina.
+
+00:16.400 --> 00:20.100
+Empurre o quadril para trás
+antes de dobrar o joelho.
+
+00:20.100 --> 00:24.000
+Pronto. Esse é o movimento certo.

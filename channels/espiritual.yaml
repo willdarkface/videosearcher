@@ -1,0 +1,34 @@
+extends: _base
+nome: "Espiritual"
+
+provedores:
+  prioridade: [pexels, pixabay]
+  pesos:
+    pexels: 1.2
+
+estetica:
+  look_padrao: any
+  aceita_4x3: false
+  grao_permitido: true
+
+briefing:
+  intent_padrao: metaforico
+  media_padrao: [video]
+  vocabulario: |
+    Vocabulário contemplativo e abstrato:
+    meditation silhouette sunrise, lotus flower water, incense smoke,
+    starry night sky timelapse, nebula galaxy, water surface ripple slow,
+    forest light rays fog, mountain peak clouds, ocean waves calm,
+    candle in darkness, hands releasing light, silhouette walking path,
+    mandala pattern, crystal refracting light, wind through grass,
+    slow motion dust particles in sunlight.
+    Movimento lento e contemplativo é obrigatório: nada de corte rápido ou
+    energia de publicidade. Prefira plano longo e respiração visual.
+
+politica:
+  sensitivity_maxima: none
+  exige_sem_atribuicao: true
+
+entrega:
+  duracao_bloco: [6, 12]        # narração contemplativa pede bloco mais longo
+  resolucao_minima: 1080

@@ -1,0 +1,51 @@
+# ==========================================================================
+# Base herdada por todos os canais. Não é um canal — o CLI ignora arquivos
+# que começam com "_". Use `extends: _base` nos packs reais.
+# ==========================================================================
+
+nome: "Base"
+idioma_legenda: pt-BR
+
+# --------------------------------------------------------------------------
+# Corrente de LLM: tentada na ordem. Chave ausente, 429, cota esgotada ou erro
+# de servidor fazem o próximo elo assumir. Custo esperado: R$ 0.
+# Veja a seção "Cadastro das LLMs" do README.
+# --------------------------------------------------------------------------
+llm:
+  chain:
+    - { provider: mistral,    model: mistral-small-latest, tier: free }
+    - { provider: zai,        model: glm-4.7-flash,        tier: free }
+    - { provider: groq,       model: openai/gpt-oss-20b,   tier: free }
+    - { provider: openrouter, model: z-ai/glm-4.5-air:free, tier: free }
+  batch_size: 20
+  cache_prompt: true
+  temperature: 0.2
+  max_output_tokens: 8000
+  on_rate_limit: next_in_chain
+  on_quota_exhausted: next_in_chain
+  timeout_s: 120
+
+provedores:
+  prioridade: [pexels, pixabay, internet_archive]
+  pesos: {}
+
+estetica:
+  look_padrao: any
+  aceita_4x3: true
+  grao_permitido: true
+
+briefing:
+  vocabulario: ""
+  intent_padrao: literal
+  media_padrao: [video, photo]
+
+politica:
+  sensitivity_maxima: sensitive
+  licencas_proibidas: []
+  exige_sem_atribuicao: false
+
+entrega:
+  duracao_bloco: [4, 10]
+  gap_maximo_s: 1.5
+  resolucao_minima: 720
+  alternativas_por_bloco: 2

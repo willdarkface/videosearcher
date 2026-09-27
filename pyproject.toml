@@ -1,0 +1,43 @@
+[project]
+name = "videosearcher"
+version = "0.1.0"
+description = "Encontra e baixa a mídia ideal (vídeo ou foto) para cada bloco de um roteiro, a partir de uma legenda SRT/VTT"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "pydantic>=2.7",
+    "typer>=0.12",
+    "rich>=13.7",
+    "pyyaml>=6.0",
+    "httpx>=0.27",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+videosearcher = "videosearcher.cli:app"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["videosearcher*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF", "TRY"]
+ignore = [
+    "TRY003",  # mensagens de exceção longas e explicativas são intencionais
+    "RUF001",  # travessão, reticências e aspas tipográficas são conteúdo, não erro
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Typer exige chamada de função no default do argumento — é a API dele.
+"videosearcher/cli.py" = ["B008"]

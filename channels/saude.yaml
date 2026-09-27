@@ -1,0 +1,33 @@
+extends: _base
+nome: "Saúde"
+
+provedores:
+  prioridade: [pexels, pixabay]
+  pesos:
+    pexels: 1.2
+
+estetica:
+  look_padrao: color_modern
+  aceita_4x3: false
+  grao_permitido: false
+
+briefing:
+  intent_padrao: literal
+  media_padrao: [video, photo]
+  vocabulario: |
+    Vocabulário de saúde, medicina e bem-estar em stock moderno:
+    doctor consultation, stethoscope examination, hospital corridor,
+    laboratory microscope, blood test tube, pills close up, medical scan,
+    healthy vegetables cutting board, drinking water glass, sleeping in bed,
+    meditation breathing, walking in park elderly, blood pressure monitor,
+    dna helix animation, human anatomy illustration, brain scan.
+    Para órgãos e processos internos, prefira animação médica ou ilustração
+    anatômica a imagem real de procedimento.
+
+politica:
+  sensitivity_maxima: none          # evita imagem clínica gráfica
+  exige_sem_atribuicao: true
+
+entrega:
+  duracao_bloco: [4, 8]
+  resolucao_minima: 1080

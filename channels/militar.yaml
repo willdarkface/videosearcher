@@ -1,0 +1,33 @@
+extends: _base
+nome: "Militar"
+
+provedores:
+  prioridade: [internet_archive, pexels, pixabay]
+  pesos:
+    internet_archive: 1.2
+    pexels: 0.9
+
+estetica:
+  look_padrao: any       # doutrina e tecnologia moderna convivem com arquivo
+  aceita_4x3: true
+
+briefing:
+  intent_padrao: literal
+  media_padrao: [video, photo]
+  vocabulario: |
+    Vocabulário militar contemporâneo e de doutrina:
+    military training exercise, soldiers rappelling, helicopter insertion,
+    armored vehicle column, aircraft carrier deck, fighter jet takeoff,
+    radar station, command center screens, night vision patrol,
+    parachute drop, military logistics depot, boot camp drill,
+    submarine surfacing, missile launch test, satellite imagery.
+    Quando o bloco citar país, ramo ou era, inclua no termo
+    (ex: "US Navy destroyer", "Cold War missile silo").
+
+politica:
+  sensitivity_maxima: sensitive
+  licencas_proibidas: [cc-by-sa]
+
+entrega:
+  duracao_bloco: [4, 10]
+  resolucao_minima: 720

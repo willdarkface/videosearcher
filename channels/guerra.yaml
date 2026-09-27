@@ -1,0 +1,35 @@
+extends: _base
+nome: "Guerra"
+
+provedores:
+  prioridade: [internet_archive, pexels, pixabay]
+  pesos:
+    internet_archive: 1.4
+    pexels: 0.6
+
+estetica:
+  look_padrao: bw_archival
+  aceita_4x3: true       # acervo de época vem em 4:3 e aqui isso é desejável
+  grao_permitido: true
+
+briefing:
+  intent_padrao: arquivo
+  media_padrao: [video, photo]
+  vocabulario: |
+    Prefira vocabulário de arquivo militar e jornalístico de época:
+    newsreel, war footage, combat film, troops marching, armored column,
+    panzer, tank advance, artillery barrage, trench warfare, airfield,
+    bomber formation, supply convoy, naval fleet, infantry patrol,
+    war ruins, civilians evacuating, military parade, field hospital.
+    Nomes de operação, unidade, frente e cidade aumentam muito a precisão
+    (ex: "Operation Overlord", "Eastern Front", "Normandy beach landing").
+    Para blocos sem referência histórica direta, use metáfora sóbria:
+    mapas antigos, cartas, medalhas, cemitério militar.
+
+politica:
+  sensitivity_maxima: sensitive   # material forte, sem corpos ou ferimentos
+  licencas_proibidas: [cc-by-sa]  # evita licença viral
+
+entrega:
+  duracao_bloco: [4, 10]
+  resolucao_minima: 480           # muito acervo de época só existe em SD

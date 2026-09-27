@@ -1,0 +1,33 @@
+extends: _base
+nome: "Religioso"
+
+provedores:
+  prioridade: [pexels, pixabay, internet_archive]
+  pesos:
+    pexels: 1.1
+
+estetica:
+  look_padrao: any
+  aceita_4x3: true
+  grao_permitido: true
+
+briefing:
+  intent_padrao: metaforico
+  media_padrao: [video, photo]
+  vocabulario: |
+    Vocabulário de reverência, tradição e cenário bíblico:
+    open bible pages, praying hands, candle flame dark, church interior nave,
+    stained glass window light, cross silhouette sunset, congregation singing,
+    baptism water, desert landscape ancient, olive trees, shepherd with sheep,
+    stone path jerusalem, sunrise over mountains, sky clouds light rays,
+    old manuscript parchment, hands opening door light.
+    Para passagens narrativas, prefira paisagem do Oriente Médio, objeto de
+    época e luz simbólica a representação figurativa de pessoas sagradas.
+
+politica:
+  sensitivity_maxima: none
+  licencas_proibidas: [cc-by-sa]
+
+entrega:
+  duracao_bloco: [5, 11]
+  resolucao_minima: 720

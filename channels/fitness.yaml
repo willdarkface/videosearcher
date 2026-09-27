@@ -1,0 +1,32 @@
+extends: _base
+nome: "Fitness"
+
+provedores:
+  prioridade: [pexels, pixabay]
+  pesos:
+    pexels: 1.3
+
+estetica:
+  look_padrao: color_modern
+  aceita_4x3: false
+  grao_permitido: false
+
+briefing:
+  intent_padrao: literal
+  media_padrao: [video]
+  vocabulario: |
+    Vocabulário de stock moderno de academia e treino:
+    gym workout, barbell deadlift, bench press, kettlebell swing, dumbbell curl,
+    squat rack, pull up bar, treadmill running, running outdoors sunrise,
+    cycling road, swimming pool laps, stretching mat, yoga pose,
+    protein shake, meal prep healthy food, measuring tape waist,
+    personal trainer coaching, sweat close up, athletic body silhouette.
+    Prefira plano fechado em execução de movimento a plano geral de academia.
+
+politica:
+  sensitivity_maxima: none
+  exige_sem_atribuicao: true
+
+entrega:
+  duracao_bloco: [3, 7]
+  resolucao_minima: 1080
