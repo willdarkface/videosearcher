@@ -16,6 +16,9 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.5"]
+# Re-rank semântico. Separado porque os encoders pesam ~0,9 GB e o pipeline
+# funciona sem eles, só com busca por palavra-chave.
+semantico = ["fastembed>=0.4"]
 
 [project.scripts]
 videosearcher = "videosearcher.cli:app"
