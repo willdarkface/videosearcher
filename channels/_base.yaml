@@ -12,10 +12,16 @@ idioma_legenda: pt-BR
 # Veja a seção "Cadastro das LLMs" do README.
 # --------------------------------------------------------------------------
 llm:
+  # Ordem validada empiricamente com roteiro real:
+  #   ministral-14b  -> melhor qualidade de query e de era histórica
+  #   gpt-oss-120b   -> bom e 2x mais rápido
+  #   gpt-oss-20b    -> 3x mais rápido, queries mais rasas
+  # Ver docs/opcoes-llm.md e a seção "Cadastro das LLMs" do README.
   chain:
-    - { provider: mistral,    model: mistral-small-latest, tier: free }
-    - { provider: zai,        model: glm-4.7-flash,        tier: free }
+    - { provider: mistral,    model: ministral-14b-2512,   tier: free }
+    - { provider: groq,       model: openai/gpt-oss-120b,  tier: free }
     - { provider: groq,       model: openai/gpt-oss-20b,   tier: free }
+    - { provider: zai,        model: glm-4.7-flash,        tier: free }
     - { provider: openrouter, model: z-ai/glm-4.5-air:free, tier: free }
   batch_size: 20
   cache_prompt: true
@@ -28,6 +34,11 @@ llm:
 provedores:
   prioridade: [pexels, pixabay, internet_archive]
   pesos: {}
+
+midia:
+  # Alvo de mistura da entrega: 20% dos blocos com vídeo, 80% com imagem.
+  # Sobrescreva por canal. `null` desliga o alvo e sempre prefere vídeo.
+  proporcao_video: 0.2
 
 estetica:
   look_padrao: any

@@ -34,9 +34,10 @@ class Look(StrEnum):
     """Estética exigida pelo bloco ou pelo canal."""
 
     ANY = "any"
-    BW_ARCHIVAL = "bw_archival"
+    BW_ARCHIVAL = "bw_archival"      # filme e foto em preto e branco (a partir de ~1840)
+    PAINTING = "painting"            # pintura, gravura, litografia — épocas pré-fotografia
+    SEPIA = "sepia"                  # virada do século, foto envelhecida
     COLOR_MODERN = "color_modern"
-    SEPIA = "sepia"
 
 
 class Sensitivity(StrEnum):

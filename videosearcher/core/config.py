@@ -63,12 +63,78 @@ class BriefingConfig(BaseModel):
     media_padrao: list[MediaType] = Field(
         default_factory=lambda: [MediaType.VIDEO, MediaType.PHOTO]
     )
+    # Idioma do slug, que vira o nome do arquivo entregue. As queries de busca
+    # são sempre em inglês, independente disto.
+    idioma_slug: str = "pt-BR"
+
+
+class MidiaConfig(BaseModel):
+    """Regras de compatibilidade entre o asset e a duração do bloco.
+
+    O bloco tem duração variável e o sistema se adapta a ela — não o contrário.
+    A regra central: vídeo precisa **cobrir** o bloco (durar o mesmo ou mais),
+    porque esticar vídeo degrada e repetir em loop aparece. Foto não tem essa
+    restrição: com pan/zoom ela cobre qualquer duração, e por isso é o fallback
+    universal quando nenhum vídeo é longo o bastante.
+    """
+
+    video_deve_cobrir_bloco: bool = True
+    tolerancia_cobertura_s: float = 0.0
+    fallback_para_imagem: bool = True
+
+    # Folga relativa a partir da qual o vídeo é RECUSADO.
+    # 1.3 = aceita até 30% mais longo que o bloco. Cobrir o bloco não basta:
+    # um filme de 2 horas cobre qualquer coisa e não serve para nada, porque
+    # sem detecção de cena ninguém sabe qual trecho usar.
+    # Um bloco de 6,0s aceita de 6,0s até 7,8s.
+    # Suba este valor só quando o corte por cena estiver ativo no canal.
+    folga_relativa_rejeicao: float = 1.3
+
+    # Folga relativa em que a nota de encaixe chega ao piso. Acompanha o teto
+    # de rejeição: com teto de 30%, a nota tem que discriminar dentro dessa
+    # faixa estreita, senão todo candidato aprovado empata.
+    folga_relativa_maxima: float = 0.3
+
+    # Penalidade quando o bloco pede estética de época (bw_archival, painting,
+    # sepia) e o asset é material moderno de banco de b-roll.
+    penalidade_look_incompativel: float = 0.55
+
+    # Alvo de proporção de vídeo na entrega. 0.2 = 20% dos blocos com vídeo e
+    # 80% com imagem. É decisão global do vídeo, não de cada bloco: primeiro
+    # cada bloco descobre o melhor vídeo E a melhor imagem, depois o orçamento
+    # de vídeo é distribuído para os blocos que mais ganham com movimento.
+    # `null` desliga o alvo e volta ao comportamento de sempre preferir vídeo.
+    proporcao_video: float | None = 0.2
+
+    # Peso de cada `motion` na disputa pelo orçamento de vídeo: bloco de ação
+    # aproveita movimento muito mais que bloco de documento.
+    peso_motion_video: dict[str, float] = Field(
+        default_factory=lambda: {"fast": 1.6, "any": 1.0, "slow": 0.7, "still": 0.35}
+    )
+
+    # Foto
+    imagem_aspecto: str = "16:9"
+    imagem_tolerancia_aspecto: float = 0.12  # desvio relativo aceito sem crop
+    permitir_crop_para_aspecto: bool = True
+
+    @property
+    def aspecto_alvo(self) -> float:
+        try:
+            w, h = self.imagem_aspecto.split(":")
+            return float(w) / float(h)
+        except (ValueError, ZeroDivisionError):
+            return 16 / 9
 
 
 class PoliticaConfig(BaseModel):
     sensitivity_maxima: Sensitivity = Sensitivity.SENSITIVE
     licencas_proibidas: list[str] = Field(default_factory=list)
     exige_sem_atribuicao: bool = False
+
+    # Recusa asset cuja licença não foi comprovada pelo metadado da fonte.
+    # Padrão ligado: canal monetizado não pode apostar em "provavelmente é
+    # domínio público". Ver videosearcher/core/licenca.py.
+    exigir_licenca_verificada: bool = True
 
 
 class EntregaConfig(BaseModel):
@@ -77,6 +143,11 @@ class EntregaConfig(BaseModel):
     gap_maximo_s: float = 1.5
     resolucao_minima: int = 720
     alternativas_por_bloco: int = 2
+
+    # Divide cues longas em frases antes de agrupar, para que o corte caia na
+    # fronteira de ideia e não na fronteira arbitrária da legenda.
+    dividir_por_frase: bool = True
+    duracao_minima_unidade_s: float = 0.6
 
     @property
     def min_duracao(self) -> float:
@@ -103,6 +174,7 @@ class ChannelConfig(BaseModel):
     provedores: ProvedoresConfig = Field(default_factory=ProvedoresConfig)
     estetica: EsteticaConfig = Field(default_factory=EsteticaConfig)
     briefing: BriefingConfig = Field(default_factory=BriefingConfig)
+    midia: MidiaConfig = Field(default_factory=MidiaConfig)
     politica: PoliticaConfig = Field(default_factory=PoliticaConfig)
     entrega: EntregaConfig = Field(default_factory=EntregaConfig)
 

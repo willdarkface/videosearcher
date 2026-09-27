@@ -42,7 +42,7 @@ Bloco sem resultado simplesmente não gera arquivo, e a numeração **não é re
 |---|---|---|
 | **0** | Esqueleto, modelos, registry de provedores, packs de canal, camada de LLM com fallback, CLI | ✅ **pronto** |
 | **1** | Parser SRT/VTT + segmentação em blocos visuais | ✅ **pronto** |
-| 2 | Briefing visual por LLM (intenção, era, queries, estética) | ⏳ próxima |
+| **2** | Briefing visual por LLM (intenção, era, queries, estética) | ✅ **pronto** |
 | 3 | Pexels + Pixabay + ranqueamento + entrega em pasta numerada | ⏳ |
 | 4 | Download, normalização ffmpeg, Ken Burns em foto, 4:3 | ⏳ |
 | 5 | Internet Archive + NARA + detecção de cena | ⏳ |
@@ -98,7 +98,7 @@ Um vídeo de 100 blocos consome **~25 mil tokens**. Mesmo produzindo 3 vídeos p
 
 ### 1. Mistral — recomendado como principal
 
-Tier **Experiment** gratuito, com acesso a todos os modelos e cota na casa de **~1 bilhão de tokens/mês**. Você usaria ~0,0025% dela por vídeo. Bônus: modelo europeu, vai bem em português.
+Tier **Experiment** gratuito, com cota alta. Melhor qualidade de briefing entre os provedores gratuitos testados.
 
 1. Acesse **<https://console.mistral.ai>** e crie a conta
 2. Menu lateral → **API Keys** → **Create new key**
@@ -108,9 +108,13 @@ Tier **Experiment** gratuito, com acesso a todos os modelos e cota na casa de **
 MISTRAL_API_KEY=sua-chave-aqui
 ```
 
-Modelo usado por padrão: `mistral-small-latest`.
+Modelo usado por padrão: **`ministral-14b-2512`**.
 
-> Os limites do tier gratuito são de **taxa** (requisições por segundo), não de volume. Como o briefing roda em lote assíncrono, isso não incomoda.
+> ⚠️ **Pegadinha verificada na prática.** A família `mistral-small`, `mistral-medium` e `mistral-large` devolve **429 Rate limit exceeded** em conta gratuita, mesmo com a chave válida e a página de limites mostrando cota. O limite efetivo dessas variantes é zero no tier grátis.
+>
+> Os que funcionam de fato: `ministral-14b-2512`, `ministral-8b-2512`, `ministral-3b-2512` e `open-mistral-nemo`. Confira os seus em <https://admin.mistral.ai/plateforme/limits>.
+>
+> Como distinguir chave inválida de conta sem cota: `GET /v1/models` responde **200** quando a chave é boa. Se a inferência devolve 429 mas o `/v1/models` responde 200, o problema é cota de modelo, não autenticação.
 
 ### 2. Z.ai (GLM) — recomendado como segundo
 
@@ -135,6 +139,8 @@ Free tier **sem cartão de crédito**, ~30 requisições/minuto, com teto diári
 ```bash
 GROQ_API_KEY=sua-chave-aqui
 ```
+
+Modelos: **`openai/gpt-oss-120b`** (melhor) e **`openai/gpt-oss-20b`** (mais rápido). São modelos de raciocínio, então precisam de folga de `max_tokens` — com orçamento apertado eles gastam tudo pensando e devolvem conteúdo vazio.
 
 ### 4. OpenRouter — a rede de segurança
 
@@ -192,6 +198,31 @@ provedor devolveu:
 ```
 
 Use `--no-ping` para checar apenas se as variáveis estão preenchidas, sem gastar requisição.
+
+### Qualidade medida com roteiro real
+
+Comparação no mesmo trecho de um roteiro de história militar, pedindo briefing estruturado para 4 blocos:
+
+| Provedor / modelo | Tempo | Qualidade observada |
+|---|---|---|
+| **mistral / ministral-14b-2512** | 4,6s | **Melhor.** Era histórica precisa (`1803-1815`), queries específicas do domínio (`baker rifle mechanism close up`, `rifle barrel spiral grooves historical`) |
+| groq / gpt-oss-120b | 2,4s | Boa classificação de intenção, mas perdeu a era em um bloco e queries mais genéricas |
+| groq / gpt-oss-20b | 1,4s | **3x mais rápido.** Queries rasas (`napoleonic troops`, `red lines`), errou uma intenção e trocou a cor de uma jaqueta no slug |
+
+Por isso a corrente padrão é `ministral-14b` → `gpt-oss-120b` → `gpt-oss-20b`: qualidade primeiro, velocidade como reserva.
+
+### Por que JSON Schema estrito não é opcional
+
+O mesmo modelo, no mesmo prompt, com e sem `response_format: json_schema`:
+
+```
+COM schema estrito:  bloco 7  · bloco 10 · bloco 40 · bloco 95   ← números preservados
+SEM schema (json_object):  bloco None · None · None · None        ← números perdidos
+```
+
+Sem o schema, o modelo devolveu uma lista na raiz em vez do objeto esperado e **descartou o `block_number` de todos os blocos**. O número do bloco é exatamente o que dá nome ao arquivo entregue (`004 - video ....mp4`), então perdê-lo inviabiliza a entrega.
+
+É por isso que `ProviderSpec.supports_json_schema` existe: provedores que não aceitam schema estrito caem para `json_object` e precisam de validação e reparo no consumidor.
 
 ### Ressalvas honestas
 
@@ -337,6 +368,54 @@ Opções:
 | `--limite`, `-n` | Mostra só os N primeiros blocos |
 | `--json ARQUIVO` | Grava blocos e estatísticas em JSON |
 
+### Gerar o briefing visual de cada bloco
+
+```bash
+videosearcher briefs examples/baker-rifle.srt --canal armas
+```
+
+```
+ #   dur   intenção   era        look  query principal                    slug
+003  9.0s  arquivo    1809-1809  bw    Baker rifle single shot kill       rifle-baker-tiro-unico
+004  6.9s  arquivo    1815-1815  bw    Waterloo farmhouse British sol…    fazenda-waterloo-defesa
+005  6.9s  metaforico —          cor   genius vs mistake military dec…    genialidade-ou-erro
+
+Resumo
+  intenções: metaforico=69 · literal=28 · arquivo=11 · retrato=4 · grafico=2
+  com era histórica: 38/114 · com query de arquivo: 81 · sensíveis: 17
+  lotes: 6 · 6/6 do cache (100%) · provedores: só cache
+```
+
+| Flag | Efeito |
+|---|---|
+| `--canal`, `-c` | Pack de canal (obrigatório: define vocabulário e estética) |
+| `--tema` | Tema do vídeo. Por padrão infere da abertura do roteiro |
+| `--limite`, `-n` | Processa só os N primeiros blocos — use ao ajustar o prompt |
+| `--sem-cache` | Ignora o cache e força chamada nova |
+| `--json ARQUIVO` | Grava todos os briefs em JSON |
+
+**Cache:** a resposta é gravada em `.cache/llm/` com chave por hash de prompt + modelo. Reprocessar o mesmo roteiro custa **0,3s e zero cota**. Mudar o prompt invalida o cache automaticamente, então não há risco de continuar servindo resposta velha.
+
+**Robustez:** o pipeline nunca deixa bloco órfão. Se o lote volta incompleto, os blocos faltantes são reprocessados isoladamente. Se a corrente de LLM falha, o lote é dividido ao meio e tentado de novo. Em último caso, um brief de emergência é montado a partir do texto do bloco, e o aviso aparece no relatório.
+
+### Onde ficam prompt e schema
+
+`videosearcher/script/prompt.py` — separado do motor de propósito, porque ajustar prompt é a atividade mais frequente e não deveria exigir mexer em rede, cache ou validação.
+
+Ao mudar o prompt de forma incompatível, incremente `VERSAO_PROMPT` no mesmo arquivo: isso invalida o cache de todo mundo.
+
+Como o prompt é medido contra roteiro real — números de uma iteração que melhorou duas regras:
+
+| Métrica | Antes | Depois |
+|---|---|---|
+| `era` preenchida mas `intent: metaforico` (contradição) | 48 (42%) | **2 (2%)** |
+| Blocos marcados só como foto, sem vídeo | 100 (88%) | **19 (17%)** |
+| Blocos que aceitam vídeo | 14 (12%) | **95 (83%)** |
+| `look: painting` (época pré-fotografia) | 0 | **17** |
+| `motion: still` | 88 | 24 |
+
+As duas correções foram: (1) regra de coerência dizendo que `era` preenchida implica fato histórico concreto, logo `intent` não deveria ser metáfora; (2) aviso explícito de que **época antiga não significa foto** — existe vídeo moderno de reconstituição, close de mecanismo, neve, fumaça e paisagem.
+
 ### Todos os comandos
 
 ```bash
@@ -344,6 +423,7 @@ videosearcher version              # versão
 videosearcher providers            # provedores de mídia + capabilities + chaves
 videosearcher channels             # packs de canal disponíveis
 videosearcher blocks LEGENDA       # fase 1: legenda → blocos
+videosearcher briefs LEGENDA -c X  # fase 2: blocos → briefing visual por LLM
 videosearcher llm list             # provedores de LLM, variáveis e onde cadastrar
 videosearcher llm check            # testa a corrente de LLM elo por elo
 ```
@@ -390,7 +470,75 @@ politica:
 entrega:
   duracao_bloco: [4, 10]
   resolucao_minima: 480           # muito acervo de época só existe em SD
+  dividir_por_frase: true         # quebra cue longa em frases antes de agrupar
+  duracao_minima_unidade_s: 0.6   # funde fragmento curto ("Right?") no vizinho
 ```
+
+> **Sobre `dividir_por_frase`:** a cue da legenda não é a unidade visual. Uma cue
+> de 8 segundos pode conter sete beats ("Long red lines. Men shoulder to
+> shoulder. Smoke everywhere. Right?"). Sem a divisão, o blocker é obrigado a
+> cortar na fronteira da legenda e às vezes estoura a duração máxima do canal.
+> Com ela, o corte cai na fronteira de ideia e o teto é respeitado. O timecode de
+> cada frase é interpolado proporcionalmente ao número de caracteres.
+
+### Regra de duração: o asset se adapta ao bloco
+
+Os blocos têm **duração variável** — é a legenda que manda, e o sistema se adapta a ela. Não existe tentativa de forçar o bloco a caber num clipe.
+
+```yaml
+midia:
+  video_deve_cobrir_bloco: true      # vídeo precisa durar ≥ o bloco
+  tolerancia_cobertura_s: 0.0        # nenhuma folga negativa aceita
+  folga_relativa_rejeicao: 1.3       # teto: no máximo 30% mais longo que o bloco
+  folga_relativa_maxima: 0.3         # nota chega ao piso nos 30%
+  fallback_para_imagem: true         # sem vídeo na faixa → imagem
+  imagem_aspecto: "16:9"
+  imagem_tolerancia_aspecto: 0.12    # desvio aceito sem crop
+  permitir_crop_para_aspecto: true   # fora da tolerância, crop central
+  penalidade_look_incompativel: 0.55 # material moderno em bloco de época
+```
+
+**A janela é estreita de propósito.** Um bloco de 6,0s aceita vídeo de **6,0s a 7,8s**. Só cobrir o bloco não basta: um filme de 2 horas cobre qualquer coisa no papel e não serve para nada, porque sem detecção de cena ninguém sabe qual trecho usar — o corte pegaria os primeiros segundos, que quase nunca servem.
+
+| Situação | Decisão |
+|---|---|
+| Vídeo entre a duração do bloco e **+30%** | **Aceito**, com `trim`. Vídeo é sempre preferido a foto |
+| Entre vídeos válidos | Vence o de **encaixe mais justo** |
+| Vídeo mais curto que o bloco | **Recusado**, sem exceção. Esticar degrada, loop aparece |
+| Vídeo mais de 30% acima | **Recusado.** É trecho de material longo, não um clipe |
+| Nenhum vídeo na faixa | **Cai para imagem**, com `kenburns` — pan/zoom cobre qualquer duração |
+| Imagem dentro da tolerância de 16:9 | Entra direto |
+| Imagem fora de 16:9 | Entra por **crop central**, nota proporcional à área mantida |
+| Crop derrubaria a resolução abaixo do mínimo | **Recusada** |
+| Bloco pede época e o asset é b-roll moderno | Aceito com **nota penalizada** — melhor que nada, pior que arquivo real |
+| Nada aprovado | Bloco vai para `_nao-encontrados.txt` |
+
+Medido no roteiro real, com teto de 30%: **79 candidatos recusados por duração**, excesso máximo entre os 59 vídeos entregues de **+26,6%**, nenhum asset mais curto que o bloco. Exemplos de recusa:
+
+```
+internet_archive:fc-fc-3933 — vídeo longo demais: 257.7s para bloco de 4.8s (+5311%, teto 6.2s)
+internet_archive:iss062m…   — vídeo longo demais: 27 min para bloco de 4.8s (+34057%, teto 6.2s)
+```
+
+Subir `folga_relativa_rejeicao` só faz sentido quando o corte por cena (fase 5) estiver ativo no canal.
+
+Exemplos reais da regra rodando num bloco de 6,2s:
+
+```
+ESCOLHIDO  video  video-6.5s   nota 0.99  [trim]      cobre o bloco: 6.5s ≥ 6.2s (folga 0.3s)
+alt 1      video  video-8s     nota 0.93  [trim]      cobre o bloco: 8.0s ≥ 6.2s (folga 1.8s)
+alt 2      photo  foto-16x9    nota 1.00  [kenburns]  aspecto 1.78 dentro da tolerância
+```
+
+E num bloco de 9,0s onde nenhum vídeo alcança:
+
+```
+ESCOLHIDO  photo  foto-16x9    nota 1.00  [kenburns]  aspecto 1.78 dentro da tolerância
+RECUSADO   video  video-8.9s               vídeo curto: 8.9s para bloco de 9.0s (faltam 0.1s)
+RECUSADO   video  video-4s                 vídeo curto: 4.0s para bloco de 9.0s (faltam 5.0s)
+```
+
+Todo veredito carrega o motivo em texto, e o motivo vai para o `_manifest.csv` da entrega — é o que permite auditar por que um bloco recebeu foto em vez de vídeo.
 
 O que cada seção controla:
 
@@ -400,6 +548,7 @@ O que cada seção controla:
 | `estetica` | `look_padrao` (`bw_archival`, `color_modern`, `sepia`, `any`), aceitar 4:3, permitir grão |
 | `briefing` | **Vocabulário injetado no prompt** — o ativo que faz o LLM gerar query de stock boa em vez de tradução literal |
 | `politica` | Teto de sensibilidade (filtro de desmonetização) e licenças banidas |
+| `midia` | Cobertura de duração do vídeo, fallback para imagem, aspecto 16:9 e crop |
 | `entrega` | Duração de bloco, resolução mínima, quantas alternativas por bloco |
 | `llm` | Corrente de LLM específica daquele canal |
 

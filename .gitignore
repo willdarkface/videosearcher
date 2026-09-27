@@ -9,11 +9,16 @@ venv/
 .env
 .env.local
 
-.cache/
-saida/
-output/
-assets/
+# Pastas geradas na raiz. A barra inicial é obrigatória: sem ela, `output/`
+# também ignoraria o pacote videosearcher/output/.
+/.cache/
+/saida/
+/output/
+/assets/
 
 .pytest_cache/
 .ruff_cache/
 .DS_Store
+
+# .env do deploy (o .example fica versionado)
+/deploy/.env
