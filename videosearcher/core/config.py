@@ -78,6 +78,11 @@ class EntregaConfig(BaseModel):
     resolucao_minima: int = 720
     alternativas_por_bloco: int = 2
 
+    # Divide cues longas em frases antes de agrupar, para que o corte caia na
+    # fronteira de ideia e não na fronteira arbitrária da legenda.
+    dividir_por_frase: bool = True
+    duracao_minima_unidade_s: float = 0.6
+
     @property
     def min_duracao(self) -> float:
         return float(self.duracao_bloco[0])

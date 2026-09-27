@@ -390,7 +390,16 @@ politica:
 entrega:
   duracao_bloco: [4, 10]
   resolucao_minima: 480           # muito acervo de época só existe em SD
+  dividir_por_frase: true         # quebra cue longa em frases antes de agrupar
+  duracao_minima_unidade_s: 0.6   # funde fragmento curto ("Right?") no vizinho
 ```
+
+> **Sobre `dividir_por_frase`:** a cue da legenda não é a unidade visual. Uma cue
+> de 8 segundos pode conter sete beats ("Long red lines. Men shoulder to
+> shoulder. Smoke everywhere. Right?"). Sem a divisão, o blocker é obrigado a
+> cortar na fronteira da legenda e às vezes estoura a duração máxima do canal.
+> Com ela, o corte cai na fronteira de ideia e o teto é respeitado. O timecode de
+> cada frase é interpolado proporcionalmente ao número de caracteres.
 
 O que cada seção controla:
 
