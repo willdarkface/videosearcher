@@ -47,6 +47,9 @@ class Veredito:
     ajustes: list[str] = field(default_factory=list)
     bonus: float = 0.0
     crop: CropBox | None = None
+    # Similaridade visual entre a miniatura e o texto do briefing. None quando
+    # não foi medida (re-rank desligado ou miniatura indisponível).
+    similaridade: float | None = None
 
     def __bool__(self) -> bool:  # pragma: no cover - conveniência
         return self.aceito
@@ -266,6 +269,38 @@ def avaliar(
     return veredito
 
 
+def _aplicar_semantica(
+    veredito: Veredito,
+    asset: Asset,
+    midia: MidiaConfig,
+    similaridades: dict[str, float],
+) -> None:
+    """Recusa ou pontua conforme a similaridade visual com o briefing.
+
+    Candidato sem similaridade medida (miniatura indisponível, re-rank
+    desligado) passa sem alteração: ausência de medida não é prova de
+    irrelevância, e punir por isso castigaria o provedor em vez do conteúdo.
+    """
+    similaridade = similaridades.get(asset.uid)
+    if similaridade is None:
+        return
+
+    veredito.similaridade = similaridade
+    if similaridade < midia.similaridade_minima:
+        veredito.aceito = False
+        veredito.motivo = (
+            f"irrelevante para o bloco: similaridade visual {similaridade:.3f} "
+            f"abaixo do mínimo de {midia.similaridade_minima:.2f}. "
+            f"A imagem não tem relação com o que o bloco narra"
+        )
+        return
+
+    from .semantico import para_multiplicador
+
+    veredito.bonus *= para_multiplicador(similaridade)
+    veredito.motivo += f" · similaridade visual {similaridade:.3f}"
+
+
 def _penalizar_look(
     veredito: Veredito, asset: Asset, midia: MidiaConfig, brief: VisualBrief | None
 ) -> None:
@@ -338,6 +373,7 @@ def selecionar(
     resolucao_minima: int,
     *,
     relevancia: dict[str, float] | None = None,
+    similaridades: dict[str, float] | None = None,
     brief: VisualBrief | None = None,
     politica: PoliticaConfig | None = None,
 ) -> Selecao:
@@ -349,12 +385,15 @@ def selecionar(
     regra.
     """
     relevancia = relevancia or {}
+    similaridades = similaridades or {}
     selecao = Selecao()
 
     for asset in candidatos:
         veredito = avaliar(
             asset, block, midia, resolucao_minima, brief=brief, politica=politica
         )
+        if veredito.aceito:
+            _aplicar_semantica(veredito, asset, midia, similaridades)
         if veredito.aceito:
             selecao.aprovados.append((asset, veredito))
         else:

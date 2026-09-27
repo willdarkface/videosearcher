@@ -36,6 +36,7 @@ provedores:
   pesos: {}
 
 midia:
+  usar_rerank_semantico: true
   # Alvo de mistura da entrega: 20% dos blocos com vídeo, 80% com imagem.
   # Sobrescreva por canal. `null` desliga o alvo e sempre prefere vídeo.
   proporcao_video: 0.2

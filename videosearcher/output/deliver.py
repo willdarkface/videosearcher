@@ -70,6 +70,31 @@ def escrever_relatorio(resultado: ResultadoPipeline, destino: Path) -> Path:
     videos = sum(1 for r in com if r.escolhido[0].media_type is MediaType.VIDEO)
     fotos = len(com) - videos
     linhas.append(f"- **Vídeo escolhido:** {videos} · **Imagem escolhida:** {fotos}")
+    avaliados = [
+        r.escolhido[1].similaridade
+        for r in com
+        if r.escolhido[1].similaridade is not None
+    ]
+    if avaliados:
+        ordenadas = sorted(avaliados)
+        meio = ordenadas[len(ordenadas) // 2]
+        linhas.append(
+            f"- **Similaridade visual dos escolhidos:** mediana {meio:.3f} · "
+            f"mínima {ordenadas[0]:.3f} · máxima {ordenadas[-1]:.3f} "
+            f"({len(avaliados)} de {len(com)} avaliados)"
+        )
+    recusas_relevancia = sum(
+        1
+        for r in resultado.resultados
+        for par in r.selecao.recusados
+        if "irrelevante para o bloco" in par[1].motivo
+    )
+    if recusas_relevancia:
+        linhas.append(
+            f"- **Recusados por irrelevância visual:** {recusas_relevancia} candidatos "
+            f"— é o re-rank semântico barrando imagem que não tem relação com o bloco"
+        )
+
     precisam_corte = sum(1 for r in com if _aviso_de_uso(r))
     if precisam_corte:
         linhas.append(
@@ -124,6 +149,21 @@ def escrever_relatorio(resultado: ResultadoPipeline, destino: Path) -> Path:
             f"- provedores consultados: {', '.join(r.provedores_consultados) or '—'} "
             f"· candidatos: {r.candidatos}"
         )
+
+        # Recusas por irrelevância são invisíveis quando o bloco acha alguém, e
+        # são justamente o diagnóstico mais útil: mostram o re-rank trabalhando.
+        irrelevantes = [
+            par for par in r.selecao.recusados if "irrelevante para o bloco" in par[1].motivo
+        ]
+        if irrelevantes:
+            piores = sorted(irrelevantes, key=lambda p: p[1].similaridade or 0)
+            amostra = ", ".join(
+                f"{(par[1].similaridade or 0):.3f}" for par in piores[:5]
+            )
+            linhas.append(
+                f"- recusados por irrelevância visual: **{len(irrelevantes)}** "
+                f"(similaridades: {amostra})"
+            )
         linhas.append("")
 
         if not r.encontrou:

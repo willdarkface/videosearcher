@@ -99,6 +99,15 @@ class MidiaConfig(BaseModel):
     # sepia) e o asset é material moderno de banco de b-roll.
     penalidade_look_incompativel: float = 0.55
 
+    # Re-rank semântico: compara a miniatura do candidato com o texto do
+    # briefing, no mesmo espaço vetorial. É o que impede entregar céu estrelado
+    # para um bloco sobre rifle — caso real, medido.
+    usar_rerank_semantico: bool = True
+    # Abaixo deste valor o candidato é RECUSADO. Calibrado com medição:
+    # relevante ficou entre 0,16 e 0,28, irrelevante entre 0,01 e 0,02.
+    similaridade_minima: float = 0.08
+    modelo_semantico: str = "jinaai/jina-clip-v1"
+
     # Alvo de proporção de vídeo na entrega. 0.2 = 20% dos blocos com vídeo e
     # 80% com imagem. É decisão global do vídeo, não de cada bloco: primeiro
     # cada bloco descobre o melhor vídeo E a melhor imagem, depois o orçamento

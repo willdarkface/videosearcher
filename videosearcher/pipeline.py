@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -19,6 +20,8 @@ from .ranking.rules import Selecao, Veredito, selecionar
 from .script.blocker import build_blocks
 from .script.briefing import BriefingEngine, ResultadoBriefing
 from .script.parser import parse_subtitles
+
+log = logging.getLogger(__name__)
 
 
 @dataclass
@@ -78,6 +81,9 @@ class Pipeline:
         # Provedores que já devolveram 429 nesta execução. Insistir só gasta
         # tempo e piora o bloqueio.
         self.esgotados: set[str] = set()
+        # Carregado sob demanda: o modelo pesa ~0,9 GB e nem toda execução usa.
+        self._rerank = None
+        self._rerank_indisponivel = False
         self._configurar_quota()
 
     def _configurar_quota(self) -> None:
@@ -294,9 +300,48 @@ class Pipeline:
             self.canal.midia,
             self.canal.entrega.resolucao_minima,
             relevancia=relevancia,
+            similaridades=self._similaridades(brief, lista),
             brief=brief,
             politica=self.canal.politica,
         )
+
+    def _similaridades(
+        self, brief: VisualBrief, assets: list[Asset]
+    ) -> dict[str, float]:
+        """Mede a similaridade visual dos candidatos, se o re-rank estiver ativo.
+
+        Falha aqui nunca derruba o bloco: sem medida, o ranqueamento volta a
+        decidir só pelas regras duras, que é o comportamento anterior.
+        """
+        if not self.canal.midia.usar_rerank_semantico or not assets:
+            return {}
+
+        rerank = self._obter_rerank()
+        if rerank is None:
+            return {}
+        try:
+            return rerank.pontuar(brief, assets)
+        except Exception as exc:
+            log.warning("re-rank semântico falhou no bloco, seguindo sem: %s", exc)
+            return {}
+
+    def _obter_rerank(self):
+        if self._rerank is not None:
+            return self._rerank
+        if self._rerank_indisponivel:
+            return None
+
+        from .ranking.semantico import ReRankSemantico
+
+        if not ReRankSemantico.disponivel():
+            self._rerank_indisponivel = True
+            log.warning(
+                "re-rank semântico desligado: `fastembed` não instalado. "
+                "Instale com: pip install 'videosearcher[semantico]'"
+            )
+            return None
+        self._rerank = ReRankSemantico(self.canal.midia.modelo_semantico)
+        return self._rerank
 
     def _buscar_com_cache(
         self,
