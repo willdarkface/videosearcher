@@ -21,7 +21,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from ..core.config import MidiaConfig
-from ..core.models import Asset, Block, MediaType
+from ..core.models import Asset, Block, Look, MediaType, VisualBrief
 
 
 @dataclass
@@ -58,7 +58,13 @@ class Veredito:
 
 
 def cobertura_video(asset: Asset, block: Block, midia: MidiaConfig) -> Veredito:
-    """O vídeo é longo o bastante para cobrir o bloco?"""
+    """O vídeo cobre o bloco sem ser absurdamente mais longo que ele?
+
+    Duas fronteiras, não uma. Curto demais é inútil porque esticar degrada e
+    loop aparece. Longo demais também é inútil: um filme inteiro cobre qualquer
+    bloco no papel, mas sem detecção de cena ninguém sabe qual trecho usar, e o
+    corte pegaria os primeiros segundos — que quase nunca servem.
+    """
     alvo = block.duration_s
 
     if asset.duration_s is None:
@@ -76,6 +82,17 @@ def cobertura_video(asset: Asset, block: Block, midia: MidiaConfig) -> Veredito:
             f"(faltam {falta:.1f}s)",
         )
 
+    if midia.folga_relativa_rejeicao > 0 and alvo > 0:
+        teto = alvo * midia.folga_relativa_rejeicao
+        if asset.duration_s > teto:
+            excesso = (asset.duration_s / alvo - 1) * 100
+            return Veredito(
+                False,
+                f"vídeo longo demais: {_dur(asset.duration_s)} para bloco de "
+                f"{alvo:.1f}s ({excesso:+.0f}%, teto {_dur(teto)} = "
+                f"+{(midia.folga_relativa_rejeicao - 1) * 100:.0f}%)",
+            )
+
     folga = asset.duration_s - alvo
     ajustes = ["trim"] if folga > 0.05 else []
     return Veredito(
@@ -84,6 +101,12 @@ def cobertura_video(asset: Asset, block: Block, midia: MidiaConfig) -> Veredito:
         ajustes=ajustes,
         bonus=_bonus_folga(folga, alvo, midia.folga_relativa_maxima),
     )
+
+
+def _dur(segundos: float) -> str:
+    if segundos >= 600:
+        return f"{segundos / 60:.0f} min"
+    return f"{segundos:.1f}s"
 
 
 def _bonus_folga(folga: float, alvo: float, folga_maxima: float) -> float:
@@ -177,7 +200,17 @@ def aspecto_foto(asset: Asset, midia: MidiaConfig, resolucao_minima: int) -> Ver
 # ---------------------------------------------------------------------------
 
 
-def avaliar(asset: Asset, block: Block, midia: MidiaConfig, resolucao_minima: int) -> Veredito:
+LOOKS_DE_EPOCA = {Look.BW_ARCHIVAL, Look.PAINTING, Look.SEPIA}
+
+
+def avaliar(
+    asset: Asset,
+    block: Block,
+    midia: MidiaConfig,
+    resolucao_minima: int,
+    *,
+    brief: VisualBrief | None = None,
+) -> Veredito:
     """Aplica a regra correta conforme o tipo de mídia."""
     if asset.media_type is MediaType.VIDEO:
         veredito = cobertura_video(asset, block, midia)
@@ -187,8 +220,31 @@ def avaliar(asset: Asset, block: Block, midia: MidiaConfig, resolucao_minima: in
                 f"resolução baixa: {asset.width}x{asset.height}, "
                 f"canal exige altura ≥ {resolucao_minima}",
             )
-        return veredito
-    return aspecto_foto(asset, midia, resolucao_minima)
+    else:
+        veredito = aspecto_foto(asset, midia, resolucao_minima)
+
+    if veredito.aceito:
+        _penalizar_look(veredito, asset, midia, brief)
+    return veredito
+
+
+def _penalizar_look(
+    veredito: Veredito, asset: Asset, midia: MidiaConfig, brief: VisualBrief | None
+) -> None:
+    """Penaliza material moderno num bloco que pede estética de época.
+
+    Não é recusa: entre um clipe colorido de reconstituição e nada, o clipe
+    ganha. Mas se houver material de arquivo de verdade, ele deve vencer.
+    """
+    if brief is None or brief.look not in LOOKS_DE_EPOCA:
+        return
+    if asset.is_archival:
+        return
+    veredito.bonus *= midia.penalidade_look_incompativel
+    veredito.motivo += (
+        f" · penalizado: bloco pede `{brief.look.value}` e o asset é material "
+        f"moderno de b-roll"
+    )
 
 
 @dataclass
@@ -219,6 +275,7 @@ def selecionar(
     resolucao_minima: int,
     *,
     relevancia: dict[str, float] | None = None,
+    brief: VisualBrief | None = None,
 ) -> Selecao:
     """Filtra e ordena candidatos para um bloco.
 
@@ -231,7 +288,7 @@ def selecionar(
     selecao = Selecao()
 
     for asset in candidatos:
-        veredito = avaliar(asset, block, midia, resolucao_minima)
+        veredito = avaliar(asset, block, midia, resolucao_minima, brief=brief)
         if veredito.aceito:
             selecao.aprovados.append((asset, veredito))
         else:

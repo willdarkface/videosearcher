@@ -150,6 +150,7 @@ class Pipeline:
             self.canal.midia,
             self.canal.entrega.resolucao_minima,
             relevancia=relevancia,
+            brief=brief,
         )
 
         return ResultadoBloco(

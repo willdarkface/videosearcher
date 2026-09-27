@@ -489,25 +489,38 @@ Os blocos têm **duração variável** — é a legenda que manda, e o sistema s
 midia:
   video_deve_cobrir_bloco: true      # vídeo precisa durar ≥ o bloco
   tolerancia_cobertura_s: 0.0        # nenhuma folga negativa aceita
-  fallback_para_imagem: true         # sem vídeo longo o bastante → imagem
-  folga_relativa_maxima: 4.0         # clipe 4x mais longo perde nota, não é eliminado
+  folga_relativa_rejeicao: 1.3       # teto: no máximo 30% mais longo que o bloco
+  folga_relativa_maxima: 0.3         # nota chega ao piso nos 30%
+  fallback_para_imagem: true         # sem vídeo na faixa → imagem
   imagem_aspecto: "16:9"
   imagem_tolerancia_aspecto: 0.12    # desvio aceito sem crop
   permitir_crop_para_aspecto: true   # fora da tolerância, crop central
+  penalidade_look_incompativel: 0.55 # material moderno em bloco de época
 ```
 
-A lógica, em ordem:
+**A janela é estreita de propósito.** Um bloco de 6,0s aceita vídeo de **6,0s a 7,8s**. Só cobrir o bloco não basta: um filme de 2 horas cobre qualquer coisa no papel e não serve para nada, porque sem detecção de cena ninguém sabe qual trecho usar — o corte pegaria os primeiros segundos, que quase nunca servem.
 
 | Situação | Decisão |
 |---|---|
-| Existe vídeo com duração **≥** o bloco | **Vídeo ganha**, com `trim`. Sempre preferido |
-| Entre vídeos válidos | Vence o de **encaixe mais justo** — menos folga, menos arbitrariedade na escolha do trecho |
-| Vídeo mais curto que o bloco | **Recusado**, sem exceção. Esticar degrada e loop aparece |
-| Nenhum vídeo cobre o bloco | **Cai para imagem**, com `kenburns` — pan/zoom cobre qualquer duração |
+| Vídeo entre a duração do bloco e **+30%** | **Aceito**, com `trim`. Vídeo é sempre preferido a foto |
+| Entre vídeos válidos | Vence o de **encaixe mais justo** |
+| Vídeo mais curto que o bloco | **Recusado**, sem exceção. Esticar degrada, loop aparece |
+| Vídeo mais de 30% acima | **Recusado.** É trecho de material longo, não um clipe |
+| Nenhum vídeo na faixa | **Cai para imagem**, com `kenburns` — pan/zoom cobre qualquer duração |
 | Imagem dentro da tolerância de 16:9 | Entra direto |
-| Imagem fora de 16:9 | Entra por **crop central**, com nota proporcional à área mantida |
-| Crop derrubaria a resolução abaixo do mínimo do canal | **Recusada** |
+| Imagem fora de 16:9 | Entra por **crop central**, nota proporcional à área mantida |
+| Crop derrubaria a resolução abaixo do mínimo | **Recusada** |
+| Bloco pede época e o asset é b-roll moderno | Aceito com **nota penalizada** — melhor que nada, pior que arquivo real |
 | Nada aprovado | Bloco vai para `_nao-encontrados.txt` |
+
+Medido no roteiro real, com teto de 30%: **79 candidatos recusados por duração**, excesso máximo entre os 59 vídeos entregues de **+26,6%**, nenhum asset mais curto que o bloco. Exemplos de recusa:
+
+```
+internet_archive:fc-fc-3933 — vídeo longo demais: 257.7s para bloco de 4.8s (+5311%, teto 6.2s)
+internet_archive:iss062m…   — vídeo longo demais: 27 min para bloco de 4.8s (+34057%, teto 6.2s)
+```
+
+Subir `folga_relativa_rejeicao` só faz sentido quando o corte por cena (fase 5) estiver ativo no canal.
 
 Exemplos reais da regra rodando num bloco de 6,2s:
 

@@ -82,9 +82,22 @@ class MidiaConfig(BaseModel):
     tolerancia_cobertura_s: float = 0.0
     fallback_para_imagem: bool = True
 
-    # Folga relativa a partir da qual o vídeo começa a perder pontos por ser
-    # longo demais (4.0 = quatro vezes a duração do bloco).
-    folga_relativa_maxima: float = 4.0
+    # Folga relativa a partir da qual o vídeo é RECUSADO.
+    # 1.3 = aceita até 30% mais longo que o bloco. Cobrir o bloco não basta:
+    # um filme de 2 horas cobre qualquer coisa e não serve para nada, porque
+    # sem detecção de cena ninguém sabe qual trecho usar.
+    # Um bloco de 6,0s aceita de 6,0s até 7,8s.
+    # Suba este valor só quando o corte por cena estiver ativo no canal.
+    folga_relativa_rejeicao: float = 1.3
+
+    # Folga relativa em que a nota de encaixe chega ao piso. Acompanha o teto
+    # de rejeição: com teto de 30%, a nota tem que discriminar dentro dessa
+    # faixa estreita, senão todo candidato aprovado empata.
+    folga_relativa_maxima: float = 0.3
+
+    # Penalidade quando o bloco pede estética de época (bw_archival, painting,
+    # sepia) e o asset é material moderno de banco de b-roll.
+    penalidade_look_incompativel: float = 0.55
 
     # Foto
     imagem_aspecto: str = "16:9"

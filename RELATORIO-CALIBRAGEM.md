@@ -2,11 +2,10 @@
 
 - **Canal:** História de Armas (`armas`)
 - **Blocos:** 114
-- **Com resultado:** 101 (89%)
-- **Sem resultado:** 13
-- **Vídeo escolhido:** 89 · **Imagem escolhida:** 12
-- **⚠️ Precisam de corte por cena (fase 5):** 24 — são filmes inteiros, não clipes, e não devem ser usados como estão
-- **Provedores:** pexels (40), pixabay (36), internet_archive (25)
+- **Com resultado:** 71 (62%)
+- **Sem resultado:** 43
+- **Vídeo escolhido:** 59 · **Imagem escolhida:** 12
+- **Provedores:** pexels (39), pixabay (32)
 
 > Confira a coluna **query** contra o **texto do bloco**: é ali que se vê
 > se o briefing está calibrado. O link abre a página do asset.
@@ -23,7 +22,7 @@
 - alternativas: `historical military decision making` · `trade-off between speed and accuracy` · `rifle vs musket debate`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 5.0s · `pixabay` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 5.0s · `pixabay` · nota 0.91
 
 - motivo: cobre o bloco: 5.0s ≥ 4.9s (folga 0.1s)
 - ajustes: `trim`
@@ -33,9 +32,8 @@
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 6.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-21115/
-- vídeo · 6.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-21118/
-- vídeo · 7.0s · `pixabay` · nota 0.89 · https://pixabay.com/videos/id-167659/
+- vídeo · 6.0s · `pixabay` · nota 0.22 · https://pixabay.com/videos/id-21115/
+- vídeo · 6.0s · `pixabay` · nota 0.22 · https://pixabay.com/videos/id-21118/
 
 ---
 
@@ -49,7 +47,7 @@ Alternativas:
 - alternativas: `historical arms evolution` · `military innovation visualization` · `soldier expectations transformation`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.84
 
 - motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
 - ajustes: `trim`
@@ -59,9 +57,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 7.0s · `pexels` · nota 0.99 · https://www.pexels.com/video/tactical-soldier-in-action-indoors-30892981/
-- vídeo · 8.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/man-aiming-with-gun-10491772/
-- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-131127/
+- vídeo · 7.0s · `pexels` · nota 0.84 · https://www.pexels.com/video/tactical-soldier-in-action-indoors-30892981/
+- vídeo · 8.0s · `pexels` · nota 0.34 · https://www.pexels.com/video/man-aiming-with-gun-10491772/
+- vídeo · 8.0s · `pixabay` · nota 0.34 · https://pixabay.com/videos/id-131127/
 
 ---
 
@@ -79,9 +77,9 @@ Alternativas:
 **❌ SEM RESULTADO**
 
 Recusados:
-- `internet_archive:gov.archives.arc.36901/gov.archives.arc.36901_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
-- `internet_archive:gov.archives.arc.32203/gov.archives.arc.32203_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
-- `internet_archive:gov.archives.arc.36734/gov.archives.arc.36734_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
+- `internet_archive:fc-fc-3933/fc-fc-3933.mp4` — vídeo longo demais: 257.7s para bloco de 4.8s (+5311%, teto 6.2s = +30%)
+- `internet_archive:iss062m261061639_EXP_62_InFlight_Meir_Colbert_NPR_200415/EXP_62_InFlight_Meir_Colbert_Npr_2020_0415_1321211.mp4` — vídeo longo demais: 27 min para bloco de 4.8s (+34057%, teto 6.2s = +30%)
+- `internet_archive:gov.dod.dimoc.28805/gov.dod.dimoc.28805.mp4` — vídeo longo demais: 19 min para bloco de 4.8s (+24040%, teto 6.2s = +30%)
 
 ---
 
@@ -96,16 +94,11 @@ Recusados:
 - arquivo: `1815 rifle battle reenactment` · `Waterloo riflemen defense` · `empty ammunition pouches`
 - provedores consultados: internet_archive · candidatos: 2
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 6.7s (1175x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 6.7s (folga 7856.6s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — vídeo longo demais: 14 min para bloco de 6.7s (+12402%, teto 8.7s = +30%)
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 6.7s (+117361%, teto 8.7s = +30%)
 
 ---
 
@@ -119,7 +112,7 @@ Recusados:
 - alternativas: `close-up rifle mechanism clue` · `weapon detail magnification` · `historical arms innovation mystery`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 0x0 · 9.0s · `pixabay` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 0x0 · 9.0s · `pixabay` · nota 0.90
 
 - motivo: cobre o bloco: 9.0s ≥ 8.7s (folga 0.3s)
 - ajustes: `trim`
@@ -128,9 +121,9 @@ Recusados:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/video-of-soldier-sharing-stories-to-his-comrades-7467770/
-- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-3191/
-- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-80699/
+- vídeo · 10.0s · `pexels` · nota 0.52 · https://www.pexels.com/video/video-of-soldier-sharing-stories-to-his-comrades-7467770/
+- vídeo · 10.0s · `pixabay` · nota 0.52 · https://pixabay.com/videos/id-3191/
+- vídeo · 10.0s · `pixabay` · nota 0.52 · https://pixabay.com/videos/id-80702/
 
 ---
 
@@ -145,16 +138,10 @@ Alternativas:
 - arquivo: `1809 British army winter campaign` · `Napoleonic Wars snow battle` · `retreat through snow reenactment`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 900x508 · 7070.5s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 118 minutos para um bloco de 7.3s (971x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7070.5s ≥ 7.3s (folga 7063.2s)
-- ajustes: `trim`
-- página: https://archive.org/details/frankenstein_202312
-- download: https://archive.org/download/frankenstein_202312/X-03-MREV03.mp4
-- preview: https://archive.org/services/img/frankenstein_202312
-- licença: `public-domain`
+Recusados:
+- `internet_archive:frankenstein_202312/X-03-MREV03.mp4` — vídeo longo demais: 118 min para bloco de 7.3s (+96965%, teto 9.5s = +30%)
 
 ---
 
@@ -172,7 +159,7 @@ Alternativas:
 **❌ SEM RESULTADO**
 
 Recusados:
-- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — resolução baixa: 640x360, canal exige altura ≥ 480
+- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — vídeo longo demais: 14 min para bloco de 8.3s (+10001%, teto 10.8s = +30%)
 
 ---
 
@@ -187,16 +174,10 @@ Recusados:
 - arquivo: `Colbert death scene` · `Napoleonic general assassination` · `rifleman duel reenactment`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 7.2s (1093x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 7.2s (folga 7856.1s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 7.2s (+109171%, teto 9.4s = +30%)
 
 ---
 
@@ -210,7 +191,7 @@ Recusados:
 - alternativas: `hidden details in history` · `reinterpretation of famous shot` · `military legend analysis`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.72
 
 - motivo: cobre o bloco: 8.0s ≥ 7.4s (folga 0.6s)
 - ajustes: `trim`
@@ -220,9 +201,8 @@ Recusados:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pexels` · nota 0.98 · https://www.pexels.com/video/man-aiming-down-the-scope-of-a-rifle-6092104/
-- vídeo · 9.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
-- vídeo · 11.0s · `pexels` · nota 0.88 · https://www.pexels.com/video/a-man-shooting-with-a-gun-6201051/
+- vídeo · 8.0s · `pexels` · nota 0.72 · https://www.pexels.com/video/man-aiming-down-the-scope-of-a-rifle-6092104/
+- vídeo · 9.0s · `pexels` · nota 0.27 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
 
 ---
 
@@ -237,19 +217,13 @@ Alternativas:
 - arquivo: `Napoleonic Wars battle painting` · `infantry line formation` · `traditional battle artwork`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.87
+**❌ SEM RESULTADO**
 
-- motivo: cobre o bloco: 10.0s ≥ 6.5s (folga 3.5s)
-- ajustes: `trim`
-- página: https://pixabay.com/videos/id-1210/
-- download: https://cdn.pixabay.com/video/2015/10/28/1210-143977098_large.mp4
-- preview: https://cdn.pixabay.com/video/2015/10/28/1210-143977098_large.jpg
-- licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 12.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/men-performing-during-historical-reenactment-9466318/
-- vídeo · 12.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/french-revolutionary-soldiers-arranging-their-rifles-9466132/
-- vídeo · 13.0s · `pexels` · nota 0.75 · https://www.pexels.com/video/people-standing-while-holding-guns-9466303/
+Recusados:
+- `pexels:9466303` — vídeo longo demais: 13.0s para bloco de 6.5s (+99%, teto 8.5s = +30%)
+- `pexels:9466201` — vídeo longo demais: 18.0s para bloco de 6.5s (+176%, teto 8.5s = +30%)
+- `pexels:9465814` — vídeo longo demais: 43.0s para bloco de 6.5s (+559%, teto 8.5s = +30%)
+- `pexels:9465811` — vídeo longo demais: 49.0s para bloco de 6.5s (+651%, teto 8.5s = +30%)
 
 ---
 
@@ -264,19 +238,14 @@ Alternativas:
 - arquivo: `Napoleonic battle smoke painting` · `hidden riflemen in battle` · `tactical positioning artwork`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.94
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.11
 
-- motivo: cobre o bloco: 9.0s ≥ 7.2s (folga 1.8s)
+- motivo: cobre o bloco: 9.0s ≥ 7.2s (folga 1.8s) · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://pixabay.com/videos/id-253436/
 - download: https://cdn.pixabay.com/video/2025/01/19/253436_large.mp4
 - preview: https://cdn.pixabay.com/video/2025/01/19/253436_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.90 · https://www.pexels.com/video/dramatic-trenches-in-steamy-battlefield-scene-31867115/
-- vídeo · 10.0s · `pixabay` · nota 0.90 · https://pixabay.com/videos/id-3068/
-- vídeo · 12.0s · `pexels` · nota 0.83 · https://www.pexels.com/video/men-performing-during-historical-reenactment-9466318/
 
 ---
 
@@ -291,16 +260,10 @@ Alternativas:
 - arquivo: `British green coats riflemen` · `Napoleonic riflemen positions` · `hidden soldiers in battle paintings`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 7.9s (1000x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 7.9s (folga 7855.5s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 7.9s (+99873%, teto 10.2s = +30%)
 
 ---
 
@@ -314,7 +277,7 @@ Alternativas:
 - alternativas: `weapon practicality illustration` · `army logistics vs technology` · `trade-off military decision`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1080x1920 · 6.0s · `pixabay` · nota 0.96
+**✅ ESCOLHIDO** · 🎬 vídeo · 1080x1920 · 6.0s · `pixabay` · nota 0.53
 
 - motivo: cobre o bloco: 6.0s ≥ 5.3s (folga 0.7s)
 - ajustes: `trim`
@@ -324,9 +287,8 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 6.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-121983/
-- vídeo · 6.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-78931/
-- vídeo · 9.0s · `pexels` · nota 0.82 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
+- vídeo · 6.0s · `pixabay` · nota 0.53 · https://pixabay.com/videos/id-121983/
+- vídeo · 6.0s · `pixabay` · nota 0.53 · https://pixabay.com/videos/id-78931/
 
 ---
 
@@ -340,7 +302,7 @@ Alternativas:
 - alternativas: `rifle vs musket debate` · `military technology adoption` · `accuracy vs speed arms`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.76
 
 - motivo: cobre o bloco: 8.0s ≥ 7.5s (folga 0.5s)
 - ajustes: `trim`
@@ -348,11 +310,6 @@ Alternativas:
 - download: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.mp4
 - preview: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.92 · https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
-- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-79759/
-- vídeo · 11.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-61418/
 
 ---
 
@@ -367,19 +324,14 @@ Alternativas:
 - arquivo: `18th century hunting rifles` · `rifle history illustrations` · `early military rifles`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 2560x1440 · 9.0s · `pixabay` · nota 0.94
+**✅ ESCOLHIDO** · 🎬 vídeo · 2560x1440 · 9.0s · `pixabay` · nota 0.11
 
-- motivo: cobre o bloco: 9.0s ≥ 7.2s (folga 1.8s)
+- motivo: cobre o bloco: 9.0s ≥ 7.2s (folga 1.8s) · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://pixabay.com/videos/id-70862/
 - download: https://cdn.pixabay.com/video/2021/04/12/70862-536317071_large.mp4
 - preview: https://cdn.pixabay.com/video/2021/04/12/70862-536317071_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.90 · https://pixabay.com/videos/id-79759/
-- vídeo · 11.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61418/
-- vídeo · 11.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-113204/
 
 ---
 
@@ -394,7 +346,7 @@ Alternativas:
 - arquivo: `historical rifle loading process` · `19th century rifle close-up` · `rifle barrel grooves`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.72
 
 - motivo: cobre o bloco: 9.0s ≥ 8.3s (folga 0.7s)
 - ajustes: `trim`
@@ -404,9 +356,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.98 · https://pixabay.com/videos/id-131088/
-- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-79759/
-- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-3129/
+- vídeo · 9.0s · `pixabay` · nota 0.72 · https://pixabay.com/videos/id-131088/
+- vídeo · 10.0s · `pixabay` · nota 0.32 · https://pixabay.com/videos/id-79759/
+- vídeo · 10.0s · `pixabay` · nota 0.32 · https://pixabay.com/videos/id-3129/
 
 ---
 
@@ -421,7 +373,7 @@ Alternativas:
 - arquivo: `19th century rifle cleaning` · `historical rifle maintenance` · `black powder residue`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.96
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.51
 
 - motivo: cobre o bloco: 8.0s ≥ 7.0s (folga 1.0s)
 - ajustes: `trim`
@@ -431,9 +383,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-188934/
-- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-131127/
-- vídeo · 9.0s · `pexels` · nota 0.93 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
+- vídeo · 8.0s · `pixabay` · nota 0.51 · https://pixabay.com/videos/id-188934/
+- vídeo · 8.0s · `pixabay` · nota 0.51 · https://pixabay.com/videos/id-131127/
+- vídeo · 9.0s · `pexels` · nota 0.20 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
 
 ---
 
@@ -448,7 +400,7 @@ Alternativas:
 - arquivo: `historical rifle jamming` · `19th century rifle malfunctions` · `rifle maintenance failures`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.61
 
 - motivo: cobre o bloco: 9.0s ≥ 8.1s (folga 0.9s)
 - ajustes: `trim`
@@ -458,9 +410,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-131088/
-- vídeo · 11.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-61418/
-- vídeo · 12.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-135988/
+- vídeo · 9.0s · `pixabay` · nota 0.61 · https://pixabay.com/videos/id-131088/
 
 ---
 
@@ -475,7 +425,7 @@ Alternativas:
 - arquivo: `19th century military armories` · `mass-produced muskets` · `rifle vs musket cost comparison`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.61
 
 - motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
 - ajustes: `trim`
@@ -485,9 +435,9 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 9.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/soldiers-in-tactical-gear-in-forest-34634810/
-- vídeo · 9.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
-- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-131088/
+- vídeo · 9.0s · `pexels` · nota 0.20 · https://www.pexels.com/video/soldiers-in-tactical-gear-in-forest-34634810/
+- vídeo · 9.0s · `pexels` · nota 0.20 · https://www.pexels.com/video/close-up-on-machine-guns-10480506/
+- vídeo · 9.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-131088/
 
 ---
 
@@ -502,19 +452,14 @@ Alternativas:
 - arquivo: `19th century volley fire` · `mass infantry firing` · `Napoleonic battle formations`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.47
 
-- motivo: cobre o bloco: 8.0s ≥ 7.7s (folga 0.3s)
+- motivo: cobre o bloco: 8.0s ≥ 7.7s (folga 0.3s) · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://pixabay.com/videos/id-27539/
 - download: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.mp4
 - preview: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-1210/
-- vídeo · 11.0s · `pixabay` · nota 0.89 · https://pixabay.com/videos/id-301635/
-- vídeo · 14.0s · `pixabay` · nota 0.79 · https://pixabay.com/videos/id-1643/
 
 ---
 
@@ -529,7 +474,7 @@ Alternativas:
 - arquivo: `18th century military manual illustration` · `Napoleonic era tactical formation`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.62
 
 - motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
 - ajustes: `trim`
@@ -539,9 +484,7 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-3608/
-- vídeo · 15.0s · `pexels` · nota 0.73 · https://www.pexels.com/video/cg-animation-of-satellite-854233/
-- vídeo · 15.0s · `pixabay` · nota 0.73 · https://pixabay.com/videos/id-313001/
+- vídeo · 9.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-3608/
 
 ---
 
@@ -556,9 +499,9 @@ Alternativas:
 - arquivo: `18th century British rifle manual illustration` · `Ferguson rifle blueprint`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.36
 
-- motivo: cobre o bloco: 9.0s ≥ 8.2s (folga 0.8s)
+- motivo: cobre o bloco: 9.0s ≥ 8.2s (folga 0.8s) · penalizado: bloco pede `bw_archival` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://www.pexels.com/video/a-rusted-drum-2674784/
 - download: https://videos.pexels.com/video-files/2674784/2674784-hd_1920_1080_24fps.mp4
@@ -566,9 +509,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 9.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/the-inside-of-a-burned-out-truck-with-a-broken-window-18221666/
-- vídeo · 9.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/wreckage-of-a-wooden-boat-base-abandoned-outdoors-2882402/
-- vídeo · 9.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/ruined-building-4876871/
+- vídeo · 9.0s · `pexels` · nota 0.36 · https://www.pexels.com/video/the-inside-of-a-burned-out-truck-with-a-broken-window-18221666/
+- vídeo · 9.0s · `pexels` · nota 0.36 · https://www.pexels.com/video/wreckage-of-a-wooden-boat-base-abandoned-outdoors-2882402/
+- vídeo · 9.0s · `pexels` · nota 0.36 · https://www.pexels.com/video/ruined-building-4876871/
 
 ---
 
@@ -583,19 +526,13 @@ Alternativas:
 - arquivo: `18th century British arms factory workers`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.84
+**❌ SEM RESULTADO**
 
-- motivo: cobre o bloco: 10.0s ≥ 6.1s (folga 3.9s)
-- ajustes: `trim`
-- página: https://pixabay.com/videos/id-13950/
-- download: https://cdn.pixabay.com/video/2018/01/27/13950-253035807_large.mp4
-- preview: https://cdn.pixabay.com/video/2018/01/27/13950-253035807_large.jpg
-- licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-13949/
-- vídeo · 11.0s · `pexels` · nota 0.80 · https://www.pexels.com/video/a-man-sketching-a-tattoo-design-6594007/
-- vídeo · 11.0s · `pexels` · nota 0.80 · https://www.pexels.com/video/video-of-a-person-sketching-6970180/
+Recusados:
+- `pexels:8126367` — vídeo longo demais: 17.0s para bloco de 6.1s (+178%, teto 7.9s = +30%)
+- `pexels:6594007` — vídeo longo demais: 11.0s para bloco de 6.1s (+80%, teto 7.9s = +30%)
+- `pexels:6594099` — vídeo longo demais: 12.0s para bloco de 6.1s (+97%, teto 7.9s = +30%)
+- `pexels:6594102` — vídeo longo demais: 28.0s para bloco de 6.1s (+359%, teto 7.9s = +30%)
 
 ---
 
@@ -610,16 +547,10 @@ Alternativas:
 - arquivo: `French revolutionary army uniform 1790s` · `Levée en masse illustration`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1280x544 · 5855.0s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 98 minutos para um bloco de 8.5s (689x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 5855.0s ≥ 8.5s (folga 5846.5s)
-- ajustes: `trim`
-- página: https://archive.org/details/u-boats-the-enemy-below
-- download: https://archive.org/download/u-boats-the-enemy-below/U-Boats%20-%20The%20Enemy%20Below.mp4
-- preview: https://archive.org/services/img/u-boats-the-enemy-below
-- licença: `public-domain`
+Recusados:
+- `internet_archive:u-boats-the-enemy-below/U-Boats - The Enemy Below.mp4` — vídeo longo demais: 98 min para bloco de 8.5s (+68750%, teto 11.1s = +30%)
 
 ---
 
@@ -634,19 +565,11 @@ Alternativas:
 - arquivo: `French revolutionary warfare tactics illustration`
 - provedores consultados: internet_archive · candidatos: 2
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1280x544 · 6766.2s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 113 minutos para um bloco de 7.8s (863x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 6766.2s ≥ 7.8s (folga 6758.3s)
-- ajustes: `trim`
-- página: https://archive.org/details/zulu-dawn-1979
-- download: https://archive.org/download/zulu-dawn-1979/Zulu%20Dawn%201979.mp4
-- preview: https://archive.org/services/img/zulu-dawn-1979
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 5855.0s · `internet_archive` · nota 0.20 · https://archive.org/details/u-boats-the-enemy-below
+Recusados:
+- `internet_archive:zulu-dawn-1979/Zulu Dawn 1979.mp4` — vídeo longo demais: 113 min para bloco de 7.8s (+86232%, teto 10.2s = +30%)
+- `internet_archive:u-boats-the-enemy-below/U-Boats - The Enemy Below.mp4` — vídeo longo demais: 98 min para bloco de 7.8s (+74607%, teto 10.2s = +30%)
 
 ---
 
@@ -661,7 +584,7 @@ Alternativas:
 - arquivo: `18th century British infantry drill illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.63
 
 - motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
 - ajustes: `trim`
@@ -671,9 +594,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-27539/
-- vídeo · 8.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-137614/
-- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-3608/
+- vídeo · 8.0s · `pixabay` · nota 0.63 · https://pixabay.com/videos/id-27539/
+- vídeo · 8.0s · `pixabay` · nota 0.63 · https://pixabay.com/videos/id-137614/
+- vídeo · 9.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-3608/
 
 ---
 
@@ -688,19 +611,11 @@ Alternativas:
 - arquivo: `Battle of Flanders 1793 illustration` · `18th century battlefield casualty painting`
 - provedores consultados: internet_archive · candidatos: 2
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1280x544 · 6766.2s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 113 minutos para um bloco de 6.5s (1039x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 6766.2s ≥ 6.5s (folga 6759.7s)
-- ajustes: `trim`
-- página: https://archive.org/details/zulu-dawn-1979
-- download: https://archive.org/download/zulu-dawn-1979/Zulu%20Dawn%201979.mp4
-- preview: https://archive.org/services/img/zulu-dawn-1979
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 5855.0s · `internet_archive` · nota 0.20 · https://archive.org/details/u-boats-the-enemy-below
+Recusados:
+- `internet_archive:zulu-dawn-1979/Zulu Dawn 1979.mp4` — vídeo longo demais: 113 min para bloco de 6.5s (+103777%, teto 8.5s = +30%)
+- `internet_archive:u-boats-the-enemy-below/U-Boats - The Enemy Below.mp4` — vídeo longo demais: 98 min para bloco de 6.5s (+89789%, teto 8.5s = +30%)
 
 ---
 
@@ -715,9 +630,9 @@ Alternativas:
 - arquivo: `18th century German rifleman uniform`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3556x2048 · 8.0s · `pixabay` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 3556x2048 · 8.0s · `pixabay` · nota 0.32
 
-- motivo: cobre o bloco: 8.0s ≥ 7.1s (folga 0.9s)
+- motivo: cobre o bloco: 8.0s ≥ 7.1s (folga 0.9s) · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://pixabay.com/videos/id-137614/
 - download: https://cdn.pixabay.com/video/2022/11/03/137614-767056227_large.mp4
@@ -725,9 +640,7 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.93 · https://pixabay.com/videos/id-140353/
-- vídeo · 10.0s · `pixabay` · nota 0.90 · https://pixabay.com/videos/id-1204/
-- vídeo · 12.0s · `pexels` · nota 0.83 · https://www.pexels.com/video/video-of-a-man-paying-in-cash-5794431/
+- vídeo · 9.0s · `pixabay` · nota 0.11 · https://pixabay.com/videos/id-140353/
 
 ---
 
@@ -741,7 +654,7 @@ Alternativas:
 - alternativas: `historical painting of defeated army` · `modern reenactment of British humiliation` · `prideful lion statue with broken chain`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.85
 
 - motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
 - ajustes: `trim`
@@ -751,9 +664,8 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-27539/
-- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-137614/
-- vídeo · 9.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-140353/
+- vídeo · 8.0s · `pixabay` · nota 0.36 · https://pixabay.com/videos/id-27539/
+- vídeo · 8.0s · `pixabay` · nota 0.36 · https://pixabay.com/videos/id-137614/
 
 ---
 
@@ -768,16 +680,10 @@ Alternativas:
 - arquivo: `Woolwich Arsenal historical images` · `British rifle testing 1800s`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 8.4s (940x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 8.4s (folga 7855.0s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 8.4s (+93896%, teto 10.9s = +30%)
 
 ---
 
@@ -807,7 +713,7 @@ Alternativas:
 - arquivo: `18th century rifle target practice illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.69
 
 - motivo: cobre o bloco: 9.0s ≥ 8.2s (folga 0.8s)
 - ajustes: `trim`
@@ -817,9 +723,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/man-checking-bullet-marks-on-target-paper-5243087/
-- vídeo · 10.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/man-aiming-a-sniper-rifle-6091129/
-- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-7549/
+- vídeo · 10.0s · `pexels` · nota 0.28 · https://www.pexels.com/video/man-checking-bullet-marks-on-target-paper-5243087/
+- vídeo · 10.0s · `pexels` · nota 0.28 · https://www.pexels.com/video/man-aiming-a-sniper-rifle-6091129/
+- vídeo · 10.0s · `pixabay` · nota 0.28 · https://pixabay.com/videos/id-7549/
 
 ---
 
@@ -834,7 +740,7 @@ Alternativas:
 - arquivo: `18th century rifle mechanism illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.77
 
 - motivo: cobre o bloco: 8.0s ≥ 7.5s (folga 0.5s)
 - ajustes: `trim`
@@ -844,9 +750,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pexels` · nota 0.98 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
-- vídeo · 8.0s · `pixabay` · nota 0.98 · https://pixabay.com/videos/id-131127/
-- vídeo · 9.0s · `pexels` · nota 0.95 · https://www.pexels.com/video/a-woman-holding-a-sniper-rifle-6090889/
+- vídeo · 8.0s · `pexels` · nota 0.77 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
+- vídeo · 8.0s · `pixabay` · nota 0.77 · https://pixabay.com/videos/id-131127/
+- vídeo · 9.0s · `pexels` · nota 0.33 · https://www.pexels.com/video/a-woman-holding-a-sniper-rifle-6090889/
 
 ---
 
@@ -861,7 +767,7 @@ Alternativas:
 - arquivo: `18th century soldier maintenance illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.86
 
 - motivo: cobre o bloco: 8.0s ≥ 7.7s (folga 0.3s)
 - ajustes: `trim`
@@ -871,9 +777,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pexels` · nota 0.99 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
-- vídeo · 8.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-131127/
-- vídeo · 8.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-164827/
+- vídeo · 8.0s · `pexels` · nota 0.86 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
+- vídeo · 8.0s · `pixabay` · nota 0.86 · https://pixabay.com/videos/id-131127/
+- vídeo · 8.0s · `pixabay` · nota 0.86 · https://pixabay.com/videos/id-164827/
 
 ---
 
@@ -887,7 +793,7 @@ Alternativas:
 - alternativas: `historical painting of soldier with damaged rifle` · `modern illustration of imperfect weapon` · `abstract balance scale with flawed item`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.61
 
 - motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
 - ajustes: `trim`
@@ -897,9 +803,8 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-131127/
-- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-131088/
-- vídeo · 11.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61418/
+- vídeo · 8.0s · `pixabay` · nota 0.61 · https://pixabay.com/videos/id-131127/
+- vídeo · 9.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-131088/
 
 ---
 
@@ -946,8 +851,8 @@ Alternativas:
 - motivo: aspecto 1.60 dentro da tolerância de 16:9
 - ajustes: `kenburns`
 - página: https://pixabay.com/photos/wooden-barrel-barrel-wooden-barrels-2782182/
-- download: https://pixabay.com/get/g73b41fbd307884715a5086b0f9b02bfec19823ae924c847b5715c4c9579c001f63d7cd501e8ece78a103da743b46ef7cdbd304d0d8e0fb99a7f023e0acaf7aee_1280.png
-- preview: https://pixabay.com/get/gef9108b96a5869165ca1a3e3eb365d7dfbd50bdb3c49fbd908daebe63a5e72096387780d1a8e15ed62542c21af472b19b75b0e77d0d0bee92574e0adb0d72dc7_640.png
+- download: https://pixabay.com/get/gd69f2e55a432a18ea33457fffd9b3f43a8c4c829806b7e8127a2aeca3a90a35d2fa7ae1f66cabc7b98d8a1ab3b8669685887f411c9e46e26e89d08d0cf643bbb_1280.png
+- preview: https://pixabay.com/get/g51f4beaba9f0fcdf01fbc167ea83d2c8b29f4fda3b256e6f8ae4d2230a7c334aef2b70ebfb64c0e80908a3f57402cc4053487ef63926290320e27b6be3a7ad7d_640.png
 - licença: `pixabay-content-license`
 
 Alternativas:
@@ -968,7 +873,7 @@ Alternativas:
 - arquivo: `18th century soldier maintaining rifle illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.64
 
 - motivo: cobre o bloco: 8.0s ≥ 7.2s (folga 0.8s)
 - ajustes: `trim`
@@ -978,9 +883,7 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-205890/
-- vídeo · 11.0s · `pexels` · nota 0.87 · https://www.pexels.com/video/man-at-indoor-shooting-range-5243139/
-- vídeo · 11.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61418/
+- vídeo · 9.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-205890/
 
 ---
 
@@ -995,7 +898,7 @@ Alternativas:
 - arquivo: `18th century rifle cleaning kit illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 4096x2160 · 9.0s · `pixabay` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 4096x2160 · 9.0s · `pixabay` · nota 0.73
 
 - motivo: cobre o bloco: 9.0s ≥ 8.3s (folga 0.7s)
 - ajustes: `trim`
@@ -1003,11 +906,6 @@ Alternativas:
 - download: https://cdn.pixabay.com/video/2020/10/11/52101-467180032_large.mp4
 - preview: https://cdn.pixabay.com/video/2020/10/11/52101-467180032_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 11.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-61418/
-- vídeo · 12.0s · `pixabay` · nota 0.89 · https://pixabay.com/videos/id-61419/
-- vídeo · 18.0s · `pexels` · nota 0.71 · https://www.pexels.com/video/french-revolutionary-soldiers-doing-rifle-drils-9466194/
 
 ---
 
@@ -1022,7 +920,7 @@ Alternativas:
 - arquivo: `Baker rifle with bayonet illustration 1800s`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.74
 
 - motivo: cobre o bloco: 9.0s ≥ 8.4s (folga 0.6s)
 - ajustes: `trim`
@@ -1030,11 +928,6 @@ Alternativas:
 - download: https://cdn.pixabay.com/video/2024/03/28/205890_large.mp4
 - preview: https://cdn.pixabay.com/video/2024/03/28/205890_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 11.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-61418/
-- vídeo · 12.0s · `pixabay` · nota 0.89 · https://pixabay.com/videos/id-61419/
-- vídeo · 13.0s · `pixabay` · nota 0.86 · https://pixabay.com/videos/id-43653/
 
 ---
 
@@ -1049,19 +942,13 @@ Alternativas:
 - arquivo: `Baker rifle blueprint` · `early 1800s rifle technical drawing`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 12.0s · `pixabay` · nota 0.88
+**❌ SEM RESULTADO**
 
-- motivo: cobre o bloco: 12.0s ≥ 8.2s (folga 3.8s)
-- ajustes: `trim`
-- página: https://pixabay.com/videos/id-4948/
-- download: https://cdn.pixabay.com/video/2016/09/05/4948-181538478_large.mp4
-- preview: https://cdn.pixabay.com/video/2016/09/05/4948-181538478_large.jpg
-- licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 13.0s · `pexels` · nota 0.85 · https://www.pexels.com/video/close-up-video-of-a-woman-aiming-at-a-rifle-scope-6090892/
-- vídeo · 14.0s · `pixabay` · nota 0.82 · https://pixabay.com/videos/id-189018/
-- vídeo · 15.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/man-holding-a-sniper-rifle-6091127/
+Recusados:
+- `pexels:9466190` — vídeo longo demais: 16.0s para bloco de 8.2s (+96%, teto 10.6s = +30%)
+- `pexels:9466310` — vídeo longo demais: 26.0s para bloco de 8.2s (+218%, teto 10.6s = +30%)
+- `pexels:9466304` — vídeo longo demais: 24.0s para bloco de 8.2s (+194%, teto 10.6s = +30%)
+- `pexels:9466192` — vídeo longo demais: 24.0s para bloco de 8.2s (+194%, teto 10.6s = +30%)
 
 ---
 
@@ -1101,7 +988,7 @@ Alternativas:
 - alternativas: `close-up of rifle vs musket barrel` · `soldier with rifle in contemplative pose` · `rifleman aiming at target`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.75
 
 - motivo: cobre o bloco: 8.0s ≥ 7.4s (folga 0.6s)
 - ajustes: `trim`
@@ -1111,9 +998,7 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-101795/
-- vídeo · 10.0s · `pexels` · nota 0.91 · https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
-- vídeo · 10.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-79759/
+- vídeo · 9.0s · `pixabay` · nota 0.30 · https://pixabay.com/videos/id-101795/
 
 ---
 
@@ -1127,7 +1012,7 @@ Alternativas:
 - alternativas: `comparison rifle vs musket firing speed` · `soldier struggling with musket` · `rifleman in precise stance`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.96
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.40
 
 - motivo: cobre o bloco: 10.0s ≥ 8.5s (folga 1.5s)
 - ajustes: `trim`
@@ -1135,11 +1020,6 @@ Alternativas:
 - download: https://videos.pexels.com/video-files/9466270/9466270-hd_1920_1080_25fps.mp4
 - preview: https://images.pexels.com/videos/9466270/adult-ammunition-army-battle-9466270.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
 - licença: `pexels`
-
-Alternativas:
-- vídeo · 13.0s · `pexels` · nota 0.87 · https://www.pexels.com/video/people-standing-while-holding-guns-9466303/
-- vídeo · 14.0s · `pexels` · nota 0.84 · https://www.pexels.com/video/people-walking-while-holding-guns-9466272/
-- vídeo · 16.0s · `pexels` · nota 0.78 · https://www.pexels.com/video/french-revolutionary-soldiers-marching-together-9467097/
 
 ---
 
@@ -1154,16 +1034,10 @@ Alternativas:
 - arquivo: `British riflemen recruitment poster 1800s` · `early 1800s rifle corps illustration`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 7.2s (1096x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 7.2s (folga 7856.2s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 7.2s (+109532%, teto 9.3s = +30%)
 
 ---
 
@@ -1182,8 +1056,8 @@ Alternativas:
 - motivo: aspecto 1.71 dentro da tolerância de 16:9
 - ajustes: `kenburns`
 - página: https://pixabay.com/photos/question-question-mark-opinion-poll-2736480/
-- download: https://pixabay.com/get/g52fba3357fd033aa60edeed34b28f466d7e19a898ce78f1696eea436fda4672f8a39c6959dfdb370479f064d88a6fa402b8b55fb892a80b501864c1c9752811b_1280.jpg
-- preview: https://pixabay.com/get/gbe0d02154daa4c5f3dcfd61fafd5c19da80076492720559c5f2f3da39cb1694cec1614fe57d7817a0d8b6cee7032d45dca34bec91c6aa176ae9b6a4428ff089b_640.jpg
+- download: https://pixabay.com/get/g611b454b8ee28ec569363dfbf2baea02bde1b57414f5f9696d477b6984c2cb98c7dd58c942c7b4fd761e7912867bb5721550f66d238f4cc48ba8e4806667730b_1280.jpg
+- preview: https://pixabay.com/get/ge971da8753086d917c05833ea57692267b5b96d35e0c7f215a8707de208f4ce68960bb33aba5375d37414b7486eeb801e7f5570c8c6a04aa1a0caf5e0b048c91_640.jpg
 - licença: `pixabay-content-license`
 
 Alternativas:
@@ -1204,16 +1078,10 @@ Alternativas:
 - arquivo: `Ninety-Fifth Rifles recruitment poster` · `early 1800s rifle regiment illustration`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 8.8s (894x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 8.8s (folga 7854.5s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 8.8s (+89338%, teto 11.4s = +30%)
 
 ---
 
@@ -1227,7 +1095,7 @@ Alternativas:
 - alternativas: `musket ball vs rifle bullet trajectory` · `soldier with rifle calculating distance` · `redcoat vs rifleman comparison`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 2160x3840 · 8.0s · `pixabay` · nota 0.95
+**✅ ESCOLHIDO** · 🎬 vídeo · 2160x3840 · 8.0s · `pixabay` · nota 0.33
 
 - motivo: cobre o bloco: 8.0s ≥ 6.7s (folga 1.3s)
 - ajustes: `trim`
@@ -1235,11 +1103,6 @@ Alternativas:
 - download: https://cdn.pixabay.com/video/2023/11/12/188811-883827743_large.mp4
 - preview: https://cdn.pixabay.com/video/2023/11/12/188811-883827743_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61412/
-- vídeo · 11.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-61418/
-- vídeo · 12.0s · `pixabay` · nota 0.80 · https://pixabay.com/videos/id-61419/
 
 ---
 
@@ -1253,7 +1116,7 @@ Alternativas:
 - alternativas: `soldier calculating trajectory` · `rifleman in natural camouflage` · `target practice with rifle`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.93
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.20
 
 - motivo: cobre o bloco: 10.0s ≥ 7.9s (folga 2.1s)
 - ajustes: `trim`
@@ -1261,11 +1124,6 @@ Alternativas:
 - download: https://cdn.pixabay.com/video/2021/01/07/61412-498529684_large.mp4
 - preview: https://cdn.pixabay.com/video/2021/01/07/61412-498529684_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 11.0s · `pixabay` · nota 0.90 · https://pixabay.com/videos/id-61418/
-- vídeo · 12.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-61419/
-- vídeo · 12.0s · `pixabay` · nota 0.87 · https://pixabay.com/videos/id-158075/
 
 ---
 
@@ -1279,7 +1137,7 @@ Alternativas:
 - alternativas: `old military manual vs rifleman` · `soldier questioning orders` · `19th century army revolution concept`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 1.00
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.95
 
 - motivo: cobre o bloco: 8.0s ≥ 7.9s (folga 0.1s)
 - ajustes: `trim`
@@ -1289,9 +1147,9 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-126557/
-- vídeo · 10.0s · `pexels` · nota 0.93 · https://www.pexels.com/video/military-parade-with-ceremonial-band-outdoors-33055464/
-- vídeo · 10.0s · `pixabay` · nota 0.93 · https://pixabay.com/videos/id-80314/
+- vídeo · 9.0s · `pixabay` · nota 0.53 · https://pixabay.com/videos/id-126557/
+- vídeo · 10.0s · `pexels` · nota 0.20 · https://www.pexels.com/video/military-parade-with-ceremonial-band-outdoors-33055464/
+- vídeo · 10.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-80314/
 
 ---
 
@@ -1306,16 +1164,12 @@ Alternativas:
 - arquivo: `rifleman pair firing illustration 1800s` · `early 19th century rifle tactics`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 655x480 · 624.4s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 10 minutos para um bloco de 7.1s (88x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 624.4s ≥ 7.1s (folga 617.3s)
-- ajustes: `trim`
-- página: https://archive.org/details/111-adc-1339
-- download: https://archive.org/download/111-adc-1339/111-adc-1339.mp4
-- preview: https://archive.org/services/img/111-adc-1339
-- licença: `public-domain`
+Recusados:
+- `internet_archive:428-npc-8530/428-npc-8530.mp4` — vídeo longo demais: 575.8s para bloco de 7.1s (+8039%, teto 9.2s = +30%)
+- `internet_archive:1960-07-21_missile_milestone/1960-07-21_missile_milestone.mp4` — vídeo longo demais: 93.1s para bloco de 7.1s (+1217%, teto 9.2s = +30%)
+- `internet_archive:111-adc-2051/111-adc-2051.mp4` — vídeo longo demais: 10 min para bloco de 7.1s (+8629%, teto 9.2s = +30%)
 
 ---
 
@@ -1345,19 +1199,12 @@ Alternativas:
 - arquivo: `Sir John Moore military portrait` · `early 1800s rifle training illustration`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 854x480 · 4957.5s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 83 minutos para um bloco de 7.7s (645x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 4957.5s ≥ 7.7s (folga 4949.8s)
-- ajustes: `trim`
-- página: https://archive.org/details/walmart-shooters-15-video-manefesto
-- download: https://archive.org/download/walmart-shooters-15-video-manefesto/Walmart%20Shooters%2015%20video%20Manefesto.mp4
-- preview: https://archive.org/services/img/walmart-shooters-15-video-manefesto
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 1492.9s · `internet_archive` · nota 0.20 · https://archive.org/details/mf-kidou-keiji-jiban-great-explosion-at-the-monster-factory-of-fear.ia_20211029
+Recusados:
+- `internet_archive:z-z-street-fighter-alpha_202110/[Z-Z] Street Fighter Alpha.mp4` — vídeo longo demais: 93 min para bloco de 7.7s (+72606%, teto 10.0s = +30%)
+- `internet_archive:bd.-1080-p-part-3-3-stephen-chow-hail-the-judge-1994-112_20211029_0916/【九品芝麻官之白面包青天】粵語中字BD·1080P【Part 3-3】周星馳高清電影喜劇 Stephen Chow【Hail the Judge 1994】_112.mp4` — vídeo longo demais: 39 min para bloco de 7.7s (+30444%, teto 10.0s = +30%)
+- `internet_archive:walmart-shooters-15-video-manefesto/Walmart Shooters 15 video Manefesto.mp4` — vídeo longo demais: 83 min para bloco de 7.7s (+64442%, teto 10.0s = +30%)
 
 ---
 
@@ -1371,7 +1218,7 @@ Alternativas:
 - alternativas: `rifleman with target and medal` · `soldier rewarded for precision` · `19th century military innovation`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.70
 
 - motivo: cobre o bloco: 8.0s ≥ 7.3s (folga 0.7s)
 - ajustes: `trim`
@@ -1381,9 +1228,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pexels` · nota 0.98 · https://www.pexels.com/video/a-man-is-smiling-while-holding-a-gun-26747811/
-- vídeo · 11.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-18390/
-- vídeo · 13.0s · `pexels` · nota 0.81 · https://www.pexels.com/video/close-up-on-man-showing-use-of-weapon-10480528/
+- vídeo · 8.0s · `pexels` · nota 0.70 · https://www.pexels.com/video/a-man-is-smiling-while-holding-a-gun-26747811/
 
 ---
 
@@ -1397,7 +1242,7 @@ Alternativas:
 - alternativas: `rifleman vs traditional soldier comparison` · `army adapting to rifle` · `19th century military innovation`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.67
 
 - motivo: cobre o bloco: 8.0s ≥ 7.3s (folga 0.7s)
 - ajustes: `trim`
@@ -1407,9 +1252,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/silhouettes-of-soldiers-in-tactical-formation-30284839/
-- vídeo · 8.0s · `pexels` · nota 0.97 · https://www.pexels.com/video/close-up-of-sneaking-special-force-soldier-13721787/
-- vídeo · 8.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-131127/
+- vídeo · 8.0s · `pexels` · nota 0.67 · https://www.pexels.com/video/silhouettes-of-soldiers-in-tactical-formation-30284839/
+- vídeo · 8.0s · `pexels` · nota 0.67 · https://www.pexels.com/video/close-up-of-sneaking-special-force-soldier-13721787/
+- vídeo · 8.0s · `pixabay` · nota 0.67 · https://pixabay.com/videos/id-131127/
 
 ---
 
@@ -1428,12 +1273,12 @@ Alternativas:
 - motivo: aspecto 1.83 dentro da tolerância de 16:9
 - ajustes: `kenburns`
 - página: https://pixabay.com/photos/sports-beach-volleyball-ball-sand-6480828/
-- download: https://pixabay.com/get/g39f4e9b72783fbaabdaeefeccfbd83c8e577f1093c089e6e63204a24839e03eaf5efb7a25487a04bea0d0145d1a3414a2d1c782506911ad0f4881ac4b11751cc_1280.jpg
-- preview: https://pixabay.com/get/g2bdd9eed090fbc8cffb7b2de26f399aa88d1be89ffaab805eca99c546ca446821050249e283eaccfbf5ef620c8ab9726ea0d172c4482ac182a87525c379f6c71_640.jpg
+- download: https://pixabay.com/get/g951bab0f5c635f60f5527139c0c6f210ed471bc7c6ca9549a5023b17a2ac20de474e6f6a376057e02cfa2cb1da492475c28f3efb5dbac41786ba2d8cc3ba7dca_1280.jpg
+- preview: https://pixabay.com/get/g8271f521c0f2ca8135238dad2bee93536ee9505b60f353c9218421ab9f5dbd546910f117bf7ba71565bc822eff5dd581cea65866e5298bb64a16bf2a76973f04_640.jpg
 - licença: `pixabay-content-license`
 
 Alternativas:
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/hunt-hunter-musket-armed-shooter-4626664/
+- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/weapons-gun-musket-chest-pirates-2882061/
 - imagem · — · `pixabay` · nota 0.88 · https://pixabay.com/photos/musket-cannon-cartridges-hunt-1761235/
 - imagem · — · `pixabay` · nota 0.85 · https://pixabay.com/photos/sports-beach-volleyball-ball-sand-6480827/
 
@@ -1449,19 +1294,13 @@ Alternativas:
 - alternativas: `muskets firing smoke at target` · `rifleman picking individual target` · `19th century military tactics comparison`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pixabay` · nota 0.92
+**❌ SEM RESULTADO**
 
-- motivo: cobre o bloco: 10.0s ≥ 7.6s (folga 2.4s)
-- ajustes: `trim`
-- página: https://pixabay.com/videos/id-345244/
-- download: https://cdn.pixabay.com/video/2026/04/08/345244_large.mp4
-- preview: https://cdn.pixabay.com/video/2026/04/08/345244_large.jpg
-- licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-199558/
-- vídeo · 12.0s · `pixabay` · nota 0.86 · https://pixabay.com/videos/id-257182/
-- vídeo · 14.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/people-walking-while-holding-guns-9466272/
+Recusados:
+- `pexels:9465976` — vídeo longo demais: 26.0s para bloco de 7.6s (+241%, teto 9.9s = +30%)
+- `pexels:9465982` — vídeo longo demais: 23.0s para bloco de 7.6s (+201%, teto 9.9s = +30%)
+- `pexels:9466148` — vídeo longo demais: 27.0s para bloco de 7.6s (+254%, teto 9.9s = +30%)
+- `pexels:9466190` — vídeo longo demais: 16.0s para bloco de 7.6s (+110%, teto 9.9s = +30%)
 
 ---
 
@@ -1475,7 +1314,7 @@ Alternativas:
 - alternativas: `military hierarchy in action` · `key figures on battlefield` · `19th century military roles`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.69
 
 - motivo: cobre o bloco: 8.0s ≥ 7.3s (folga 0.7s)
 - ajustes: `trim`
@@ -1485,9 +1324,7 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-208367/
-- vídeo · 10.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-43658/
-- vídeo · 15.0s · `pixabay` · nota 0.74 · https://pixabay.com/videos/id-88242/
+- vídeo · 9.0s · `pixabay` · nota 0.24 · https://pixabay.com/videos/id-208367/
 
 ---
 
@@ -1501,7 +1338,7 @@ Alternativas:
 - alternativas: `soldier taking out officer concept` · `removing sergeant chaos` · `19th century military decision makers`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.79
 
 - motivo: cobre o bloco: 8.0s ≥ 7.5s (folga 0.5s)
 - ajustes: `trim`
@@ -1511,9 +1348,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.98 · https://pixabay.com/videos/id-156893/
-- vídeo · 10.0s · `pexels` · nota 0.92 · https://www.pexels.com/video/police-officer-arresting-a-man-7714308/
-- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-1210/
+- vídeo · 8.0s · `pixabay` · nota 0.79 · https://pixabay.com/videos/id-156893/
 
 ---
 
@@ -1527,7 +1362,7 @@ Alternativas:
 - alternativas: `Baker rifle close-up in cold` · `rifleman in snowy terrain` · `precision shot in snow concept`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.95
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.27
 
 - motivo: cobre o bloco: 10.0s ≥ 8.2s (folga 1.8s)
 - ajustes: `trim`
@@ -1535,11 +1370,6 @@ Alternativas:
 - download: https://videos.pexels.com/video-files/6200859/6200859-hd_1920_1080_25fps.mp4
 - preview: https://images.pexels.com/videos/6200859/pexels-photo-6200859.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
 - licença: `pexels`
-
-Alternativas:
-- vídeo · 12.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-12396/
-- vídeo · 12.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-103361/
-- vídeo · 15.0s · `pexels` · nota 0.79 · https://www.pexels.com/video/a-men-walking-together-holding-rifle-9466149/
 
 ---
 
@@ -1569,7 +1399,7 @@ Alternativas:
 - arquivo: `rifleman in green jacket aiming` · `19th century sharpshooter`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.86
 
 - motivo: cobre o bloco: 9.0s ≥ 8.6s (folga 0.4s)
 - ajustes: `trim`
@@ -1579,9 +1409,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/drone-footage-of-people-wearing-camouflage-and-carrying-rifles-6200859/
-- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-187614/
-- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-329674/
+- vídeo · 10.0s · `pexels` · nota 0.47 · https://www.pexels.com/video/drone-footage-of-people-wearing-camouflage-and-carrying-rifles-6200859/
+- vídeo · 10.0s · `pixabay` · nota 0.47 · https://pixabay.com/videos/id-187614/
+- vídeo · 10.0s · `pixabay` · nota 0.47 · https://pixabay.com/videos/id-329674/
 
 ---
 
@@ -1596,9 +1426,9 @@ Alternativas:
 - arquivo: `British rifle range 19th century` · `historical sharpshooter training`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.96
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.29
 
-- motivo: cobre o bloco: 8.0s ≥ 7.0s (folga 1.0s)
+- motivo: cobre o bloco: 8.0s ≥ 7.0s (folga 1.0s) · penalizado: bloco pede `bw_archival` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://www.pexels.com/video/abandoned-industrial-warehouse-with-tanks-33770831/
 - download: https://videos.pexels.com/video-files/33770831/14335852_1920_1080_25fps.mp4
@@ -1606,9 +1436,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-8386/
-- vídeo · 10.0s · `pexels` · nota 0.89 · https://www.pexels.com/video/chattanooga-national-cemetery-memorial-rows-33214794/
-- vídeo · 10.0s · `pexels` · nota 0.89 · https://www.pexels.com/video/beautiful-view-at-the-park-4671896/
+- vídeo · 8.0s · `pixabay` · nota 0.29 · https://pixabay.com/videos/id-8386/
 
 ---
 
@@ -1623,7 +1451,7 @@ Alternativas:
 - arquivo: `British rifleman in ambush 1800s` · `historical sharpshooter tactics`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.86
 
 - motivo: cobre o bloco: 8.0s ≥ 7.7s (folga 0.3s)
 - ajustes: `trim`
@@ -1633,9 +1461,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-349388/
-- vídeo · 10.0s · `pexels` · nota 0.92 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
-- vídeo · 11.0s · `pexels` · nota 0.89 · https://www.pexels.com/video/interior-of-cave-11423540/
+- vídeo · 8.0s · `pixabay` · nota 0.86 · https://pixabay.com/videos/id-349388/
 
 ---
 
@@ -1650,7 +1476,7 @@ Alternativas:
 - arquivo: `British sharpshooter in concealment 1800s` · `historical sniper position`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.95
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.38
 
 - motivo: cobre o bloco: 8.0s ≥ 6.8s (folga 1.2s)
 - ajustes: `trim`
@@ -1658,11 +1484,6 @@ Alternativas:
 - download: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.mp4
 - preview: https://cdn.pixabay.com/video/2019/10/04/27539-364430966_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 12.0s · `pixabay` · nota 0.81 · https://pixabay.com/videos/id-12396/
-- vídeo · 12.0s · `pixabay` · nota 0.81 · https://pixabay.com/videos/id-103361/
-- vídeo · 13.0s · `pexels` · nota 0.77 · https://www.pexels.com/video/man-holding-gun-on-shoulders-and-looking-at-camera-6201050/
 
 ---
 
@@ -1677,7 +1498,7 @@ Alternativas:
 - arquivo: `British military map 1800s` · `historical range estimation`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1366x658 · 9.0s · `pexels` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 1366x658 · 9.0s · `pexels` · nota 0.61
 
 - motivo: cobre o bloco: 9.0s ≥ 8.1s (folga 0.9s)
 - ajustes: `trim`
@@ -1687,9 +1508,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/man-checking-bullet-marks-on-target-paper-5243087/
-- vídeo · 10.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-80699/
-- vídeo · 10.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-80702/
+- vídeo · 10.0s · `pexels` · nota 0.20 · https://www.pexels.com/video/man-checking-bullet-marks-on-target-paper-5243087/
+- vídeo · 10.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-80699/
+- vídeo · 10.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-80702/
 
 ---
 
@@ -1704,9 +1525,9 @@ Alternativas:
 - arquivo: `British Light Division 1810s` · `Wellington's army success`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.44
 
-- motivo: cobre o bloco: 7.0s ≥ 6.6s (folga 0.4s)
+- motivo: cobre o bloco: 7.0s ≥ 6.6s (folga 0.4s) · penalizado: bloco pede `bw_archival` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://www.pexels.com/video/two-men-celebrating-7005855/
 - download: https://videos.pexels.com/video-files/7005855/7005855-hd_1920_1080_24fps.mp4
@@ -1714,9 +1535,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-137614/
-- vídeo · 9.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-4848/
-- vídeo · 9.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-4852/
+- vídeo · 8.0s · `pixabay` · nota 0.16 · https://pixabay.com/videos/id-137614/
 
 ---
 
@@ -1731,20 +1550,12 @@ Alternativas:
 - arquivo: `British Army Light Division archival` · `Wellington's army unit portraits`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1280x536 · 7829.6s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 130 minutos para um bloco de 7.7s (1013x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7829.6s ≥ 7.7s (folga 7821.8s)
-- ajustes: `trim`
-- página: https://archive.org/details/decembrist-uprising-of-russia-1825
-- download: https://archive.org/download/decembrist-uprising-of-russia-1825/Decembrist%20Uprising%20of%20Russia%201825.mp4
-- preview: https://archive.org/services/img/decembrist-uprising-of-russia-1825
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 6766.2s · `internet_archive` · nota 0.20 · https://archive.org/details/zulu-dawn-1979
-- vídeo · 5855.0s · `internet_archive` · nota 0.20 · https://archive.org/details/u-boats-the-enemy-below
+Recusados:
+- `internet_archive:zulu-dawn-1979/Zulu Dawn 1979.mp4` — vídeo longo demais: 113 min para bloco de 7.7s (+87409%, teto 10.1s = +30%)
+- `internet_archive:decembrist-uprising-of-russia-1825/Decembrist Uprising of Russia 1825.mp4` — vídeo longo demais: 130 min para bloco de 7.7s (+101162%, teto 10.1s = +30%)
+- `internet_archive:u-boats-the-enemy-below/U-Boats - The Enemy Below.mp4` — vídeo longo demais: 98 min para bloco de 7.7s (+75625%, teto 10.1s = +30%)
 
 ---
 
@@ -1762,8 +1573,8 @@ Alternativas:
 **❌ SEM RESULTADO**
 
 Recusados:
-- `internet_archive:algeria_memory/AlgerieLOpiumEtLeBaton1969.mp4` — resolução baixa: 640x464, canal exige altura ≥ 480
-- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — resolução baixa: 640x360, canal exige altura ≥ 480
+- `internet_archive:algeria_memory/AlgerieLOpiumEtLeBaton1969.mp4` — vídeo longo demais: 126 min para bloco de 7.2s (+104204%, teto 9.4s = +30%)
+- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — vídeo longo demais: 14 min para bloco de 7.2s (+11471%, teto 9.4s = +30%)
 
 ---
 
@@ -1781,9 +1592,9 @@ Recusados:
 **❌ SEM RESULTADO**
 
 Recusados:
-- `internet_archive:gov.archives.arc.36901/gov.archives.arc.36901_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
-- `internet_archive:gov.archives.arc.32203/gov.archives.arc.32203_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
-- `internet_archive:gov.archives.arc.36734/gov.archives.arc.36734_512kb.mp4` — resolução baixa: 320x240, canal exige altura ≥ 480
+- `internet_archive:fc-fc-3933/fc-fc-3933.mp4` — vídeo longo demais: 257.7s para bloco de 7.9s (+3170%, teto 10.2s = +30%)
+- `internet_archive:gov.dod.dimoc.28805/gov.dod.dimoc.28805.mp4` — vídeo longo demais: 19 min para bloco de 7.9s (+14488%, teto 10.2s = +30%)
+- `internet_archive:gov.dod.dimoc.29649/gov.dod.dimoc.29649_512kb.mp4` — vídeo longo demais: 33 min para bloco de 7.9s (+25404%, teto 10.2s = +30%)
 
 ---
 
@@ -1798,19 +1609,12 @@ Recusados:
 - arquivo: `British rifleman with supplies 1800s` · `historical ammunition storage`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 655x480 · 674.1s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 11 minutos para um bloco de 8.8s (77x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 674.1s ≥ 8.8s (folga 665.4s)
-- ajustes: `trim`
-- página: https://archive.org/details/428-npc-31627
-- download: https://archive.org/download/428-npc-31627/428-npc-31627.mp4
-- preview: https://archive.org/services/img/428-npc-31627
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 524.5s · `internet_archive` · nota 0.20 · https://archive.org/details/428-npc-4852
+Recusados:
+- `internet_archive:fc-fc-3933/fc-fc-3933.mp4` — vídeo longo demais: 257.7s para bloco de 8.8s (+2841%, teto 11.4s = +30%)
+- `internet_archive:gov.dod.dimoc.28805/gov.dod.dimoc.28805.mp4` — vídeo longo demais: 19 min para bloco de 8.8s (+13023%, teto 11.4s = +30%)
+- `internet_archive:gov.dod.dimoc.29649/gov.dod.dimoc.29649_512kb.mp4` — vídeo longo demais: 33 min para bloco de 8.8s (+22842%, teto 11.4s = +30%)
 
 ---
 
@@ -1840,7 +1644,7 @@ Alternativas:
 - arquivo: `historical defense tactic 1800s` · `British riflemen last stand`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.68
 
 - motivo: cobre o bloco: 8.0s ≥ 7.3s (folga 0.7s)
 - ajustes: `trim`
@@ -1848,11 +1652,6 @@ Alternativas:
 - download: https://cdn.pixabay.com/video/2020/05/04/38084-416330724_large.mp4
 - preview: https://cdn.pixabay.com/video/2020/05/04/38084-416330724_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.91 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
-- vídeo · 10.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-7817/
-- vídeo · 15.0s · `pexels` · nota 0.74 · https://www.pexels.com/video/men-with-rifles-shooting-during-historical-reenactment-9466302/
 
 ---
 
@@ -1870,7 +1669,7 @@ Alternativas:
 **❌ SEM RESULTADO**
 
 Recusados:
-- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — resolução baixa: 640x360, canal exige altura ≥ 480
+- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — vídeo longo demais: 14 min para bloco de 5.8s (+14408%, teto 7.5s = +30%)
 
 ---
 
@@ -1885,20 +1684,12 @@ Recusados:
 - arquivo: `Waterloo map La Haye Sainte` · `historical farmhouse Waterloo`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1280x536 · 7829.6s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 130 minutos para um bloco de 7.5s (1044x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7829.6s ≥ 7.5s (folga 7822.1s)
-- ajustes: `trim`
-- página: https://archive.org/details/decembrist-uprising-of-russia-1825
-- download: https://archive.org/download/decembrist-uprising-of-russia-1825/Decembrist%20Uprising%20of%20Russia%201825.mp4
-- preview: https://archive.org/services/img/decembrist-uprising-of-russia-1825
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 6766.2s · `internet_archive` · nota 0.20 · https://archive.org/details/zulu-dawn-1979
-- vídeo · 5855.0s · `internet_archive` · nota 0.20 · https://archive.org/details/u-boats-the-enemy-below
+Recusados:
+- `internet_archive:zulu-dawn-1979/Zulu Dawn 1979.mp4` — vídeo longo demais: 113 min para bloco de 7.5s (+90098%, teto 9.8s = +30%)
+- `internet_archive:decembrist-uprising-of-russia-1825/Decembrist Uprising of Russia 1825.mp4` — vídeo longo demais: 130 min para bloco de 7.5s (+104274%, teto 9.8s = +30%)
+- `internet_archive:u-boats-the-enemy-below/U-Boats - The Enemy Below.mp4` — vídeo longo demais: 98 min para bloco de 7.5s (+77952%, teto 9.8s = +30%)
 
 ---
 
@@ -1913,14 +1704,10 @@ Alternativas:
 - arquivo: `Waterloo German troops archival` · `British riflemen portraits`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1280x720 · 137.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-- motivo: cobre o bloco: 137.3s ≥ 7.0s (folga 130.3s)
-- ajustes: `trim`
-- página: https://archive.org/details/ozymandias-p.-b.-shelley-powerful-life-poetry
-- download: https://archive.org/download/ozymandias-p.-b.-shelley-powerful-life-poetry/Ozymandias%20-%20P.%20B.%20Shelley%20%28Powerful%20Life%20Poetry%29.mp4
-- preview: https://archive.org/services/img/ozymandias-p.-b.-shelley-powerful-life-poetry
-- licença: `public-domain`
+Recusados:
+- `internet_archive:ozymandias-p.-b.-shelley-powerful-life-poetry/Ozymandias - P. B. Shelley (Powerful Life Poetry).mp4` — vídeo longo demais: 137.3s para bloco de 7.0s (+1861%, teto 9.1s = +30%)
 
 ---
 
@@ -1938,8 +1725,8 @@ Alternativas:
 **❌ SEM RESULTADO**
 
 Recusados:
-- `internet_archive:algeria_memory/AlgerieLOpiumEtLeBaton1969.mp4` — resolução baixa: 640x464, canal exige altura ≥ 480
-- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — resolução baixa: 640x360, canal exige altura ≥ 480
+- `internet_archive:algeria_memory/AlgerieLOpiumEtLeBaton1969.mp4` — vídeo longo demais: 126 min para bloco de 6.6s (+115041%, teto 8.5s = +30%)
+- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — vídeo longo demais: 14 min para bloco de 6.6s (+12674%, teto 8.5s = +30%)
 
 ---
 
@@ -1954,7 +1741,7 @@ Recusados:
 - arquivo: `Waterloo battle smoke archival` · `19th century combat close-up`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 1.00
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.94
 
 - motivo: cobre o bloco: 8.0s ≥ 7.9s (folga 0.1s)
 - ajustes: `trim`
@@ -1964,9 +1751,9 @@ Recusados:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pexels` · nota 1.00 · https://www.pexels.com/video/silhouettes-of-soldiers-in-tactical-formation-30284839/
-- vídeo · 8.0s · `pixabay` · nota 1.00 · https://pixabay.com/videos/id-27539/
-- vídeo · 9.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/soldiers-in-formation-with-smoke-indoors-30892982/
+- vídeo · 8.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/silhouettes-of-soldiers-in-tactical-formation-30284839/
+- vídeo · 8.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-27539/
+- vídeo · 9.0s · `pexels` · nota 0.52 · https://www.pexels.com/video/soldiers-in-formation-with-smoke-indoors-30892982/
 
 ---
 
@@ -1981,7 +1768,7 @@ Alternativas:
 - arquivo: `Waterloo sharpshooter tactics` · `19th century battlefield targeting`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.81
 
 - motivo: cobre o bloco: 9.0s ≥ 8.5s (folga 0.5s)
 - ajustes: `trim`
@@ -1991,9 +1778,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-139586/
-- vídeo · 10.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
-- vídeo · 10.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/man-aiming-a-sniper-rifle-6091129/
+- vídeo · 9.0s · `pixabay` · nota 0.81 · https://pixabay.com/videos/id-139586/
+- vídeo · 10.0s · `pexels` · nota 0.42 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
+- vídeo · 10.0s · `pexels` · nota 0.42 · https://www.pexels.com/video/man-aiming-a-sniper-rifle-6091129/
 
 ---
 
@@ -2008,7 +1795,7 @@ Alternativas:
 - arquivo: `Waterloo rifleman engagement archival` · `19th century sharpshooter tactics`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.59
 
 - motivo: cobre o bloco: 9.0s ≥ 8.0s (folga 1.0s)
 - ajustes: `trim`
@@ -2018,9 +1805,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/a-young-boy-holding-a-rifle-in-a-room-4836478/
-- vídeo · 10.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
-- vídeo · 10.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-345244/
+- vídeo · 10.0s · `pexels` · nota 0.20 · https://www.pexels.com/video/a-young-boy-holding-a-rifle-in-a-room-4836478/
+- vídeo · 10.0s · `pexels` · nota 0.20 · https://www.pexels.com/video/close-up-of-pistol-in-hands-13721796/
+- vídeo · 10.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-345244/
 
 ---
 
@@ -2035,16 +1822,10 @@ Alternativas:
 - arquivo: `1809 Spain battle scene archival` · `Peninsular War soldiers in action`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 6.7s (1182x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 6.7s (folga 7856.7s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 6.7s (+118126%, teto 8.6s = +30%)
 
 ---
 
@@ -2058,7 +1839,7 @@ Alternativas:
 - alternativas: `soldiers with soot marks faces` · `historical battle fatigue expressions` · `warriors leaning on walls exhausted`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.96
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.44
 
 - motivo: cobre o bloco: 8.0s ≥ 6.8s (folga 1.2s)
 - ajustes: `trim`
@@ -2068,9 +1849,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-38084/
-- vídeo · 9.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-101795/
-- vídeo · 10.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-191159/
+- vídeo · 8.0s · `pixabay` · nota 0.44 · https://pixabay.com/videos/id-38084/
 
 ---
 
@@ -2084,7 +1863,7 @@ Alternativas:
 - alternativas: `historical soldiers staring at fallen friends` · `Napoleonic era grim determination` · `warriors gripping rifles tightly`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.95
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.36
 
 - motivo: cobre o bloco: 10.0s ≥ 8.4s (folga 1.6s)
 - ajustes: `trim`
@@ -2094,9 +1873,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-345244/
-- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-19706/
-- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-61412/
+- vídeo · 10.0s · `pixabay` · nota 0.36 · https://pixabay.com/videos/id-345244/
+- vídeo · 10.0s · `pixabay` · nota 0.36 · https://pixabay.com/videos/id-19706/
+- vídeo · 10.0s · `pixabay` · nota 0.36 · https://pixabay.com/videos/id-61412/
 
 ---
 
@@ -2111,16 +1890,10 @@ Alternativas:
 - arquivo: `1809 military dispatch riders archival` · `British army supply lines historical`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 6.8s (1153x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 6.8s (folga 7856.5s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 6.8s (+115187%, teto 8.9s = +30%)
 
 ---
 
@@ -2135,9 +1908,9 @@ Alternativas:
 - arquivo: `1800s rifle ammunition technical drawing`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🖼️ imagem · 5194x3075 · — · `pexels` · nota 1.00
+**✅ ESCOLHIDO** · 🖼️ imagem · 5194x3075 · — · `pexels` · nota 0.55
 
-- motivo: aspecto 1.69 dentro da tolerância de 16:9
+- motivo: aspecto 1.69 dentro da tolerância de 16:9 · penalizado: bloco pede `bw_archival` e o asset é material moderno de b-roll
 - ajustes: `kenburns`
 - página: https://www.pexels.com/photo/brown-and-silver-tube-lot-6092080/
 - download: https://images.pexels.com/photos/6092080/pexels-photo-6092080.jpeg
@@ -2145,9 +1918,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/bullets-shells-bullet-shells-2166491/
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/bullet-caliber-cartridge-ammo-5633997/
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/pebble-stones-pebbles-multicoloured-1090536/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/bullets-shells-bullet-shells-2166491/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/bullet-caliber-cartridge-ammo-5633997/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/pebble-stones-pebbles-multicoloured-1090536/
 
 ---
 
@@ -2162,16 +1935,10 @@ Alternativas:
 - arquivo: `1809 battle rifle fire archival footage`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1124x480 · 7863.3s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 131 minutos para um bloco de 7.1s (1114x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 7863.3s ≥ 7.1s (folga 7856.3s)
-- ajustes: `trim`
-- página: https://archive.org/details/the-bounty-1982
-- download: https://archive.org/download/the-bounty-1982/The%20Bounty%201982.mp4
-- preview: https://archive.org/services/img/the-bounty-1982
-- licença: `public-domain`
+Recusados:
+- `internet_archive:the-bounty-1982/The Bounty 1982.mp4` — vídeo longo demais: 131 min para bloco de 7.1s (+111295%, teto 9.2s = +30%)
 
 ---
 
@@ -2185,7 +1952,7 @@ Alternativas:
 - alternativas: `Napoleonic era soldiers scavenging ammo` · `historical battle last shot desperation` · `riflemen checking fallen friends`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.83
 
 - motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
 - ajustes: `trim`
@@ -2195,9 +1962,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-51237/
-- vídeo · 10.0s · `pexels` · nota 0.87 · https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
-- vídeo · 12.0s · `pexels` · nota 0.80 · https://www.pexels.com/video/soldiers-entering-through-door-13884572/
+- vídeo · 8.0s · `pixabay` · nota 0.33 · https://pixabay.com/videos/id-51237/
 
 ---
 
@@ -2212,19 +1977,12 @@ Alternativas:
 - arquivo: `1809 French assault archival`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1280x544 · 6766.2s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 113 minutos para um bloco de 7.0s (962x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 6766.2s ≥ 7.0s (folga 6759.2s)
-- ajustes: `trim`
-- página: https://archive.org/details/zulu-dawn-1979
-- download: https://archive.org/download/zulu-dawn-1979/Zulu%20Dawn%201979.mp4
-- preview: https://archive.org/services/img/zulu-dawn-1979
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 5855.0s · `internet_archive` · nota 0.20 · https://archive.org/details/u-boats-the-enemy-below
+Recusados:
+- `internet_archive:zulu-dawn-1979/Zulu Dawn 1979.mp4` — vídeo longo demais: 113 min para bloco de 7.0s (+96147%, teto 9.1s = +30%)
+- `internet_archive:napoleonic-wars-battle-of-waterloo-1815/Napoleonic Wars Battle of Waterloo 1815.mp4` — vídeo longo demais: 14 min para bloco de 7.0s (+11806%, teto 9.1s = +30%)
+- `internet_archive:u-boats-the-enemy-below/U-Boats - The Enemy Below.mp4` — vídeo longo demais: 98 min para bloco de 7.0s (+83186%, teto 9.1s = +30%)
 
 ---
 
@@ -2238,7 +1996,7 @@ Alternativas:
 - alternativas: `Peninsular War retreat under fire` · `19th century military withdrawal` · `British infantry survivors leaving battlefield`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3556x2048 · 8.0s · `pixabay` · nota 1.00
+**✅ ESCOLHIDO** · 🎬 vídeo · 3556x2048 · 8.0s · `pixabay` · nota 0.99
 
 - motivo: cobre o bloco: 8.0s ≥ 8.0s (folga 0.0s)
 - página: https://pixabay.com/videos/id-137614/
@@ -2247,9 +2005,9 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 1.00 · https://pixabay.com/videos/id-156893/
-- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-140353/
-- vídeo · 10.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-1204/
+- vídeo · 8.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-156893/
+- vídeo · 9.0s · `pixabay` · nota 0.57 · https://pixabay.com/videos/id-140353/
+- vídeo · 10.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-1204/
 
 ---
 
@@ -2263,19 +2021,19 @@ Alternativas:
 - alternativas: `19th century rifle accuracy vs range infographic` · `Baker rifle weakness visual representation` · `Napoleonic era weapon trade-off diagram`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🖼️ imagem · 5968x3926 · — · `pixabay` · nota 0.86
+**✅ ESCOLHIDO** · 🖼️ imagem · 5968x3926 · — · `pixabay` · nota 0.47
 
-- motivo: aspecto 1.52 ajustado para 16:9 por crop central (5968x3357, mantém 86%)
+- motivo: aspecto 1.52 ajustado para 16:9 por crop central (5968x3357, mantém 86%) · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `kenburns`, `crop`
 - página: https://pixabay.com/photos/baker-cook-coffee-cupcake-frog-1194428/
-- download: https://pixabay.com/get/g0dce436a8082545dbb6a65bf02eab09b72e2f411377c0dd52402e088d856c6ac00f2c7bb8305701b8075d1f8250f0a06ed093e5c20f8f51224a645076bde596f_1280.jpg
-- preview: https://pixabay.com/get/gcec8f70e688005788894040d6f0d27b4c8b1c5e8c0fb5282c01ff69a2fff370597f42c9fca641d02cf93e976de248e163137e0a5bf3d5d1bca1801704f9f6768_640.jpg
+- download: https://pixabay.com/get/g4875aad64ed138b5cdd545b4899cc53d587dfdaaa2e3b822bc71ba031647963eb75a11c946f74bae82ceaac6fa90ba9d09d9b63ba578f7f523f4517e820f84f5_1280.jpg
+- preview: https://pixabay.com/get/g6760009e789ea10089af0fecae05a5b4063412bcca1e3b5171e191f4c02f9059f3aa4a87c46d75b2b43c79bb8e666ffa19b4f4b313016c1b881081f1f55bc438_640.jpg
 - licença: `pixabay-content-license`
 
 Alternativas:
-- imagem · — · `pixabay` · nota 0.84 · https://pixabay.com/photos/bakery-bread-baker-apron-baking-1868396/
-- imagem · — · `pexels` · nota 0.84 · https://www.pexels.com/photo/armed-soldiers-marching-on-a-grass-field-9267454/
-- imagem · — · `pexels` · nota 0.84 · https://www.pexels.com/photo/soldiers-marching-while-holding-rifles-9268696/
+- imagem · — · `pixabay` · nota 0.46 · https://pixabay.com/photos/bakery-bread-baker-apron-baking-1868396/
+- imagem · — · `pexels` · nota 0.46 · https://www.pexels.com/photo/armed-soldiers-marching-on-a-grass-field-9267454/
+- imagem · — · `pexels` · nota 0.46 · https://www.pexels.com/photo/soldiers-marching-while-holding-rifles-9268696/
 
 ---
 
@@ -2289,7 +2047,7 @@ Alternativas:
 - alternativas: `Napoleonic era soldiers bayonet charge no ammo` · `historical battle last stand with rifles` · `British infantry empty pouches`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.64
 
 - motivo: cobre o bloco: 7.0s ≥ 6.3s (folga 0.7s)
 - ajustes: `trim`
@@ -2299,9 +2057,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.93 · https://pixabay.com/videos/id-188811/
-- vídeo · 10.0s · `pixabay` · nota 0.85 · https://pixabay.com/videos/id-61412/
-- vídeo · 11.0s · `pixabay` · nota 0.81 · https://pixabay.com/videos/id-61418/
+- vídeo · 8.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-188811/
 
 ---
 
@@ -2316,19 +2072,19 @@ Alternativas:
 - arquivo: `1800s military supply depot archival`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🖼️ imagem · 6016x3450 · — · `pixabay` · nota 1.00
+**✅ ESCOLHIDO** · 🖼️ imagem · 4592x2870 · — · `pixabay` · nota 0.55
 
-- motivo: aspecto 1.74 dentro da tolerância de 16:9
+- motivo: aspecto 1.60 dentro da tolerância de 16:9 · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `kenburns`
-- página: https://pixabay.com/photos/hunt-hunter-musket-armed-shooter-4626664/
-- download: https://pixabay.com/get/ge4618a2ffff4a4d82205f02cee12e716dc855f24f72010a28a115641352d48262be686843feefd4f90a836084da166eb16ef88cf3106a55bd6f01b5a15c2eff4_1280.jpg
-- preview: https://pixabay.com/get/g349e820ec3a05955289d08e7aec8a4e697a084479edff67f1237428f1488aa23b24037cf288ef97a7b34b3f077e28c988b81f853dee96ca6f865c3b6be58b0ee_640.jpg
+- página: https://pixabay.com/photos/weapons-gun-musket-chest-pirates-2882061/
+- download: https://pixabay.com/get/g74caf7a76b6c05780a1b8da5801791954e4d09a8bd829cbffbaad2237adf02ac3fad83d481147e8b81261f7a883327aeb6ff09686609b063bb5047ac410416a3_1280.jpg
+- preview: https://pixabay.com/get/g9cb16108f2e9f76dcef8088ad86e72107de98f96de54828dbdd57f904252b803041ae2873e6b3f048742d358bd4fd6c004d97de3488a26c40372817def5c36bb_640.jpg
 - licença: `pixabay-content-license`
 
 Alternativas:
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/weapons-gun-musket-chest-pirates-2882061/
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/cartridges-ammunition-hunt-musket-1761236/
-- imagem · — · `pixabay` · nota 0.88 · https://pixabay.com/photos/musket-cannon-cartridges-hunt-1761235/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/cartridges-ammunition-hunt-musket-1761236/
+- imagem · — · `pixabay` · nota 0.48 · https://pixabay.com/photos/musket-cannon-cartridges-hunt-1761235/
+- imagem · — · `pixabay` · nota 0.47 · https://pixabay.com/photos/railway-station-freight-trains-1363771/
 
 ---
 
@@ -2342,9 +2098,9 @@ Alternativas:
 - alternativas: `19th century rifle supply chain breakdown` · `La Haye Sainte lesson visual` · `historical weapon dependency infographic`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🖼️ imagem · 4125x2578 · — · `pexels` · nota 1.00
+**✅ ESCOLHIDO** · 🖼️ imagem · 4125x2578 · — · `pexels` · nota 0.55
 
-- motivo: aspecto 1.60 dentro da tolerância de 16:9
+- motivo: aspecto 1.60 dentro da tolerância de 16:9 · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `kenburns`
 - página: https://www.pexels.com/photo/young-man-concerned-about-hair-loss-39570855/
 - download: https://images.pexels.com/photos/39570855/pexels-photo-39570855.jpeg
@@ -2352,9 +2108,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- imagem · — · `pexels` · nota 1.00 · https://www.pexels.com/photo/military-men-holding-guns-10246126/
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/meal-food-loaf-isolated-3277831/
-- imagem · — · `pixabay` · nota 0.84 · https://pixabay.com/photos/bakery-bread-baker-apron-baking-1868396/
+- imagem · — · `pexels` · nota 0.55 · https://www.pexels.com/photo/military-men-holding-guns-10246126/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/meal-food-loaf-isolated-3277831/
+- imagem · — · `pixabay` · nota 0.46 · https://pixabay.com/photos/bakery-bread-baker-apron-baking-1868396/
 
 ---
 
@@ -2369,19 +2125,11 @@ Alternativas:
 - arquivo: `1830s British rifle archives` · `Victorian era weapon transition`
 - provedores consultados: internet_archive · candidatos: 2
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 4904.5s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 82 minutos para um bloco de 6.7s (734x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 4904.5s ≥ 6.7s (folga 4897.8s)
-- ajustes: `trim`
-- página: https://archive.org/details/01-just-for-laughs
-- download: https://archive.org/download/01-just-for-laughs/Def%20Comedy%20Jam%2025.mp4
-- preview: https://archive.org/services/img/01-just-for-laughs
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 696.9s · `internet_archive` · nota 0.20 · https://archive.org/details/HP_P2
+Recusados:
+- `internet_archive:01-just-for-laughs/Def Comedy Jam 25.mp4` — vídeo longo demais: 82 min para bloco de 6.7s (+73251%, teto 8.7s = +30%)
+- `internet_archive:HP_P2/3audio.mp4` — vídeo longo demais: 12 min para bloco de 6.7s (+10322%, teto 8.7s = +30%)
 
 ---
 
@@ -2411,7 +2159,7 @@ Alternativas:
 - arquivo: `1840s rifle bullet technical drawing`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.84
 
 - motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
 - ajustes: `trim`
@@ -2421,9 +2169,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 7.0s · `pexels` · nota 0.99 · https://www.pexels.com/video/make-today-great-over-a-colored-yellow-background-5981789/
-- vídeo · 7.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-240531/
-- vídeo · 7.0s · `pixabay` · nota 0.99 · https://pixabay.com/videos/id-199545/
+- vídeo · 7.0s · `pexels` · nota 0.84 · https://www.pexels.com/video/make-today-great-over-a-colored-yellow-background-5981789/
+- vídeo · 7.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-240531/
+- vídeo · 7.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-199545/
 
 ---
 
@@ -2437,9 +2185,9 @@ Alternativas:
 - alternativas: `Minié rifle advantage illustration` · `historical weapon progress diagram` · `Napoleonic to Victorian rifle transition`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🖼️ imagem · 2813x1777 · — · `pexels` · nota 1.00
+**✅ ESCOLHIDO** · 🖼️ imagem · 2813x1777 · — · `pexels` · nota 0.55
 
-- motivo: aspecto 1.58 dentro da tolerância de 16:9
+- motivo: aspecto 1.58 dentro da tolerância de 16:9 · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `kenburns`
 - página: https://www.pexels.com/photo/civil-war-reenactor-holding-historical-rifle-38774384/
 - download: https://images.pexels.com/photos/38774384/pexels-photo-38774384.png
@@ -2447,9 +2195,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/hunt-hunter-musket-armed-shooter-4626664/
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/weapons-gun-musket-chest-pirates-2882061/
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/cartridges-ammunition-hunt-musket-1761236/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/weapons-gun-musket-chest-pirates-2882061/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/cartridges-ammunition-hunt-musket-1761236/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/hunting-rifle-weapons-shooting-3781222/
 
 ---
 
@@ -2464,19 +2212,12 @@ Alternativas:
 - arquivo: `1850s British military training archives`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 655x480 · 377.1s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 6 minutos para um bloco de 5.7s (66x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 377.1s ≥ 5.7s (folga 371.4s)
-- ajustes: `trim`
-- página: https://archive.org/details/111-adc-9948
-- download: https://archive.org/download/111-adc-9948/111-adc-9948.mp4
-- preview: https://archive.org/services/img/111-adc-9948
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 564.1s · `internet_archive` · nota 0.20 · https://archive.org/details/111-adc-5510
+Recusados:
+- `internet_archive:gov.archives.arc.44119.5/gov.archives.arc.44119.5_512kb.mp4` — vídeo longo demais: 466.0s para bloco de 5.7s (+8091%, teto 7.4s = +30%)
+- `internet_archive:gov.archives.arc.14038/gov.archives.arc.14038_512kb.mp4` — vídeo longo demais: 552.1s para bloco de 5.7s (+9605%, teto 7.4s = +30%)
+- `internet_archive:111-adc-1552/111-adc-1552.mp4` — vídeo longo demais: 442.9s para bloco de 5.7s (+7686%, teto 7.4s = +30%)
 
 ---
 
@@ -2490,9 +2231,9 @@ Alternativas:
 - alternativas: `19th century soldier aiming at target` · `Victorian era rifle accuracy drill` · `British infantry marksmanship`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🖼️ imagem · 4642x2956 · — · `pexels` · nota 1.00
+**✅ ESCOLHIDO** · 🖼️ imagem · 4642x2956 · — · `pexels` · nota 0.55
 
-- motivo: aspecto 1.57 dentro da tolerância de 16:9
+- motivo: aspecto 1.57 dentro da tolerância de 16:9 · penalizado: bloco pede `bw_archival` e o asset é material moderno de b-roll
 - ajustes: `kenburns`
 - página: https://www.pexels.com/photo/a-person-using-a-rifle-in-target-shooting-11389638/
 - download: https://images.pexels.com/photos/11389638/pexels-photo-11389638.jpeg
@@ -2500,9 +2241,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- imagem · — · `pexels` · nota 1.00 · https://www.pexels.com/photo/tactical-training-with-soldiers-in-combat-gear-30403112/
-- imagem · — · `pexels` · nota 1.00 · https://www.pexels.com/photo/man-in-white-t-shirt-and-vest-holding-a-rifle-5798159/
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/arrow-target-bullseye-goal-aim-2886227/
+- imagem · — · `pexels` · nota 0.55 · https://www.pexels.com/photo/tactical-training-with-soldiers-in-combat-gear-30403112/
+- imagem · — · `pexels` · nota 0.55 · https://www.pexels.com/photo/man-in-white-t-shirt-and-vest-holding-a-rifle-5798159/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/arrow-target-bullseye-goal-aim-2886227/
 
 ---
 
@@ -2516,9 +2257,9 @@ Alternativas:
 - alternativas: `300 years rifle development summary` · `military weapon evolution graphic` · `historical arms race infographic`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🖼️ imagem · 6000x3376 · — · `pexels` · nota 1.00
+**✅ ESCOLHIDO** · 🖼️ imagem · 6000x3376 · — · `pexels` · nota 0.55
 
-- motivo: aspecto 1.78 dentro da tolerância de 16:9
+- motivo: aspecto 1.78 dentro da tolerância de 16:9 · penalizado: bloco pede `painting` e o asset é material moderno de b-roll
 - ajustes: `kenburns`
 - página: https://www.pexels.com/photo/military-men-holding-guns-10246126/
 - download: https://images.pexels.com/photos/10246126/pexels-photo-10246126.jpeg
@@ -2526,9 +2267,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/human-evolution-reenactment-sunset-3801547/
-- imagem · — · `pixabay` · nota 1.00 · https://pixabay.com/photos/hunting-rifle-weapons-shooting-3781222/
-- imagem · — · `pixabay` · nota 0.86 · https://pixabay.com/photos/soldier-submachine-gun-war-fight-62902/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/human-evolution-reenactment-sunset-3801547/
+- imagem · — · `pixabay` · nota 0.55 · https://pixabay.com/photos/hunting-rifle-weapons-shooting-3781222/
+- imagem · — · `pixabay` · nota 0.47 · https://pixabay.com/photos/soldier-submachine-gun-war-fight-62902/
 
 ---
 
@@ -2543,19 +2284,13 @@ Alternativas:
 - arquivo: `18th century musket blueprint` · `early 19th century rifle technical drawing`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 10.0s · `pexels` · nota 0.92
+**❌ SEM RESULTADO**
 
-- motivo: cobre o bloco: 10.0s ≥ 7.5s (folga 2.5s)
-- ajustes: `trim`
-- página: https://www.pexels.com/video/revolutionary-soldiers-fixing-their-rifles-9466270/
-- download: https://videos.pexels.com/video-files/9466270/9466270-hd_1920_1080_25fps.mp4
-- preview: https://images.pexels.com/videos/9466270/adult-ammunition-army-battle-9466270.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200
-- licença: `pexels`
-
-Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-3611/
-- vídeo · 11.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-61418/
-- vídeo · 11.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-11186/
+Recusados:
+- `pexels:9466190` — vídeo longo demais: 16.0s para bloco de 7.5s (+113%, teto 9.8s = +30%)
+- `pexels:9466194` — vídeo longo demais: 18.0s para bloco de 7.5s (+140%, teto 9.8s = +30%)
+- `pexels:9465976` — vídeo longo demais: 26.0s para bloco de 7.5s (+247%, teto 9.8s = +30%)
+- `pexels:9466146` — vídeo longo demais: 16.0s para bloco de 7.5s (+113%, teto 9.8s = +30%)
 
 ---
 
@@ -2570,7 +2305,7 @@ Alternativas:
 - arquivo: `early 1800s rifle manufacturing engraving` · `Baker rifle technical illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 1.00
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pixabay` · nota 0.99
 
 - motivo: cobre o bloco: 8.0s ≥ 8.0s (folga 0.0s)
 - página: https://pixabay.com/videos/id-135851/
@@ -2579,9 +2314,9 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-130651/
-- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-267359/
-- vídeo · 9.0s · `pixabay` · nota 0.97 · https://pixabay.com/videos/id-11749/
+- vídeo · 9.0s · `pixabay` · nota 0.57 · https://pixabay.com/videos/id-130651/
+- vídeo · 9.0s · `pixabay` · nota 0.57 · https://pixabay.com/videos/id-267359/
+- vídeo · 9.0s · `pixabay` · nota 0.57 · https://pixabay.com/videos/id-11749/
 
 ---
 
@@ -2596,9 +2331,9 @@ Alternativas:
 - arquivo: `early 1800s rifle training manual illustration` · `Napoleonic Wars rifle drill engraving`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 7.0s · `pexels` · nota 0.46
 
-- motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s)
+- motivo: cobre o bloco: 7.0s ≥ 6.7s (folga 0.3s) · penalizado: bloco pede `bw_archival` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://www.pexels.com/video/armies-firing-at-the-shooting-range-8605303/
 - download: https://videos.pexels.com/video-files/8605303/8605303-hd_1920_1080_30fps.mp4
@@ -2606,9 +2341,7 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-27539/
-- vídeo · 11.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-61418/
-- vídeo · 12.0s · `pixabay` · nota 0.80 · https://pixabay.com/videos/id-61419/
+- vídeo · 8.0s · `pixabay` · nota 0.19 · https://pixabay.com/videos/id-27539/
 
 ---
 
@@ -2623,9 +2356,9 @@ Alternativas:
 - arquivo: `early industrial age adaptation illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.97
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.35
 
-- motivo: cobre o bloco: 9.0s ≥ 8.1s (folga 0.9s)
+- motivo: cobre o bloco: 9.0s ≥ 8.1s (folga 0.9s) · penalizado: bloco pede `sepia` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://pixabay.com/videos/id-267359/
 - download: https://cdn.pixabay.com/video/2025/03/25/267359_large.mp4
@@ -2633,9 +2366,7 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 10.0s · `pexels` · nota 0.94 · https://www.pexels.com/video/industrial-workers-in-steel-fabrication-plant-33855578/
-- vídeo · 12.0s · `pexels` · nota 0.88 · https://www.pexels.com/video/industrial-textile-machinery-in-operation-35469636/
-- vídeo · 12.0s · `pexels` · nota 0.88 · https://www.pexels.com/video/textile-factory-workers-operating-machinery-31370992/
+- vídeo · 10.0s · `pexels` · nota 0.12 · https://www.pexels.com/video/industrial-workers-in-steel-fabrication-plant-33855578/
 
 ---
 
@@ -2649,7 +2380,7 @@ Alternativas:
 - alternativas: `industrial revolution progress visualization` · `workers using improved machinery` · `societal adaptation to change`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.98
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 9.0s · `pexels` · nota 0.75
 
 - motivo: cobre o bloco: 9.0s ≥ 8.4s (folga 0.6s)
 - ajustes: `trim`
@@ -2659,9 +2390,8 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 9.0s · `pexels` · nota 0.98 · https://www.pexels.com/video/employees-discussing-work-7687998/
-- vídeo · 10.0s · `pixabay` · nota 0.95 · https://pixabay.com/videos/id-7549/
-- vídeo · 11.0s · `pixabay` · nota 0.92 · https://pixabay.com/videos/id-15629/
+- vídeo · 9.0s · `pexels` · nota 0.75 · https://www.pexels.com/video/employees-discussing-work-7687998/
+- vídeo · 10.0s · `pixabay` · nota 0.35 · https://pixabay.com/videos/id-7549/
 
 ---
 
@@ -2691,16 +2421,10 @@ Alternativas:
 - arquivo: `1809 Spain winter battle scene` · `Napoleonic Wars rifleman in snow engraving`
 - provedores consultados: internet_archive · candidatos: 1
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1280x544 · 6766.2s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 113 minutos para um bloco de 6.8s (1002x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 6766.2s ≥ 6.8s (folga 6759.4s)
-- ajustes: `trim`
-- página: https://archive.org/details/zulu-dawn-1979
-- download: https://archive.org/download/zulu-dawn-1979/Zulu%20Dawn%201979.mp4
-- preview: https://archive.org/services/img/zulu-dawn-1979
-- licença: `public-domain`
+Recusados:
+- `internet_archive:zulu-dawn-1979/Zulu Dawn 1979.mp4` — vídeo longo demais: 113 min para bloco de 6.8s (+100067%, teto 8.8s = +30%)
 
 ---
 
@@ -2715,20 +2439,12 @@ Alternativas:
 - arquivo: `19th century rifle bullet technical drawing` · `Baker rifle mechanism illustration`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 640x480 · 1826.0s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 30 minutos para um bloco de 8.1s (225x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 1826.0s ≥ 8.1s (folga 1817.9s)
-- ajustes: `trim`
-- página: https://archive.org/details/gov.house.ogr.fw.20100615.2
-- download: https://archive.org/download/gov.house.ogr.fw.20100615.2/gov.house.ogr.fw.20100615.2.mp4
-- preview: https://archive.org/services/img/gov.house.ogr.fw.20100615.2
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 524.6s · `internet_archive` · nota 0.20 · https://archive.org/details/fc-fc-4787-r2
-- vídeo · 655.8s · `internet_archive` · nota 0.20 · https://archive.org/details/MotherMa1952
+Recusados:
+- `internet_archive:gov.msha.dvd573/dvd573.msha.gov.mp4` — vídeo longo demais: 15 min para bloco de 8.1s (+10957%, teto 10.5s = +30%)
+- `internet_archive:fc-fc-245/fc-fc-245.mp4` — vídeo longo demais: 11 min para bloco de 8.1s (+7988%, teto 10.5s = +30%)
+- `internet_archive:gov.house.ogr.20100923.1/gov.house.ogr.20100923.1_512kb.mp4` — vídeo longo demais: 85 min para bloco de 8.1s (+62651%, teto 10.5s = +30%)
 
 ---
 
@@ -2743,7 +2459,7 @@ Alternativas:
 - arquivo: `Napoleonic Wars sniper scene engraving`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.96
+**✅ ESCOLHIDO** · 🎬 vídeo · 1920x1080 · 8.0s · `pexels` · nota 0.41
 
 - motivo: cobre o bloco: 8.0s ≥ 6.8s (folga 1.2s)
 - ajustes: `trim`
@@ -2753,9 +2469,9 @@ Alternativas:
 - licença: `pexels`
 
 Alternativas:
-- vídeo · 8.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/man-aiming-down-the-scope-of-a-rifle-6092104/
-- vídeo · 8.0s · `pexels` · nota 0.96 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
-- vídeo · 8.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-27539/
+- vídeo · 8.0s · `pexels` · nota 0.41 · https://www.pexels.com/video/man-aiming-down-the-scope-of-a-rifle-6092104/
+- vídeo · 8.0s · `pexels` · nota 0.41 · https://www.pexels.com/video/close-up-shot-of-a-sniper-rifle-6090849/
+- vídeo · 8.0s · `pixabay` · nota 0.41 · https://pixabay.com/videos/id-27539/
 
 ---
 
@@ -2785,9 +2501,9 @@ Alternativas:
 - arquivo: `19th century inventor portrait` · `historical workshop with forgotten inventor`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 1.00
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.53
 
-- motivo: cobre o bloco: 8.0s ≥ 7.9s (folga 0.1s)
+- motivo: cobre o bloco: 8.0s ≥ 7.9s (folga 0.1s) · penalizado: bloco pede `sepia` e o asset é material moderno de b-roll
 - ajustes: `trim`
 - página: https://pixabay.com/videos/id-34855/
 - download: https://cdn.pixabay.com/video/2020/04/03/34855-403777679_large.mp4
@@ -2795,9 +2511,7 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.93 · https://pixabay.com/videos/id-7549/
-- vídeo · 11.0s · `pexels` · nota 0.90 · https://www.pexels.com/video/rusty-antiques-4327233/
-- vídeo · 11.0s · `pexels` · nota 0.90 · https://www.pexels.com/video/rustic-abandoned-train-interior-39623046/
+- vídeo · 10.0s · `pixabay` · nota 0.11 · https://pixabay.com/videos/id-7549/
 
 ---
 
@@ -2812,7 +2526,7 @@ Alternativas:
 - arquivo: `Napoleonic Wars rifle training scene` · `19th century arms factory workers`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.95
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 8.0s · `pixabay` · nota 0.35
 
 - motivo: cobre o bloco: 8.0s ≥ 6.7s (folga 1.3s)
 - ajustes: `trim`
@@ -2820,11 +2534,6 @@ Alternativas:
 - download: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.mp4
 - preview: https://cdn.pixabay.com/video/2022/09/12/131127-749689609_large.jpg
 - licença: `pixabay-content-license`
-
-Alternativas:
-- vídeo · 9.0s · `pixabay` · nota 0.91 · https://pixabay.com/videos/id-131088/
-- vídeo · 10.0s · `pixabay` · nota 0.88 · https://pixabay.com/videos/id-79759/
-- vídeo · 11.0s · `pixabay` · nota 0.84 · https://pixabay.com/videos/id-61418/
 
 ---
 
@@ -2839,7 +2548,7 @@ Alternativas:
 - arquivo: `Ferguson rifle technical drawing` · `early 1800s rifle comparison illustration`
 - provedores consultados: pexels, pixabay · candidatos: 24
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.99
+**✅ ESCOLHIDO** · 🎬 vídeo · 3840x2160 · 9.0s · `pixabay` · nota 0.91
 
 - motivo: cobre o bloco: 9.0s ≥ 8.8s (folga 0.2s)
 - ajustes: `trim`
@@ -2849,9 +2558,9 @@ Alternativas:
 - licença: `pixabay-content-license`
 
 Alternativas:
-- vídeo · 10.0s · `pixabay` · nota 0.96 · https://pixabay.com/videos/id-79759/
-- vídeo · 11.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-61418/
-- vídeo · 11.0s · `pixabay` · nota 0.94 · https://pixabay.com/videos/id-131126/
+- vídeo · 10.0s · `pixabay` · nota 0.53 · https://pixabay.com/videos/id-79759/
+- vídeo · 11.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-61418/
+- vídeo · 11.0s · `pixabay` · nota 0.20 · https://pixabay.com/videos/id-131126/
 
 ---
 
@@ -2866,18 +2575,11 @@ Alternativas:
 - arquivo: `Ferguson rifle engraving` · `18th century experimental rifle illustration`
 - provedores consultados: internet_archive · candidatos: 3
 
-**✅ ESCOLHIDO** · 🎬 vídeo · 640x480 · 350.1s · `internet_archive` · nota 0.20
+**❌ SEM RESULTADO**
 
-> ⚠️ **NÃO USE DIRETO.** Este asset tem 6 minutos para um bloco de 2.1s (170x). É um filme inteiro, não um clipe. Sem detecção de cena (fase 5) o corte pegaria os primeiros segundos, que quase nunca servem. Além disso, o ranqueamento atual não mede relevância semântica: este item pode não ter relação nenhuma com o bloco.
-
-- motivo: cobre o bloco: 350.1s ≥ 2.1s (folga 348.1s)
-- ajustes: `trim`
-- página: https://archive.org/details/OurWorldChangingTheories-TheScientificMethodInAction
-- download: https://archive.org/download/OurWorldChangingTheories-TheScientificMethodInAction/Ow32changingtheoriesClean-skv.mp4
-- preview: https://archive.org/services/img/OurWorldChangingTheories-TheScientificMethodInAction
-- licença: `public-domain`
-
-Alternativas:
-- vídeo · 598.4s · `internet_archive` · nota 0.20 · https://archive.org/details/428-npc-1257
+Recusados:
+- `internet_archive:foreign062515_1/foreign062515_1.mp4` — vídeo longo demais: 156 min para bloco de 2.1s (+454866%, teto 2.7s = +30%)
+- `internet_archive:fc-fc-3933/fc-fc-3933.mp4` — vídeo longo demais: 257.7s para bloco de 2.1s (+12422%, teto 2.7s = +30%)
+- `internet_archive:gov.archives.arc.38998/gov.archives.arc.38998_512kb.mp4` — vídeo longo demais: 579.8s para bloco de 2.1s (+28072%, teto 2.7s = +30%)
 
 ---

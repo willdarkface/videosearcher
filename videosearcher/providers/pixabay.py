@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from ..core.http import baixar, get_json
-from ..core.models import Asset, ContentKind, Intent, MediaType, VisualBrief
+from ..core.models import Asset, ContentKind, MediaType, VisualBrief
 from ..core.provider import BaseProvider, Capabilities
 from ..core.registry import register
 
@@ -42,8 +42,7 @@ class PixabayProvider(BaseProvider):
     )
 
     def accepts(self, brief: VisualBrief) -> bool:
-        if brief.intent is Intent.ARQUIVO or brief.era is not None:
-            return False
+        """Aceita bloco histórico como rede de segurança — ver nota no Pexels."""
         return super().accepts(brief)
 
     # ------------------------------------------------------------------ busca

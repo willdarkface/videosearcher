@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any
 
 from ..core.http import baixar, get_json
-from ..core.models import Asset, ContentKind, Intent, MediaType, Orientation, VisualBrief
+from ..core.models import Asset, ContentKind, MediaType, Orientation, VisualBrief
 from ..core.provider import BaseProvider, Capabilities
 from ..core.registry import register
 
@@ -48,8 +48,15 @@ class PexelsProvider(BaseProvider):
     )
 
     def accepts(self, brief: VisualBrief) -> bool:
-        if brief.intent is Intent.ARQUIVO or brief.era is not None:
-            return False
+        """Aceita até bloco histórico, como rede de segurança.
+
+        Recusar bloco de arquivo parecia correto — Pexels não tem newsreel de
+        1944. Mas na prática deixava o bloco órfão quando o acervo histórico não
+        achava nada utilizável, e reconstituição histórica, close de mecanismo,
+        neve e fumaça existem aqui. Nenhum resultado é pior que resultado
+        moderno. Quem decide a ordem é o peso do canal, e quem penaliza estética
+        incompatível é o ranqueamento.
+        """
         return super().accepts(brief)
 
     # ------------------------------------------------------------------ busca
