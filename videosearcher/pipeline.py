@@ -295,6 +295,7 @@ class Pipeline:
             self.canal.entrega.resolucao_minima,
             relevancia=relevancia,
             brief=brief,
+            politica=self.canal.politica,
         )
 
     def _buscar_com_cache(

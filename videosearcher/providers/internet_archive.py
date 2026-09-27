@@ -16,6 +16,7 @@ from typing import Any
 from urllib.parse import quote
 
 from ..core.http import baixar, get_json
+from ..core.licenca import Licenca, classificar_licenca
 from ..core.models import Asset, ContentKind, Intent, MediaType, VisualBrief
 from ..core.provider import BaseProvider, Capabilities
 from ..core.registry import register
@@ -128,6 +129,10 @@ class InternetArchiveProvider(BaseProvider):
         except Exception:
             return None
 
+        # A licença vem do metadado do item, nunca por suposição. Ver nota em
+        # `classificar_licenca`.
+        licenca = classificar_licenca(meta.get("metadata") or {})
+
         arquivos = [f for f in (meta.get("files") or []) if isinstance(f, dict)]
         candidatos = [
             f for f in arquivos
@@ -147,6 +152,7 @@ class InternetArchiveProvider(BaseProvider):
 
         escolhido = min(candidatos, key=nota)
         escolhido["_identifier"] = identifier
+        escolhido["_licenca"] = licenca
         return escolhido
 
     # ------------------------------------------------------------ normalização
@@ -156,6 +162,9 @@ class InternetArchiveProvider(BaseProvider):
         identifier = raw.get("identifier", "")
         nome = arquivo.get("name", "")
         ano = str(raw.get("year") or "") or None
+        licenca: Licenca = raw.get("_licenca") or Licenca(
+            id="unknown", url=None, atribuicao=True, verificada=False
+        )
 
         return Asset(
             uid=self.uid(f"{identifier}/{nome}"),
@@ -170,9 +179,9 @@ class InternetArchiveProvider(BaseProvider):
             height=int(arquivo.get("height") or 0),
             preview_url=f"https://archive.org/services/img/{identifier}",
             download_url=f"{DOWNLOAD}/{identifier}/{quote(nome)}",
-            license_id="public-domain",
-            license_url="https://archive.org/about/terms",
-            attribution_required=False,
+            license_id=licenca.id,
+            license_url=licenca.url,
+            attribution_required=licenca.atribuicao,
             credit_string=f"{raw.get('title') or identifier} (Internet Archive)",
             date_original=ano,
             is_archival=True,
@@ -223,14 +232,17 @@ def _texto(valor: Any) -> str | None:
 # Excluir isso é a diferença entre newsreel de 1944 e reunião de câmara municipal.
 _SEM_LIXO = "NOT collection:(tvarchive) AND NOT collection:(tvnews)"
 
-# Coleções curadas, usadas quando não há era para filtrar por ano.
-_CURADAS = (
+# Coleções institucionais onde a licença é verificável por origem.
+# Mantido em sincronia com core.licenca.COLECOES_CONFIAVEIS.
+_CONFIAVEIS = (
     "usgovfilms",
     "prelinger",
     "FedFlix",
-    "newsreels",
     "universal_newsreels",
     "nasa",
+    "library_of_congress",
+    "nationalarchives",
+    "smithsonian",
 )
 
 # Palavras de vocabulário de banco de imagem que não aparecem em título de
@@ -270,27 +282,35 @@ def _termos_de_titulo(brief: VisualBrief, termos_busca: list[str]) -> list[str]:
 
 
 def _montar_consultas(palavras: list[str], faixa: tuple[int, int] | None) -> list[str]:
-    """Estratégias da mais precisa para a mais aberta."""
+    """Estratégias em ordem de segurança jurídica, não de precisão de busca.
+
+    As coleções institucionais vêm primeiro de propósito. Fora delas, o item
+    quase sempre é upload de comunidade sem licença declarada, e o pipeline vai
+    recusar por política — buscar lá primeiro seria gastar cota para colher
+    candidato que já nasce reprovado.
+    """
     alvo = " OR ".join(palavras)
+    colecoes = " OR ".join(_CONFIAVEIS)
     consultas: list[str] = []
 
+    # 1 e 2: acervo institucional, onde a licença é verificável.
     if faixa:
-        # Mais preciso que existe: título casa E o ano bate com a era do bloco.
+        consultas.append(
+            f"title:({alvo}) AND mediatype:(movies) AND collection:({colecoes}) "
+            f"AND year:[{faixa[0]} TO {faixa[1]}]"
+        )
+    consultas.append(f"title:({alvo}) AND mediatype:(movies) AND collection:({colecoes})")
+    consultas.append(f"({alvo}) AND mediatype:(movies) AND collection:({colecoes})")
+
+    # 3: fora das coleções confiáveis, só vale se o item declarar licença.
+    # Passa pelo gate apenas quem tem licenseurl de domínio público ou CC.
+    if faixa:
         consultas.append(
             f"title:({alvo}) AND mediatype:(movies) AND {_SEM_LIXO} "
-            f"AND year:[{faixa[0]} TO {faixa[1]}]"
+            f"AND licenseurl:[* TO *] AND year:[{faixa[0]} TO {faixa[1]}]"
         )
-        consultas.append(
-            f"({alvo}) AND mediatype:(movies) AND {_SEM_LIXO} "
-            f"AND year:[{faixa[0]} TO {faixa[1]}]"
-        )
-
-    colecoes = " OR ".join(_CURADAS)
     consultas.append(
-        f"title:({alvo}) AND mediatype:(movies) AND collection:({colecoes})"
-    )
-    consultas.append(
-        f"({alvo}) AND mediatype:(movies) AND collection:({colecoes})"
+        f"title:({alvo}) AND mediatype:(movies) AND {_SEM_LIXO} AND licenseurl:[* TO *]"
     )
     return consultas
 

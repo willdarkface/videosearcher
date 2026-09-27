@@ -131,6 +131,11 @@ class PoliticaConfig(BaseModel):
     licencas_proibidas: list[str] = Field(default_factory=list)
     exige_sem_atribuicao: bool = False
 
+    # Recusa asset cuja licença não foi comprovada pelo metadado da fonte.
+    # Padrão ligado: canal monetizado não pode apostar em "provavelmente é
+    # domínio público". Ver videosearcher/core/licenca.py.
+    exigir_licenca_verificada: bool = True
+
 
 class EntregaConfig(BaseModel):
     duracao_bloco: tuple[float, float] = (4.0, 10.0)

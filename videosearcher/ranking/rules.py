@@ -20,7 +20,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from ..core.config import MidiaConfig
+from ..core.config import MidiaConfig, PoliticaConfig
 from ..core.models import Asset, Block, Look, MediaType, VisualBrief
 
 
@@ -203,6 +203,39 @@ def aspecto_foto(asset: Asset, midia: MidiaConfig, resolucao_minima: int) -> Ver
 LOOKS_DE_EPOCA = {Look.BW_ARCHIVAL, Look.PAINTING, Look.SEPIA}
 
 
+LICENCAS_NAO_VERIFICADAS = {"unknown", "declarado-nao-verificado", "nao-comercial"}
+
+
+def checar_licenca(asset: Asset, politica: PoliticaConfig | None) -> Veredito | None:
+    """Recusa por licença. Devolve None quando está tudo bem.
+
+    Roda antes de qualquer outra regra: não importa quão perfeito seja o
+    encaixe se o asset pode gerar strike.
+    """
+    if politica is None:
+        return None
+
+    if asset.license_id in politica.licencas_proibidas:
+        return Veredito(
+            False, f"licença `{asset.license_id}` está na lista de proibidas do canal"
+        )
+
+    if politica.exigir_licenca_verificada and asset.license_id in LICENCAS_NAO_VERIFICADAS:
+        return Veredito(
+            False,
+            f"licença não comprovada (`{asset.license_id}`): a fonte não declara "
+            f"domínio público nem Creative Commons. Risco de strike em canal "
+            f"monetizado",
+        )
+
+    if politica.exige_sem_atribuicao and asset.attribution_required:
+        return Veredito(
+            False, f"exige atribuição e o canal não aceita (`{asset.license_id}`)"
+        )
+
+    return None
+
+
 def avaliar(
     asset: Asset,
     block: Block,
@@ -210,8 +243,13 @@ def avaliar(
     resolucao_minima: int,
     *,
     brief: VisualBrief | None = None,
+    politica: PoliticaConfig | None = None,
 ) -> Veredito:
     """Aplica a regra correta conforme o tipo de mídia."""
+    recusa = checar_licenca(asset, politica)
+    if recusa is not None:
+        return recusa
+
     if asset.media_type is MediaType.VIDEO:
         veredito = cobertura_video(asset, block, midia)
         if veredito.aceito and asset.height and asset.height < resolucao_minima:
@@ -301,6 +339,7 @@ def selecionar(
     *,
     relevancia: dict[str, float] | None = None,
     brief: VisualBrief | None = None,
+    politica: PoliticaConfig | None = None,
 ) -> Selecao:
     """Filtra e ordena candidatos para um bloco.
 
@@ -313,7 +352,9 @@ def selecionar(
     selecao = Selecao()
 
     for asset in candidatos:
-        veredito = avaliar(asset, block, midia, resolucao_minima, brief=brief)
+        veredito = avaliar(
+            asset, block, midia, resolucao_minima, brief=brief, politica=politica
+        )
         if veredito.aceito:
             selecao.aprovados.append((asset, veredito))
         else:
