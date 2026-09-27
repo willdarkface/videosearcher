@@ -37,6 +37,7 @@ class Config:
     limiar_cena: float
     max_clipes_por_fonte: int
     modelo_vlm: str
+    modelo_embedding: str
     zai_api_key: str
 
     @classmethod
@@ -60,6 +61,9 @@ class Config:
             # Teto por fonte: um filme de 2 horas renderia 1200 clipes e
             # entupiria a fila de classificação com material de um só assunto.
             max_clipes_por_fonte=_int("MAX_CLIPES_POR_FONTE", 400),
-            modelo_vlm=_env("MODELO_VLM", "glm-4.6v-flash"),
+            # Vazio = deixa o vlm.py escolher pelo provedor com chave presente.
+            modelo_vlm=_env("MODELO_VLM"),
+            # 768 dimensões, casa com a coluna vector(768) do schema.
+            modelo_embedding=_env("MODELO_EMBEDDING", "jinaai/jina-clip-v1"),
             zai_api_key=_env("ZAI_API_KEY"),
         )

@@ -25,6 +25,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 from . import catalogo
+from .ambiente import carregar_env
 from .config import Config
 from .ingestao import ingerir_arquivo_local, ingerir_internet_archive
 
@@ -32,6 +33,7 @@ log = logging.getLogger("vsworker.media")
 
 
 def configurar_log() -> None:
+    carregar_env()
     logging.basicConfig(
         level=os.getenv("LOG_LEVEL", "INFO").upper(),
         format="%(asctime)s %(levelname)-7s %(name)s: %(message)s",
